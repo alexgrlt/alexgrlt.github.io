@@ -242,3 +242,16 @@
     }
   </script>
 {% endif %}
+
+{% for lang in site.languages %}
+  {% capture href %}{{ site.baseurl }}{% if lang != site.default_lang %}/{{ lang }}{% endif %}{% endcapture %}
+  {% capture path %}
+    {% if page.permalink_lang and page.permalink_lang[lang] %}
+      {{ page.permalink_lang[lang] }}
+    {% else %}
+      {{ page.url }}
+    {% endif %}
+  {% endcapture %}
+  <link rel="alternate" hreflang="{{ lang }}" href="{{ href }}{% if path != '/' %}{{ path }}{% endif %}">
+{% endfor %}
+

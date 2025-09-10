@@ -11,7 +11,7 @@ description: > # the ">" symbol means to ignore newlines until "footer_text:"
   After 2 years spent as a research associate at J-PAL Europe, I am now a PhD student at the Department of Economics, Sciences Po. I am working on the evaluation of education policies in France.
 # footer_text: >
 keywords: Education, Economics, Policy evaluation # add your own keywords or leave empty
-lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
+# lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 😸 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://alexgrlt.github.io # the base hostname & protocol for your site
@@ -211,6 +211,16 @@ plugins:
   - jekyll-toc
   - jekyll-twitter-plugin
   - jemoji
+
+# Polyglot config
+languages: ["en", "fr"] 
+default_lang: "en"
+exclude_from_localization:
+  - assets
+  - files
+  - images
+  - favicon.ico
+parallel_localization: true     # set false on Windows if needed
 
 # Sitemap settings
 defaults:

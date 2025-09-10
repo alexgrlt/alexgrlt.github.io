@@ -147,4 +147,46 @@
       </div>
     </progress>
   {% endif %}
+  <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-toggle="dropdown">
+    {{ site.active_lang | upcase }}
+  </a>
+  <div class="dropdown-menu" aria-labelledby="langDropdown">
+    {% for lang in site.languages %}
+      {% capture base %}{{ site.baseurl }}{% endcapture %}
+      {% if lang != site.default_lang %}{% assign base = base | append: '/' | append: lang %}{% endif %}
+
+      {%- comment -%}
+      Prefer Polyglot's `permalink_lang` (available when you use `page_id:`).
+      Fallback to current page.url when missing.
+      {%- endcomment -%}
+      {% assign target = page.permalink_lang | default: {} | dig: lang %}
+      {% if target == nil or target == '' %}{% assign target = page.url %}{% endif %}
+      <a class="dropdown-item" href="{{ base }}{% if target != '/' %}{{ target }}{% endif %}">
+        {{ lang | upcase }}
+      </a>
+    {% endfor %}
+  </div>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-toggle="dropdown">
+    {{ site.active_lang | upcase }}
+  </a>
+  <div class="dropdown-menu" aria-labelledby="langDropdown">
+    {% for lang in site.languages %}
+      {% capture base %}{{ site.baseurl }}{% endcapture %}
+      {% if lang != site.default_lang %}{% assign base = base | append: '/' | append: lang %}{% endif %}
+
+      {%- comment -%}
+      Prefer Polyglot's `permalink_lang` (available when you use `page_id:`).
+      Fallback to current page.url when missing.
+      {%- endcomment -%}
+      {% assign target = page.permalink_lang | default: {} | dig: lang %}
+      {% if target == nil or target == '' %}{% assign target = page.url %}{% endif %}
+      <a class="dropdown-item" href="{{ base }}{% if target != '/' %}{{ target }}{% endif %}">
+        {{ lang | upcase }}
+      </a>
+    {% endfor %}
+  </div>
+</li>
 </header>
