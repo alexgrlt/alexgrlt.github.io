@@ -11,26 +11,26 @@ page_id: teaching
 ---
 
 ------------------
-## Current Courses
+## Cours actuellement enseignés
 
-**Introduction to mathematics for economists (1st year graduate students) -- Fall 2025-2026**  
-*Institution:* SciencesPo. *Role:* Instructor . *Format:* 6x2h lectures + 6x2h tutorials  
-*Focus:* multivariate calculus, linear algebra, integration, optimization.  
-
----
-
-**Policy Analysis and Policy Evaluation (1st year graduate students) -- Fall and Spring 2025-2026**  
-*Institution:* SciencesPo. *Role:* Teaching Assistant -- lecturer: [Clément Imbert](https://sites.google.com/site/clemimbert/) (fall) and [Justine Knebelmann](https://sites.google.com/view/justine-knebelmann/home) (spring). *Format:* 12x2h tutorials in each semester  
-*Focus:* RCTs, regressions, matching, DiD, RDD
+**Introduction aux mathématiques pour les économistes (M1 de recherche en économie) -- Automne 2025-2026**  
+*Institution :* SciencesPo. *Rôle :* Enseignant. *Format :* 6x2h cours magistral + 6x2h travaux dirigés. *Langue :* anglais.   
+*Notions :* Analyse réelle, algèbre linéaire, intégration, optimisation.  
 
 ---
 
-**Causal statistics for treatment models (3rd year undergraduate students) -- Spring 2025-2026 and Spring 2024-2025**  
-*Institution:* Ecole Normale Supérieure. *Role:* Assistant lecturer (main lecturer: Marc Gurgand). *Format:* 12x2h lectures (teaching 3x2h)  
-*Focus:* RCTs, regressions, matching, DiD, RDD, intro to ML (trees and forests)
+**Analyse et évaluation des politiques publiques (M1 d'affaires publiques, spécalité politiques économiques) -- Automne and Printemps 2025-2026**  
+*Institution :* SciencesPo. *Rôle :* Assistant d'enseignement -- professeurs : [Clément Imbert](https://sites.google.com/site/clemimbert/) (automne) et [Justine Knebelmann](https://sites.google.com/view/justine-knebelmann/home) (printemps). *Format:* 12x2h travaux dirigés par semestre. *Langue :* anglais.  
+*Notions:* évaluation d'impact randomisée, régressions, méthodes d'appariemment, DiD, RDD
 
-## Past Courses
+---
 
-**Introduction to statistics for social sciences (1st year undergraduate students) -- Spring 2024-2025 and 2023-2024**  
-*Institution:* SciencesPo. *Role:* Instructor. *Format:* 12x2h lectures  
-*Focus:* mean, variance, normal distribution, CLT, hypothesis testing, intro to regression
+**Causal statistics for treatment models (L3 d'économie et M1 de sciences cognitives) -- Printemps 2025-2026 and Printemps 2024-2025**  
+*Institution:* Ecole Normale Supérieure. *Rôle:* Assistant d'enseignement -- professeur: Marc Gurgand. *Format:* 12x2h cours (3 cours enseignés par mes soins). *Langue :* anglais.    
+*Notions:* évaluation d'impact randomisée, régressions, méthodes d'appariemment, DiD, RDD, introduction aux méthodes d'apprentissages automatiques (arbres et forêts)
+
+## Cours enseignés dans le passé
+
+**Introduction aux statistiques pour les sciences sociales (Bachelor 1) -- Printemps 2024-2025 and 2023-2024**  
+*Institution:* SciencesPo. *Rôle:* Enseignant. *Format:* 12x2h cours.  
+*Notions:* concepts statistiques basiques (moyenne, médiane, variance, écart- et erreur-type), loi normale, théorème central-limite et loi des grands nombres, test d'hypothèse, introduction à la régression linéaire
