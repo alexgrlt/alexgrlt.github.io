@@ -136,70 +136,70 @@
             </li>
           {% endif %}
 
-          {%- comment -%} --- Language switcher (flags) --- {%- endcomment -%}
+        {%- comment -%} --- Language switcher (flags) --- {%- endcomment -%}
+          {%- assign active = site.active_lang | default: site.default_lang -%}
+          {%- assign active_flag = site.language_flags[active] | default: active -%}
 
-            {%- assign active = site.active_lang | default: site.default_lang -%}
-            {%- assign active_flag = site.language_flags[active] | default: active -%}
+          {%- comment -%} Desktop / expanded navbar (≥ sm) {%- endcomment -%}
+          <li class="nav-item dropdown d-none d-sm-block">
+            <a class="nav-link dropdown-toggle"
+              id="langDropdown"
+              href="#"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-label="Change language">
+              <img alt="" class="lang-flag"
+                  src="{{ '/assets/flags/' | append: (active_flag | replace: '_','-' | replace: 'en','gb') | append: '.svg' | relative_url }}">
+              <span class="ml-1">{{ active | upcase }}</span>
+            </a>
 
-            {# Desktop / expanded navbar (≥ sm) #}
-            <li class="nav-item dropdown d-none d-sm-block">
-              <a class="nav-link dropdown-toggle"
-                id="langDropdown"
-                href="#"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                aria-label="Change language">
-                <img alt="{{ active | upcase }}" class="lang-flag"
-                    src="{{ site.baseurl }}/assets/flags/{{ active_flag | replace: '_','-' | replace: 'en','gb' }}.svg">
-                <span class="ml-1">{{ active | upcase }}</span>
-              </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="langDropdown">
+              {% for code in site.languages %}
+                {% assign base = site.baseurl %}
+                {% if code != site.default_lang %}{% assign base = base | append: '/' | append: code %}{% endif %}
+                {% assign target = page.permalink_lang | default: {} | dig: code %}
+                {% if target == nil or target == '' %}{% assign target = page.url %}{% endif %}
+                {% assign flag = site.language_flags[code] | default: code %}
 
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="langDropdown">
-                {% for code in site.languages %}
-                  {% assign base = site.baseurl %}
-                  {% if code != site.default_lang %}{% assign base = base | append: '/' | append: code %}{% endif %}
-                  {% assign target = page.permalink_lang | default: {} | dig: code %}
-                  {% if target == nil or target == '' %}{% assign target = page.url %}{% endif %}
-                  {% assign flag = site.language_flags[code] | default: code %}
+                <a class="dropdown-item{% if code == site.active_lang %} active{% endif %}"
+                  lang="{{ code | downcase }}" hreflang="{{ code | downcase }}" rel="alternate"
+                  href="{{ base }}{% if target != '/' %}{{ target }}{% endif %}">
+                  <img alt="" class="lang-flag mr-1"
+                      src="{{ '/assets/flags/' | append: (flag | replace: '_','-' | replace: 'en','gb') | append: '.svg' | relative_url }}">
+                  {{ code | upcase }}{% if code == site.active_lang %}<span class="sr-only"> (current)</span>{% endif %}
+                </a>
+              {% endfor %}
+            </div>
+          </li>
 
-                  <a class="dropdown-item{% if code == site.active_lang %} active{% endif %}"
-                    lang="{{ code | downcase }}" hreflang="{{ code | downcase }}" rel="alternate"
-                    href="{{ base }}{% if target != '/' %}{{ target }}{% endif %}">
-                    <img alt="{{ code | upcase }}" class="lang-flag mr-1"
-                        src="{{ site.baseurl }}/assets/flags/{{ flag | replace: '_','-' | replace: 'en','gb' }}.svg">
-                    {{ code | upcase }}{% if code == site.active_lang %}<span class="sr-only"> (current)</span>{% endif %}
-                  </a>
-                {% endfor %}
-              </div>
-            </li>
+          {%- comment -%} Mobile / collapsed navbar (< sm) {%- endcomment -%}
+          <li class="nav-item d-sm-none">
+            <span class="nav-link disabled">
+              <img alt="" class="lang-flag mr-1"
+                  src="{{ '/assets/flags/' | append: (active_flag | replace: '_','-' | replace: 'en','gb') | append: '.svg' | relative_url }}">
+              {{ active | upcase }}
+            </span>
+            <div class="pl-3">
+              {% for code in site.languages %}
+                {% assign base = site.baseurl %}
+                {% if code != site.default_lang %}{% assign base = base | append: '/' | append: code %}{% endif %}
+                {% assign target = page.permalink_lang | default: {} | dig: code %}
+                {% if target == nil or target == '' %}{% assign target = page.url %}{% endif %}
+                {% assign flag = site.language_flags[code] | default: code %}
 
-            {# Mobile / collapsed navbar (< sm) #}
-            <li class="nav-item d-sm-none">
-              <span class="nav-link disabled">
-                <img alt="{{ active | upcase }}" class="lang-flag mr-1"
-                    src="{{ site.baseurl }}/assets/flags/{{ active_flag | replace: '_','-' | replace: 'en','gb' }}.svg">
-                {{ active | upcase }}
-              </span>
-              <div class="pl-3">
-                {% for code in site.languages %}
-                  {% assign base = site.baseurl %}
-                  {% if code != site.default_lang %}{% assign base = base | append: '/' | append: code %}{% endif %}
-                  {% assign target = page.permalink_lang | default: {} | dig: code %}
-                  {% if target == nil or target == '' %}{% assign target = page.url %}{% endif %}
-                  {% assign flag = site.language_flags[code] | default: code %}
+                <a class="dropdown-item py-1{% if code == site.active_lang %} active{% endif %}"
+                  lang="{{ code | downcase }}" hreflang="{{ code | downcase }}" rel="alternate"
+                  href="{{ base }}{% if target != '/' %}{{ target }}{% endif %}">
+                  <img alt="" class="lang-flag mr-1"
+                      src="{{ '/assets/flags/' | append: (flag | replace: '_','-' | replace: 'en','gb') | append: '.svg' | relative_url }}">
+                  {{ code | upcase }}
+                </a>
+              {% endfor %}
+            </div>
+          </li>
 
-                  <a class="dropdown-item py-1{% if code == site.active_lang %} active{% endif %}"
-                    lang="{{ code | downcase }}" hreflang="{{ code | downcase }}" rel="alternate"
-                    href="{{ base }}{% if target != '/' %}{{ target }}{% endif %}">
-                    <img alt="{{ code | upcase }}" class="lang-flag mr-1"
-                        src="{{ site.baseurl }}/assets/flags/{{ flag | replace: '_','-' | replace: 'en','gb' }}.svg">
-                    {{ code | upcase }}
-                  </a>
-                {% endfor %}
-              </div>
-            </li>
 
         </ul>
       </div>
