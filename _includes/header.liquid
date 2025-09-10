@@ -145,7 +145,7 @@
           {% if site.active_lang == "en" %}
           <a class="nav-link" href="{{site.baseurl_root}}/fr{{page.url}}"> FR </a>
           {% elsif site.active_lang == "fr" %}
-          <a class="nav-link" href="{{site.baseurl_root}}{{page.url}}"> EN </a>
+          <<a class="nav-link" href="{{ site.baseurl_root }}{{ page.url | replace_first: '/fr', '' }}">EN</a>
           {% endif %}
         </li>
 
