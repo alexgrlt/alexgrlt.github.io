@@ -10,7 +10,6 @@ lang: fr
 page_id: teaching
 ---
 
-------------------
 ## Cours actuellement enseignés
 
 **Introduction aux mathématiques pour les économistes (M1 de recherche en économie) -- Automne 2025-2026**  
@@ -28,6 +27,10 @@ page_id: teaching
 **Causal statistics for treatment models (L3 d'économie et M1 de sciences cognitives) -- Printemps 2025-2026 and Printemps 2024-2025**  
 *Institution:* Ecole Normale Supérieure. *Rôle:* Assistant d'enseignement -- professeur: Marc Gurgand. *Format:* 12x2h cours (3 cours enseignés par mes soins). *Langue :* anglais.    
 *Notions:* évaluation d'impact randomisée, régressions, méthodes d'appariemment, DiD, RDD, introduction aux méthodes d'apprentissages automatiques (arbres et forêts)
+
+
+<hr style="height:6px; background-color:gray; border:none; margin:auto;" />
+
 
 ## Cours enseignés dans le passé
 
