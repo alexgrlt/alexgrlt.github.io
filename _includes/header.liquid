@@ -157,12 +157,30 @@
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="langDropdown">
               {% for code in site.languages %}
+                {%- comment -%} Build base prefix for target language {%- endcomment -%}
                 {% assign base = site.baseurl %}
                 {% if code != site.default_lang %}{% assign base = base | append: '/' | append: code %}{% endif %}
-                {% assign target = page.permalink_lang | default: {} | dig: code %}
-                {% if target == nil or target == '' %}{% assign target = page.url %}{% endif %}
-                {% assign flag = site.language_flags[code] | default: code %}
 
+                {%- comment -%} Prefer same-page permalink if provided via page_id pairing {%- endcomment -%}
+                {% assign target = page.permalink_lang | default: {} | dig: code %}
+
+                {%- comment -%}
+                Fallback: use current page.url, but if we're linking to the default language
+                from a non-default page (e.g., FR → EN), remove the active lang prefix.
+                {%- endcomment -%}
+                {% if target == nil or target == '' %}
+                  {% assign target = page.url %}
+                  {% if code == site.default_lang and site.active_lang != site.default_lang %}
+                    {% assign lang_prefix = '/' | append: site.active_lang %}
+                    {% if target == lang_prefix or target == lang_prefix | append: '/' %}
+                      {% assign target = '/' %}
+                    {% else %}
+                      {% assign target = target | remove_first: lang_prefix %}
+                    {% endif %}
+                  {% endif %}
+                {% endif %}
+
+                {% assign flag = site.language_flags[code] | default: code %}
                 <a class="dropdown-item{% if code == site.active_lang %} active{% endif %}"
                   lang="{{ code | downcase }}" hreflang="{{ code | downcase }}" rel="alternate"
                   href="{{ base }}{% if target != '/' %}{{ target }}{% endif %}">
@@ -171,24 +189,43 @@
                   {{ code | upcase }}{% if code == site.active_lang %}<span class="sr-only"> (current)</span>{% endif %}
                 </a>
               {% endfor %}
+
             </div>
           </li>
 
           {%- comment -%} Mobile / collapsed navbar (< sm) {%- endcomment -%}
           <li class="nav-item d-sm-none">
             <span class="nav-link disabled">
-              <img alt="" class="lang-flag mr-1"
+              <img alt="" class="lang-flag"
                   src="{{ '/assets/flags/' | append: (active_flag | replace: '_','-' | replace: 'en','gb') | append: '.svg' | relative_url }}">
               {{ active | upcase }}
             </span>
             <div class="pl-3">
               {% for code in site.languages %}
+                {%- comment -%} Build base prefix for target language {%- endcomment -%}
                 {% assign base = site.baseurl %}
                 {% if code != site.default_lang %}{% assign base = base | append: '/' | append: code %}{% endif %}
-                {% assign target = page.permalink_lang | default: {} | dig: code %}
-                {% if target == nil or target == '' %}{% assign target = page.url %}{% endif %}
-                {% assign flag = site.language_flags[code] | default: code %}
 
+                {%- comment -%} Prefer same-page permalink if provided via page_id pairing {%- endcomment -%}
+                {% assign target = page.permalink_lang | default: {} | dig: code %}
+
+                {%- comment -%}
+                Fallback: use current page.url, but if we're linking to the default language
+                from a non-default page (e.g., FR → EN), remove the active lang prefix.
+                {%- endcomment -%}
+                {% if target == nil or target == '' %}
+                  {% assign target = page.url %}
+                  {% if code == site.default_lang and site.active_lang != site.default_lang %}
+                    {% assign lang_prefix = '/' | append: site.active_lang %}
+                    {% if target == lang_prefix or target == lang_prefix | append: '/' %}
+                      {% assign target = '/' %}
+                    {% else %}
+                      {% assign target = target | remove_first: lang_prefix %}
+                    {% endif %}
+                  {% endif %}
+                {% endif %}
+
+                {% assign flag = site.language_flags[code] | default: code %}
                 <a class="dropdown-item py-1{% if code == site.active_lang %} active{% endif %}"
                   lang="{{ code | downcase }}" hreflang="{{ code | downcase }}" rel="alternate"
                   href="{{ base }}{% if target != '/' %}{{ target }}{% endif %}">
@@ -197,6 +234,7 @@
                   {{ code | upcase }}
                 </a>
               {% endfor %}
+
             </div>
           </li>
 
