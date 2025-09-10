@@ -18,13 +18,13 @@ page_id: teaching
 
 ---
 
-**Analyse et évaluation des politiques publiques (M1 d'affaires publiques, spécalité politiques économiques) -- Automne and Printemps 2025-2026**  
+**Analyse et évaluation des politiques publiques (M1 d'affaires publiques, spécalité politiques économiques) -- Automne et Printemps 2025-2026**  
 *Institution :* SciencesPo. *Rôle :* Assistant d'enseignement -- professeurs : [Clément Imbert](https://sites.google.com/site/clemimbert/) (automne) et [Justine Knebelmann](https://sites.google.com/view/justine-knebelmann/home) (printemps). *Format:* 12x2h travaux dirigés par semestre. *Langue :* anglais.  
 *Notions:* évaluation d'impact randomisée, régressions, méthodes d'appariemment, DiD, RDD
 
 ---
 
-**Causal statistics for treatment models (L3 d'économie et M1 de sciences cognitives) -- Printemps 2025-2026 and Printemps 2024-2025**  
+**Causal statistics for treatment models (L3 d'économie et M1 de sciences cognitives) -- Printemps 2025-2026 et Printemps 2024-2025**  
 *Institution:* Ecole Normale Supérieure. *Rôle:* Assistant d'enseignement -- professeur: Marc Gurgand. *Format:* 12x2h cours (3 cours enseignés par mes soins). *Langue :* anglais.    
 *Notions:* évaluation d'impact randomisée, régressions, méthodes d'appariemment, DiD, RDD, introduction aux méthodes d'apprentissages automatiques (arbres et forêts)
 
@@ -34,6 +34,6 @@ page_id: teaching
 
 ## Cours enseignés dans le passé
 
-**Introduction aux statistiques pour les sciences sociales (Bachelor 1) -- Printemps 2024-2025 and 2023-2024**  
+**Introduction aux statistiques pour les sciences sociales (Bachelor 1) -- Printemps 2024-2025 et 2023-2024**  
 *Institution:* SciencesPo. *Rôle:* Enseignant. *Format:* 12x2h cours.  
 *Notions:* concepts statistiques basiques (moyenne, médiane, variance, écart- et erreur-type), loi normale, théorème central-limite et loi des grands nombres, test d'hypothèse, introduction à la régression linéaire

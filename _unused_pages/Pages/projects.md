@@ -2,11 +2,13 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: An overview of the current projects I am currently involved in.
 nav: true
 nav_order: 3
-display_categories: [work, fun]
+display_categories: [education, labor, development]
 horizontal: false
+lang: en
+page-id: projects
 ---
 
 <!-- pages/projects.md -->

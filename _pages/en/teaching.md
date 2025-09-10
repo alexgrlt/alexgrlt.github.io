@@ -10,7 +10,6 @@ lang: en
 page_id: teaching
 ---
 
-------------------
 ## Current Courses
 
 **Introduction to mathematics for economists (1st year graduate students) -- Fall 2025-2026**  
@@ -28,6 +27,8 @@ page_id: teaching
 **Causal statistics for treatment models (3rd year undergraduate students) -- Spring 2025-2026 and Spring 2024-2025**  
 *Institution:* Ecole Normale Supérieure. *Role:* Assistant lecturer (main lecturer: Marc Gurgand). *Format:* 12x2h lectures (teaching 3x2h)  
 *Focus:* RCTs, regressions, matching, DiD, RDD, intro to ML (trees and forests)
+
+<hr style="height:6px; background-color:gray; border:none; margin:auto;" />
 
 ## Past Courses
 
