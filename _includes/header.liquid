@@ -142,9 +142,9 @@
 
         <!-- Toogle language -->
         <li class="nav-item active">
-          {% if site.lang == "en" %}
+          {% if site.active_lang == "en" %}
           <a class="nav-link" href="{{site.baseurl_root}}/fr{{page.url}}"> FR </a>
-          {% elsif site.lang == "fr" %}
+          {% elsif site.active_lang == "fr" %}
           <a class="nav-link" href="{{site.baseurl_root}}{{page.url}}"> EN </a>
           {% endif %}
         </li>
