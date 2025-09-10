@@ -167,26 +167,53 @@
       </a>
     {% endfor %}
   </div>
-</li>
-<li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-toggle="dropdown">
-    {{ site.active_lang | upcase }}
-  </a>
-  <div class="dropdown-menu" aria-labelledby="langDropdown">
-    {% for lang in site.languages %}
-      {% capture base %}{{ site.baseurl }}{% endcapture %}
-      {% if lang != site.default_lang %}{% assign base = base | append: '/' | append: lang %}{% endif %}
 
-      {%- comment -%}
-      Prefer Polyglot's `permalink_lang` (available when you use `page_id:`).
-      Fallback to current page.url when missing.
-      {%- endcomment -%}
-      {% assign target = page.permalink_lang | default: {} | dig: lang %}
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle"
+     id="langDropdown"
+     href="#"
+     role="button"
+     data-toggle="dropdown"
+     aria-haspopup="true"
+     aria-expanded="false"
+     aria-label="Change language">
+     {% assign active = site.active_lang | default: site.default_lang %}
+     {% assign active_flag = site.language_flags[active] | default: active %}
+     {% if site.show_language_flags %}
+       <img alt="{{ active | upcase }}"
+            class="lang-flag"
+            src="{{ site.baseurl }}/assets/flags/{{ active_flag | replace: '_','-' | replace: 'en','gb' }}.svg">
+     {% else %}
+       {{ active | upcase }}
+     {% endif %}
+  </a>
+
+  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="langDropdown">
+    {% for code in site.languages %}
+      {% assign base = site.baseurl %}
+      {% if code != site.default_lang %}{% assign base = base | append: '/' | append: code %}{% endif %}
+
+      {%- comment -%} Prefer exact same-page target if paired with page_id {%- endcomment -%}
+      {% assign target = page.permalink_lang | default: {} | dig: code %}
       {% if target == nil or target == '' %}{% assign target = page.url %}{% endif %}
-      <a class="dropdown-item" href="{{ base }}{% if target != '/' %}{{ target }}{% endif %}">
-        {{ lang | upcase }}
+
+      {% assign flag = site.language_flags[code] | default: code %}
+      <a class="dropdown-item{% if code == site.active_lang %} active{% endif %}"
+         lang="{{ code | downcase }}"
+         hreflang="{{ code | downcase }}"
+         rel="alternate"
+         href="{{ base }}{% if target != '/' %}{{ target }}{% endif %}">
+        {% if site.show_language_flags %}
+          <img alt="{{ code | upcase }}"
+               class="lang-flag mr-1"
+               src="{{ site.baseurl }}/assets/flags/{{ flag | replace: '_','-' | replace: 'en','gb' }}.svg">
+        {% endif %}
+        {{ code | upcase }}
+        {% if code == site.active_lang %}<span class="sr-only"> (current)</span>{% endif %}
       </a>
     {% endfor %}
   </div>
 </li>
+
+
 </header>
