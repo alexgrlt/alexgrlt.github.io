@@ -2,13 +2,12 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Some info on the classes I am teaching.
+# description: Some info on the classes I am teaching.
 nav: true
-nav_order: 6
+nav_order: 2
 ---
 
-## Overview
-I mostly teach classes related to empirical methods for causal inference with applications in policy evaluation.
+
 
 ## Current Courses
 
@@ -17,7 +16,7 @@ I mostly teach classes related to empirical methods for causal inference with ap
 **Focus:** multivariate calculus, linear algebra, integration, optimization.  
 
 ### Policy Analysis and Policy Evaluation (1st year graduate students) — Fall and Spring 2025-2026
-**Institution:** SciencesPo· **Role:** Teaching Assistant (lecturer: [Clément Imbert](https://sites.google.com/site/clemimbert/) (fall) and [Justine Knebelmann](https://sites.google.com/view/justine-knebelmann/home) (spring)· **Format:** 12×2h tutorials in each semester  
+**Institution:** SciencesPo· **Role:** Teaching Assistant -- lecturer: [Clément Imbert](https://sites.google.com/site/clemimbert/) (fall) and [Justine Knebelmann](https://sites.google.com/view/justine-knebelmann/home) (spring)· **Format:** 12×2h tutorials in each semester  
 **Focus:** RCTs, regressions, matching, DiD, RDD
 
 ### Causal statistics for treatment models (3rd year undergraduate students) - Spring 2025-2026 and Spring 2024-2025

@@ -1,0 +1,1 @@
+This folder is where I moved some of the main pages from the _pages directory I didn't want to publish yet. To make them appear again, it's just needed to move them back.
