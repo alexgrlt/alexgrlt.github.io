@@ -38,17 +38,12 @@ ninja.data = [{
             window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
           
         },
-      },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
-            },},{
+      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%61%6C%65%78%61%6E%64%72%65.%67%72%65%6C%6C%65%74[%61%74]%73%63%69%65%6E%63%65%73%70%6F.%66%72", "_blank");
+          window.open("mailto:%61%6C%65%78%61%6E%64%72%65.%67%72%65%6C%6C%65%74@%73%63%69%65%6E%63%65%73%70%6F.%66%72", "_blank");
         },
       },{
       id: 'light-theme',
