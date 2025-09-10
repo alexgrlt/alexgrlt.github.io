@@ -1,13 +1,13 @@
 ---
 layout: page
 permalink: /teaching/
-# title: teaching
+title: teaching
 # description: Some info on the classes I am teaching.
 nav: true
 nav_order: 2
 ---
 
-
+------------------
 ## Current Courses
 
 **Introduction to mathematics for economists (1st year graduate students) — Fall 2025-2026**
