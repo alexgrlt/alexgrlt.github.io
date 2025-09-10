@@ -24,7 +24,7 @@ nav_order: 2
 ---
 
 **Causal statistics for treatment models (3rd year undergraduate students) -- Spring 2025-2026 and Spring 2024-2025**  
-*Institution:* Ecole Normale Supérieure. *Role:* Assistant lecturer (main lecturer: Marc Gurgand). *Format:* 12x2h lectures (teaching 3x2h)
+*Institution:* Ecole Normale Supérieure. *Role:* Assistant lecturer (main lecturer: Marc Gurgand). *Format:* 12x2h lectures (teaching 3x2h)  
 *Focus:* RCTs, regressions, matching, DiD, RDD, intro to ML (trees and forests)
 
 ## Past Courses
