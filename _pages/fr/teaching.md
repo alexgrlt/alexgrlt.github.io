@@ -7,6 +7,7 @@ hide_title: true
 nav: true
 nav_order: 2
 lang: fr
+page_id: teaching
 ---
 
 ------------------

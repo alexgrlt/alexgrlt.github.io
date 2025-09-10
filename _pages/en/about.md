@@ -4,6 +4,7 @@ title: about
 permalink: /
 subtitle: <a href='https://www.sciencespo.fr/department-economics/'>Department of Economics, Sciences Po</a>. 28, rue des Saints-Pères, 75007
 lang: en
+page_id: presentation
 
 profile:
   align: right
