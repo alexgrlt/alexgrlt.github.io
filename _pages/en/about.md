@@ -10,8 +10,7 @@ profile:
   align: right
   image: Main_CV_pic.jpg
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>28, rue des Saints-Pères, 75007</p>
+  more_info: 
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,5 +26,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-After 2 years spent working for the [Innovation, Data and Experiments in Education (IDEE) program](https://www.idee-education.fr/) at J-PAL Europe, I am now a PhD student at the Department of Economics, Sciences Po, under the supervision of [Clément de Chaisemartin](https://sites.google.com/site/clementdechaisemartin/) and [Carlo Barone](https://www.sciencespo.fr/cris/en/directory/barone-carlo/). I am working on the evaluation of education policies, mostly in France. But I am open to doing research in development economics, and labor economics.
+After 2 years spent working for the [Innovation, Data and Experiments in Education (IDEE) program](https://www.idee-education.fr/) at J-PAL Europe, I am now a PhD student at the Department of Economics, Sciences Po, under the supervision of [Clément de Chaisemartin](https://sites.google.com/site/clementdechaisemartin/) and [Carlo Barone](https://www.sciencespo.fr/cris/en/directory/barone-carlo/). I am working on the evaluation of education policies, mostly in France. But I am open to doing research in development economics, and labor economics. I also enjoy keeping up-to-date with state of the art econometrics.
 
+I am author of the [IDEE power calculator](https://www.idee-education.fr/en/power-calculator/).
