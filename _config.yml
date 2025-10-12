@@ -212,6 +212,7 @@ plugins:
   - jekyll-twitter-plugin
   - jemoji
   - jekyll-seo-tag
+  - jekyll-last-modified-at
 
 # -----------------------------------------------------------------------------
 # Polyglot
