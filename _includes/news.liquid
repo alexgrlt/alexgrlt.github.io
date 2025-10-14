@@ -1,6 +1,7 @@
 <div class="news">
-  {% if site.news != blank %}
-    {% assign news_size = site.news | size %}
+  {% assign localized_news = site.news | where: "lang", site.active_lang %}
+  {% if localized_news != blank %}
+    {% assign news_size = localized_news | size %}
     <div
       class="table-responsive"
       {% if include.limit and page.announcements.scrollable and news_size > 3 %}
@@ -8,7 +9,7 @@
       {% endif %}
     >
       <table class="table table-sm table-borderless">
-        {% assign news = site.news | reverse %}
+        {% assign news = localized_news | reverse %}
         {% if include.limit and page.announcements.limit %}
           {% assign news_limit = page.announcements.limit %}
         {% else %}
@@ -16,12 +17,16 @@
         {% endif %}
         {% for item in news limit: news_limit %}
           <tr>
-            <th scope="row" style="width: 20%">{% include date_format.liquid format='short' date=item.date %}</th>
+            <th scope="row" style="width: 20%">
+              {{ item.date | date: '%b %d, %Y' }}
+            </th>
             <td>
               {% if item.inline %}
                 {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
               {% else %}
-                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                <a class="news-title" href="{{ item.url | relative_url }}">
+                  {{ item.title }}
+                </a>
               {% endif %}
             </td>
           </tr>
@@ -29,6 +34,12 @@
       </table>
     </div>
   {% else %}
-    <p>{{ site.data[site.active_lang].strings.no_news }}</p>
+    <p>
+      {% if site.active_lang == "fr" %}
+        Aucune actualité pour le moment...
+      {% else %}
+        No news so far...
+      {% endif %}
+    </p>
   {% endif %}
 </div>
