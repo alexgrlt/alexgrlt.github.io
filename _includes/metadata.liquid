@@ -37,24 +37,21 @@
 {% if page_title %}
   {% assign title_array = '' | split: ',' %}
   {% assign splitted_description_by_space = page_title | split: ' ' %}
-  {% assign lang = site.active_lang | default: site.default_lang | default: site.lang | default: 'en' %}
   {% for outer_part in splitted_description_by_space %}
     {% if outer_part contains '.' %}
-      {% assign parts = outer_part | split: '.' %}
-      {% assign k0 = parts[0] %}
-      {% assign k1 = parts[1] %}
-      {%- comment -%}
-        Try two-level key: site.data[lang].strings[k0][k1]
-        If it exists and is non-blank, use it; else keep the original token.
-      {%- endcomment -%}
-      {% assign localized = site.data[lang].strings[k0][k1] %}
-      {% if localized %}
-        {% assign title_array = title_array | push: localized %}
+      {% capture contains_localization %}{% localization_exists {{ outer_part }} %}{% endcapture %}
+      {% if contains_localization == 'true' %}
+        {% assign first_part = outer_part | split: '.' | first %}
+        {% assign last_part = outer_part | split: '.' | last %}
+        {% capture temp_var %}{{ site.data[site.active_lang].strings[first_part][last_part] }}{% endcapture %}
+        {% assign title_array = title_array | push: temp_var %}
       {% else %}
-        {% assign title_array = title_array | push: outer_part %}
+        {% capture temp_var %}{{ outer_part }}{% endcapture %}
+        {% assign title_array = title_array | push: temp_var %}
       {% endif %}
     {% else %}
-      {% assign title_array = title_array | push: outer_part %}
+      {% capture temp_var %}{{ outer_part }}{% endcapture %}
+      {% assign title_array = title_array | push: temp_var %}
     {% endif %}
   {% endfor %}
   {% assign page_title = title_array | join: ' ' %}
