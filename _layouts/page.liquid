@@ -10,15 +10,7 @@ layout: default
 
 <div class="post">
   <header class="post-header">
-    {% unless page.hide_title %}
-      <h1 class="post-title">
-        {% if page.custom_title %}
-          {{ page.custom_title }}
-        {% else %}
-          {{ page.title }}
-        {% endif %}
-      </h1>
-    {% endunless %}
+    <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-description">{{ page.description }}</p>
   </header>
 
@@ -27,7 +19,7 @@ layout: default
   </article>
 
   {% if page.related_publications %}
-    <h2>References</h2>
+    <h2>{{ site.data[site.active_lang].strings.references }}</h2>
     <div class="publications">
       {% bibliography --cited_in_order %}
     </div>
