@@ -148,6 +148,7 @@ collections:
     output: false
   projects:
     output: true
+    permalink: /projects/:title/
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
