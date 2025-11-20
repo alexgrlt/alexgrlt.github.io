@@ -5,7 +5,7 @@ title: Reading with AI: Can Technology Foster Reading Acquisition and Promote Ed
 description: Exploring the use of ML-based platforms to improve reading skills in first-grade
 img: assets/img/Livre_Lalilo_Pixabay.jpg
 importance: 1
-category: Education
+category: education
 related_publications: false
 lang: en
 ---
