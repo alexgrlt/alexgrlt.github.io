@@ -16,10 +16,22 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
+        },{id: "nav-projects",
+          title: "projects",
+          description: "An overview of the current projects I am currently involved in.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
         },{id: "news-with-a-pluridisciplinary-team-from-university-of-lyon-1-and-paris-school-of-econonomics-we-released-the-results-of-a-research-about-delaying-school-start-in-high-school-in-france-you-can-check-it-out-here",
           title: 'With a pluridisciplinary team from University of Lyon 1 and Paris School of...',
           description: "",
-          section: "News",},{
+          section: "News",},{id: "projects-",
+          title: '',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/en/Lalilo/";
+            },},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
