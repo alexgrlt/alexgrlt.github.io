@@ -26,9 +26,9 @@ ninja.data = [{
         },{id: "news-conjointement-avec-une-équipe-du-centre-de-recherche-en-neurosciences-de-lyon-nous-venons-de-publier-une-note-présentant-une-expérimentation-sur-le-report-d-horaire-de-début-des-cours-vous-pouvez-en-savoir-plus-en-lisant-cette-note-sur-le-site-du-conseil-scientifique-de-l-education-nationale-csen",
           title: 'Conjointement avec une équipe du Centre de Recherche en Neurosciences de Lyon, nous...',
           description: "",
-          section: "News",},{id: "projects-",
-          title: '',
-          description: "",
+          section: "News",},{id: "projects-reading-with-ai-can-technology-foster-reading-acquisition-and-promote-educational-equity",
+          title: 'Reading with AI. Can Technology Foster Reading Acquisition and Promote Educational Equity?',
+          description: "Exploring the use of ML-based platforms to improve reading skills in first-grade",
           section: "Projects",handler: () => {
               window.location.href = "/projects/en/Lalilo/";
             },},{

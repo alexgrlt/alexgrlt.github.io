@@ -26,9 +26,9 @@ ninja.data = [{
         },{id: "news-with-a-pluridisciplinary-team-from-university-of-lyon-1-and-paris-school-of-econonomics-we-released-the-results-of-a-research-about-delaying-school-start-in-high-school-in-france-you-can-check-it-out-here",
           title: 'With a pluridisciplinary team from University of Lyon 1 and Paris School of...',
           description: "",
-          section: "News",},{id: "projects-",
-          title: '',
-          description: "",
+          section: "News",},{id: "projects-reading-with-ai-can-technology-foster-reading-acquisition-and-promote-educational-equity",
+          title: 'Reading with AI. Can Technology Foster Reading Acquisition and Promote Educational Equity?',
+          description: "Exploring the use of ML-based platforms to improve reading skills in first-grade",
           section: "Projects",handler: () => {
               window.location.href = "/projects/en/Lalilo/";
             },},{
