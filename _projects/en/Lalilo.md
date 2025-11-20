@@ -3,7 +3,7 @@ page_id: lalilo
 layout: page
 title: Reading with AI. Can Technology Foster Reading Acquisition and Promote Educational Equity?
 description: >
-    Co-authors: [Carlo Barone](https://www.sciencespo.fr/cris/en/directory/barone-carlo/), Marc Gurgand, [Elise Huillery](https://sites.google.com/site/elisehuillery/), Thomas Villemonteix
+    Co-authors: Carlo Barone, Marc Gurgand, Elise Huillery, Thomas Villemonteix
 img: /assets/img/Livre_Lalilo_Pixabay.jpg
 importance: 1
 category: education

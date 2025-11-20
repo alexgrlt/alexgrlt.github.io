@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Projects
+title: Projets
 permalink: /projects/
-description: An overview of the current projects I am currently involved in.
+description: Une description de mes projets de recherche en cours
 nav: true
 nav_order: 3
-# display_categories: [education, labor, development]
+# display_categories: [éducation, travail, développement]
 horizontal: false
-lang: en
+lang: fr
 page-id: projects
 ---
 
