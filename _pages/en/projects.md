@@ -5,19 +5,11 @@ permalink: /projects/
 description: An overview of the current projects I am currently involved in.
 nav: true
 nav_order: 3
-display_categories: [education, labor, development]
+# display_categories: [education, labor, development]
 horizontal: false
 lang: en
 page-id: projects
 ---
-
-<p>DEBUG – active_lang = {{ site.active_lang }}</p>
-<ul>
-  {% for p in site.projects %}
-    <li>{{ p.title }} – cat: {{ p.category }} – lang: {{ p.lang }}</li>
-  {% endfor %}
-</ul>
-
 
 <!-- pages/projects.md -->
 <div class="projects">
