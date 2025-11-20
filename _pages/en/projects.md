@@ -1,15 +1,21 @@
 ---
 page_id: projects
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
 description: An overview of my current projects.
 nav: true
 nav_order: 3
 display_categories: [Education, Labor]
-horizontal: false
 lang: en
 ---
+
+<p>DEBUG: projects collection</p>
+<ul>
+  {% for p in site.projects %}
+    <li>{{ p.title }} — category: {{ p.category }} — lang: {{ p.lang }}</li>
+  {% endfor %}
+</ul>
 
 <!-- pages/projects.md -->
 <div class="projects">
