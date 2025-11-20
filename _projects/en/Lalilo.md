@@ -1,6 +1,6 @@
 ---
 page_id: lalilo
-layout: page
+layout: project
 title: Reading with AI: Can Technology Foster Reading Acquisition and Promote Educational Equity?
 description: Exploring the use of ML-based platforms to improve reading skills in first-grade
 img: assets/img/Livre_Lalilo_Pixabay.jpg
