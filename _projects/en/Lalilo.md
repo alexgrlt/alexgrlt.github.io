@@ -3,15 +3,13 @@ page_id: lalilo
 layout: page
 title: Reading with AI. Can Technology Foster Reading Acquisition and Promote Educational Equity?
 description: >
-    Exploring the use of ML-based platforms to improve reading skills in first-grade
+    Co-authors: [Carlo Barone](https://www.sciencespo.fr/cris/en/directory/barone-carlo/), Marc Gurgand, [Elise Huillery](https://sites.google.com/site/elisehuillery/), Thomas Villemonteix
 img: /assets/img/Livre_Lalilo_Pixabay.jpg
 importance: 1
-# category: education
+category: education
 related_publications: false
 lang: en
 ---
-
-Co-authors: Carlo Barone, Marc Gurgand, Elise Huillery, Thomas Villemonteix
  
 While educational technology (edtech) has been the subject of numerous studies and shows positive effects on different outcomes, evidence regarding digital tools for learning how to read in first grade remains limited. In this study, we investigate whether the use of a gamified digital platform developed by an edtech company can successfully improve first-grade students' French language skills by targeting their proximal development zone, in particular low-performing students.
 
