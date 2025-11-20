@@ -16,9 +16,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "nav-projects",
-          title: "Projects",
-          description: "An overview of the current projects I am currently involved in.",
+        },{id: "nav-projets",
+          title: "Projets",
+          description: "Une description de mes projets de recherche en cours",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -26,11 +26,11 @@ ninja.data = [{
         },{id: "news-conjointement-avec-une-équipe-du-centre-de-recherche-en-neurosciences-de-lyon-nous-venons-de-publier-une-note-présentant-une-expérimentation-sur-le-report-d-horaire-de-début-des-cours-vous-pouvez-en-savoir-plus-en-lisant-cette-note-sur-le-site-du-conseil-scientifique-de-l-education-nationale-csen",
           title: 'Conjointement avec une équipe du Centre de Recherche en Neurosciences de Lyon, nous...',
           description: "",
-          section: "News",},{id: "projects-reading-with-ai-can-technology-foster-reading-acquisition-and-promote-educational-equity",
-          title: 'Reading with AI. Can Technology Foster Reading Acquisition and Promote Educational Equity?',
-          description: "Co-authors: [Carlo Barone](https://www.sciencespo.fr/cris/en/directory/barone-carlo/), Marc Gurgand, [Elise Huillery](https://sites.google.com/site/elisehuillery/), Thomas Villemonteix",
+          section: "News",},{id: "projects-apprendre-à-lire-avec-l-39-ia-la-technologie-peut-elle-faciliter-l-39-acquisition-de-la-lecture-et-améliorer-l-39-égalité-entre-élèves",
+          title: 'Apprendre à lire avec l&amp;#39;IA. La technologie peut-elle faciliter l&amp;#39;acquisition de la lecture...',
+          description: "Co-auteurs: Carlo Barone, Marc Gurgand, Elise Huillery, Thomas Villemonteix",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/en/Lalilo/";
+              window.location.href = "/projects/fr/Lalilo/";
             },},{
         id: 'social-email',
         title: 'email',
