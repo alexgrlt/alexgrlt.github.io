@@ -30,7 +30,7 @@ ninja.data = [{
           title: 'Reading with AI. Can Technology Foster Reading Acquisition and Promote Educational Equity?',
           description: "Co-authors: Carlo Barone, Marc Gurgand, Elise Huillery, Thomas Villemonteix",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/Lalilo_en/";
+              window.location.href = "/projects/Lalilo/";
             },},{
         id: 'social-email',
         title: 'email',

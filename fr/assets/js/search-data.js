@@ -30,7 +30,7 @@ ninja.data = [{
           title: 'Apprendre à lire avec l&amp;#39;IA. La technologie peut-elle faciliter l&amp;#39;acquisition de la lecture...',
           description: "Co-auteurs: Carlo Barone, Marc Gurgand, Elise Huillery, Thomas Villemonteix",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/Lalilo_fr/";
+              window.location.href = "/projects/Lalilo/";
             },},{
         id: 'social-email',
         title: 'email',
