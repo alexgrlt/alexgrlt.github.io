@@ -14,7 +14,7 @@ ninja.data = [{
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/assets/teaching/PAPE/PAPE/";
+            window.location.href = "/assets/teaching/PAPE/";
           },
         },{id: "nav-teaching",
           title: "teaching",
