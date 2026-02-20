@@ -9,7 +9,14 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-enseignement",
+  },{id: "nav-advanced-policy-analysis-and-policy-evaluation",
+          title: "Advanced Policy Analysis and Policy Evaluation",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/teaching/PAPE";
+          },
+        },{id: "nav-enseignement",
           title: "Enseignement",
           description: "",
           section: "Navigation",
