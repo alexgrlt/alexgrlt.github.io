@@ -21,7 +21,7 @@ page_id: teaching
 **Policy Analysis and Policy Evaluation (1st year graduate students) -- Fall and Spring 2025-2026**  
 *Institution:* SciencesPo. *Role:* Teaching Assistant -- lecturer: [Clément Imbert](https://sites.google.com/site/clemimbert/) (fall) and [Justine Knebelmann](https://sites.google.com/view/justine-knebelmann/home) (spring). *Format:* 12x2h tutorials in each semester  
 *Focus:* RCTs, regressions, matching, DiD, RDD
-**Students**: You may access the [class material here]({{ '/en/_teaching/PAPE.md' | relative_url }})
+**Students**: You may access the [slides]({{ '/assets/teaching/PAPE/PAPE.md' | relative_url }})
 
 ---
 
