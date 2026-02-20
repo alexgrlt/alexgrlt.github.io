@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /teaching/PAPE
+page_id: lalilo
 title: Advanced Policy Analysis and Policy Evaluation 
 # description: Some info on the classes I am teaching.
 hide_title: true
