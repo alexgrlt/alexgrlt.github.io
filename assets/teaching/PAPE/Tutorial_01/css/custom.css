@@ -1,0 +1,63 @@
+/* ============================================================
+   Callouts (Quarto)
+   ============================================================ */
+
+.reveal .callout {
+  border-radius: 14px;
+  padding: 0.9em 1.1em;
+  margin-top: 0.8em;
+}
+
+.reveal .callout .callout-title {
+  letter-spacing: -0.02em;
+}
+
+.reveal .callout .callout-body {
+  line-height: 1.25;
+}
+
+/* Specific callout flavors (subtle but distinct) */
+
+.reveal .callout-note {
+  border-left: 6px solid #4C78A8;
+}
+
+.reveal .callout-tip {
+  border-left: 6px solid #54A24B;
+}
+
+.reveal .callout-success {
+  border-left: 6px solid #2E7D32;
+}
+
+.reveal .callout-warning {
+  border-left: 6px solid #E45756;
+}
+
+.reveal .callout-question {
+  border-left: 6px solid #F2A541;
+}
+
+/* ============================================================
+   Fragments (reveal.js)
+   ============================================================ */
+
+.reveal .fragment {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.reveal .fragment.visible {
+  opacity: 1;
+}
+
+/* ============================================================
+   Standout slides
+   ============================================================ */
+
+.reveal section.standout {
+  display: grid !important;
+  place-items: center;
+  text-align: center;
+}
+

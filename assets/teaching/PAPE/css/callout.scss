@@ -1,0 +1,41 @@
+// Source - https://stackoverflow.com/a
+// Posted by Shafee, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-01-28, License - CC BY-SA 4.0
+
+/*-- scss:defaults --*/
+$question-border-color: #F2A541 !default;
+
+$question-icon: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm0 13A6 6 0 1 1 8 2a6 6 0 0 1 0 12z"/><path d="M5.255 5.786a2.6 2.6 0 0 1 5.16.35c0 .93-.52 1.42-1.173 1.86-.606.41-1.242.77-1.242 1.73v.25a.5.5 0 0 1-1 0v-.25c0-1.55.94-2.12 1.682-2.62.61-.41.733-.62.733-1.0a1.6 1.6 0 0 0-3.19-.2.5.5 0 1 1-.97-.22z"/><path d="M8 11.5a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5z"/></svg>') !default;
+
+
+/*-- scss:rules --*/
+
+/* Reveal-only minimal styling */
+.reveal div.callout-question.callout {
+  border-left: 6px solid $question-border-color;
+  padding-left: 1rem;
+}
+
+/* Remove header background & padding */
+.reveal div.callout-question.callout-style-default > .callout-header {
+  background: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Ensure icon is visible but subtle */
+.reveal .callout-question.icon .callout-icon {
+  display: unset !important;
+  opacity: 0.8;
+}
+
+/* Inject question-mark icon */
+.reveal div.callout-question.icon.callout-captioned .callout-icon::before {
+  background-image: $question-icon;
+}
+
+/* Tight icon spacing to match minimal look */
+.reveal .callout-question.icon.callout-style-default div.callout-icon-container {
+  padding-top: 0.05em;
+  padding-right: 0.3em;
+}

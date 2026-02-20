@@ -1,0 +1,47 @@
+/* Fonts (same intent as xaringan) */
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
+@import url("https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz");
+@import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic");
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700");
+
+/* Base typography (reveal slides live inside .reveal) */
+.reveal {
+  font-family: "Droid Serif", "Palatino Linotype", "Book Antiqua", Palatino,
+               "Microsoft YaHei", "Songti SC", serif;
+}
+
+/* Headings in reveal */
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-weight: normal;
+}
+
+/* Code blocks: in reveal it's typically pre code */
+.reveal pre,
+.reveal code {
+  font-family: "Inconsolata", monospace;
+  color: #515151;
+}
+
+/* Inline code: pandoc/quarto generates code not inside pre for inline */
+.reveal :not(pre) > code {
+  font-family: "Inconsolata", monospace;
+  color: #515151;
+  background-color: rgba(217, 5, 2, 0.2);
+  border-radius: 5px;
+  padding: 0px 2px 1px 2px;
+  white-space: nowrap; /* keeps inline code compact */
+}
+
+/* Line highlighting:
+   Quarto can emit highlighted lines with classes like .highlight-line
+   and/or code spans; depending on engine/theme this may vary.
+   These selectors cover common cases in Quarto+reveal. */
+.reveal pre code .highlight-line,
+.reveal pre code span.highlight-line,
+.reveal pre code .hljs-ln-line.highlighted {
+  background-color: #ffff88;
+  display: block; /* ensures the background fills the whole line */
+}
