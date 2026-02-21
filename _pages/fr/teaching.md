@@ -22,6 +22,8 @@ page_id: teaching
 *Institution :* SciencesPo. *Rôle :* Assistant d'enseignement -- professeurs : [Clément Imbert](https://sites.google.com/site/clemimbert/) (automne) et [Justine Knebelmann](https://sites.google.com/view/justine-knebelmann/home) (printemps). *Format:* 12x2h travaux dirigés par semestre. *Langue :* anglais.  
 *Notions:* évaluation d'impact randomisée, régressions, méthodes d'appariemment, DiD, RDD
 
+**Etudiants**: Les [diapositives et exercices]({{ '/assets/teaching/PAPE/' | relative_url }}) du cours sont accessibles avec le mot de passe qui vous a été transmis.
+
 ---
 
 **Causal statistics for treatment models (L3 d'économie et M1 de sciences cognitives) -- Printemps 2025-2026 et Printemps 2024-2025**  
