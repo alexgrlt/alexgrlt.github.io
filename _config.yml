@@ -10,7 +10,8 @@ last_name: Grellet
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   After 2 years spent as a research associate at J-PAL Europe, I am now a PhD student at the Department of Economics, Sciences Po. I am working on the evaluation of education policies in France.
 footer_text: >
-  Powered by [Jekyll](https://jekyllrb.com/) with [al-folio](https://github.com/alshedivat/al-folio) theme. Hosted by [GitHub Pages](https://pages.github.com/).
+  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
+  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>..
 keywords: Education, Economics, Policy evaluation # add your own keywords or leave empty
 # lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 😸 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
