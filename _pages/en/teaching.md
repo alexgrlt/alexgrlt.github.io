@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /teaching/
-title: teaching
+title: Teaching
 # description: Some info on the classes I am teaching.
 hide_title: true
 nav: true
