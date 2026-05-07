@@ -26,7 +26,12 @@ ninja.data = [{
         },{id: "news-with-a-pluridisciplinary-team-from-university-of-lyon-1-and-paris-school-of-econonomics-we-released-the-results-of-a-research-about-delaying-school-start-in-high-school-in-france-you-can-check-it-out-here",
           title: 'With a pluridisciplinary team from University of Lyon 1 and Paris School of...',
           description: "",
-          section: "News",},{id: "projects-reading-with-ai-can-technology-foster-reading-acquisition-and-promote-educational-equity",
+          section: "News",},{id: "projects-delaying-school-start-in-adolescence-dessa",
+          title: 'Delaying School Start in Adolescence (DESSA)',
+          description: "Co-authors: Stéphanie Mazza, Eve Reynaud, Amandine Rey, Lucie Malevergne, Adrien Pawlik, Marc Gurgand",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/DESSA/";
+            },},{id: "projects-reading-with-ai-can-technology-foster-reading-acquisition-and-promote-educational-equity",
           title: 'Reading with AI. Can Technology Foster Reading Acquisition and Promote Educational Equity?',
           description: "Co-authors: Carlo Barone, Marc Gurgand, Elise Huillery, Thomas Villemonteix",
           section: "Projects",handler: () => {

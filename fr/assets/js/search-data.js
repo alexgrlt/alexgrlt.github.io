@@ -26,7 +26,12 @@ ninja.data = [{
         },{id: "news-conjointement-avec-une-équipe-du-centre-de-recherche-en-neurosciences-de-lyon-nous-venons-de-publier-une-note-présentant-une-expérimentation-sur-le-report-d-horaire-de-début-des-cours-vous-pouvez-en-savoir-plus-en-lisant-cette-note-sur-le-site-du-conseil-scientifique-de-l-education-nationale-csen",
           title: 'Conjointement avec une équipe du Centre de Recherche en Neurosciences de Lyon, nous...',
           description: "",
-          section: "News",},{id: "projects-apprendre-à-lire-avec-l-39-ia-la-technologie-peut-elle-faciliter-l-39-acquisition-de-la-lecture-et-améliorer-l-39-égalité-entre-élèves",
+          section: "News",},{id: "projects-delaying-school-start-in-adolescence-dessa",
+          title: 'Delaying School Start in Adolescence (DESSA)',
+          description: "Co-authors: Stéphanie Mazza, Eve Reynaud, Amandine Rey, Lucie Malevergne, Adrien Pawlik, Marc Gurgand",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/DESSA/";
+            },},{id: "projects-apprendre-à-lire-avec-l-39-ia-la-technologie-peut-elle-faciliter-l-39-acquisition-de-la-lecture-et-améliorer-l-39-égalité-entre-élèves",
           title: 'Apprendre à lire avec l&amp;#39;IA. La technologie peut-elle faciliter l&amp;#39;acquisition de la lecture...',
           description: "Co-auteurs: Carlo Barone, Marc Gurgand, Elise Huillery, Thomas Villemonteix",
           section: "Projects",handler: () => {
