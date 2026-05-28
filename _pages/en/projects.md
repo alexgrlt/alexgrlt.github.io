@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: An overview of the current projects I am currently involved in.
+description: An overview of my projects.
 nav: true
 nav_order: 3
 # display_categories: [education, labor, development]
