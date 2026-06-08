@@ -1,0 +1,130 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Alexandre Grellet
+    - name: Position
+      value: PhD Student, Department of Economics, Sciences Po
+    - name: Email
+      value: alexandre.grellet[at]sciencespo.fr
+    - name: Languages
+      value: French, English
+
+- title: Education
+  type: time_table
+  contents:
+    - title: PhD in Economics (in preparation)
+      institution: Sciences Po Paris, Paris, France
+      year: 2025 - 2028
+      description:
+        - Specializing in the evaluation of public policies, with an expertise on education policies, particularly in France.
+    - title: Master's in Economics (Cum Laude)
+      institution: Sciences Po Paris, Paris, France
+      year: 2021 - 2023
+      description:
+        - Certificate available online.
+    - title: Undergraduate in Applied Mathematics and Computer Science (MIASHS), with Highest Honours
+      institution: Université Paris 1 Panthéon-Sorbonne, Paris, France
+      year: 2018 - 2021
+      description:
+        - Dual degree between Paris 1 and Sciences Po Paris (SMASS).
+        - title: Courses
+          contents:
+            - Real analysis, linear and bilinear algebra, probability and statistics (covering measure theory).
+            - Coding (Python and SQL), methods in computer science (advantages and limits of classes of algorithms).
+    - title: Bachelor, Economics and Societies Major
+      institution: Sciences Po Paris, Paris, France
+      year: 2018 - 2021
+      description:
+        - Dual degree between Paris 1 and Sciences Po Paris (SMASS).
+        - title: Courses
+          contents:
+            - Microeconomics, digital sociology, history of the welfare state, history of the XIXth and XXth centuries.
+            - Political science, sociology.
+
+- title: Research Experience
+  type: time_table
+  contents:
+    - title: Researcher – Lalilo Project
+      institution: France
+      year: Ongoing
+      description:
+        - Principal Investigators C. Barone and E. Huillery.
+        - Impact evaluation of an edtech aiming to help students learn how to read, currently running in 200+ schools.
+    - title: Researcher – Quantification of the Effects of School Evaluation in France
+      institution: France
+      year: Ongoing
+      description:
+        - Quantifying the effects of school evaluation guided by the Conseil d'Evaluation de l'Ecole.
+        - Assessing whether evaluations induce meaningful improvement in students' learning outcomes.
+        - Planning cost-benefit analysis to compare this intervention to other policies such as teacher inspections.
+    - title: Researcher – Mobility within the French Education System
+      institution: France
+      year: Ongoing
+      description:
+        - Co-author M. Gurgand.
+        - Assessing the extent to which there is mobility in the French education system at primary and secondary school levels.
+        - Estimating the joint distribution of early- and late-achievement and its policy implications.
+    - title: Researcher – ICC Project
+      institution: IDEE / J-PAL Europe, France
+      year: Ongoing
+      description:
+        - Compiled an open-source database of intra-cluster correlation coefficients in the field of education in France.
+        - Coefficients are integrated into the IDEE power calculator.
+
+- title: Professional Experience
+  type: time_table
+  contents:
+    - title: Research Associate – IDEE Program
+      institution: J-PAL Europe, Paris, France
+      year: 2023 - 2025
+      description:
+        - Supporting researchers in the design of randomized controlled trials (randomization level, power calculations, statistical analyses).
+        - Delivering methodological trainings for researchers and PhD students on power calculations, ITT vs LATE, encouragement designs, attrition, and GDPR compliance.
+        - Delivering introductory trainings in impact evaluation to civil servants.
+        - Leading the release of the IDEE power calculator.
+    - title: Research Assistant
+      institution: Centre de Recherche en Economie et STatistiques (CREST), Palaiseau, France
+      year: 2022 - 2023
+      description:
+        - Elaborating an RCT testing a gamified approach to improve self-efficacy of jobseekers, in partnership with France Travail (formerly Pôle Emploi).
+
+- title: Teaching Experience
+  type: time_table
+  contents:
+    - title: Teacher – Causal Statistics for Treatment Models
+      institution: ENS-PSL, Paris, France
+      year: 2024 - now
+      description:
+        - Joint course for third-year undergraduate students in economics and first-year graduate students in cognitive science.
+        - title: Topics covered
+          contents:
+            - Rubin potential outcome framework, randomized controlled trials, instrumental variables.
+            - Regression discontinuity designs, difference-in-differences.
+            - Introduction to machine learning for estimation of conditional average treatment effects (causal trees and forests).
+    - title: Teaching Assistant – Policy Analysis and Policy Evaluation
+      institution: Sciences Po Paris, Paris, France
+      year: 2024 - now
+      description:
+        - Course in the Master of Public Affairs, economics track. Lecturers Clément Imbert (fall) and Justine Knebellmann (spring).
+        - Topics include linear regression, matching, RCTs, regression discontinuity design, difference-in-differences, and instrumental variables.
+    - title: Teacher – Introduction to Statistics
+      institution: Sciences Po Paris, Paris, France
+      year: 2024 - 2025
+      description:
+        - Introductory course for first-year undergraduate students.
+        - title: Topics covered
+          contents:
+            - Standard measures (means, standard deviations, variance, quantiles), bivariate analysis, sampling.
+            - Statistical tests (chi-2, t-test), confidence intervals, significance level, linear regression, data visualization.
+    - title: Teaching Assistant – Evaluating Social Programs
+      institution: J-PAL Europe, Rabat, Morocco
+      year: 2024
+      description:
+        - Week-long training on randomized evaluations, their design and implementation, and evidence-based policy applications.
+    - title: Teaching Assistant – Introduction to Digital Culture and Skills
+      institution: University Paris 1, Paris, France
+      year: 2019 - 2022
+      description:
+        - Course by Prof. Valérie Monfort.
+        - Taught classes, proposed and graded in-class exams and homeworks, monitored final exams.
