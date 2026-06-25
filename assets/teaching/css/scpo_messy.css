@@ -1,0 +1,262 @@
+/* ============================================================
+   ScPo revealjs (Quarto) — FULL CSS (robust)
+   Fixes:
+   - no reveal layout breakage
+   - no background bleed
+   - title logo ABOVE text without overlap
+   ============================================================ */
+
+:root{
+  --scpo-red: #d90502;
+  --scpo-grey: #515151;
+  --scpo-dark: #353632;
+  --scpo-blue: #0729a6;
+  --scpo-lightgrey: #818181;
+
+  --slide-font-size: 23px;
+  --slide-pad-left: 100px;
+
+  /* Asset */
+  --title-logo-url: url("../img/logo/ScPo-econ.png");
+
+  /* ===== Title slide knobs (these two fix your overlap) ===== */
+  --title-logo-x: 30px;
+  --title-logo-y: 24px;
+
+  /* ↓ your screenshot shows the logo is WAY too big: shrink it */
+  --title-logo-width: 320px;
+
+  /* ↓ push all title text below the logo */
+  --title-content-y: 190px;
+
+  --footnote-font-size: 85%;
+}
+
+/* ============================================================
+   1) Never break reveal layout
+   ============================================================ */
+.reveal{
+  font-size: var(--slide-font-size);
+  color: var(--scpo-dark);
+}
+.reveal, .reveal *{ box-sizing: border-box; }
+
+/* ============================================================
+   2) Stack-safe backgrounds (no bleed)
+   ============================================================ */
+.reveal .slides section.stack{
+  background: transparent !important;
+  background-image: none !important;
+}
+.reveal .slides section:not(.stack){
+  background-color: #fff;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.reveal .slides section.stack > section{
+  background-color: #fff;
+  background-image: none;
+}
+
+/* ============================================================
+   3) Baseline slide styling
+   ============================================================ */
+.reveal .slides section:not(#title-slide):not(.title-slide-section-red):not(.title-slide-section-grey){
+  text-align: left;
+  padding-left: var(--slide-pad-left);
+  text-shadow: none;
+}
+.reveal .slides section .slide-content{
+  padding-left: inherit;
+  font-size: inherit;
+}
+
+.reveal h1{ color: var(--scpo-red); }
+.reveal h2{ color: var(--scpo-grey); }
+.reveal h3{ color: var(--scpo-grey); }
+
+.reveal ul, .reveal ol{ margin-top: 0.4em; }
+.reveal li{ margin: 0.25em 0; }
+
+.reveal a, .reveal a > code{
+  color: var(--scpo-red);
+  text-decoration: none;
+}
+.reveal a:hover{ text-decoration: underline; }
+
+.reveal pre{ margin: 0 0 0.3em 0; }
+.reveal pre, .reveal code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.reveal img, .reveal video, .reveal iframe{ max-width: 100%; }
+
+.reveal blockquote{
+  border-left: solid 5px lightgray;
+  padding-left: 1em;
+}
+
+/* ============================================================
+   4) Footnotes
+   ============================================================ */
+.reveal .footnote,
+.reveal .footnotes{
+  position: absolute;
+  bottom: 1em;
+  left: 0;
+  right: 0;
+  padding-left: var(--slide-pad-left);
+  padding-right: 4em;
+  font-size: var(--footnote-font-size);
+  max-height: 30%;
+  overflow: auto;
+}
+
+/* ============================================================
+   5) Inverse slides
+   ============================================================ */
+.reveal .slides section.inverse{
+  background-color: #ffebf0;
+  color: var(--scpo-dark);
+}
+.reveal .slides section.inverse h1,
+.reveal .slides section.inverse h2,
+.reveal .slides section.inverse h3{
+  color: var(--scpo-blue);
+  line-height: 1.1;
+}
+.reveal .slides section.inverse pre,
+.reveal .slides section.inverse code{
+  background-color: #e0e1df;
+}
+
+/* ============================================================
+   6) Columns
+   ============================================================ */
+.reveal .left-column{ color:#777; width:25%; height:92%; float:left; }
+.reveal .right-column{ width:70%; float:right; padding-top:1em; }
+.reveal .pull-left{ float:left; width:48%; }
+.reveal .pull-right{ float:right; width:48%; }
+.reveal .pull-right ~ *{ clear:both; }
+.reveal .clearfix::after{ content:""; display:table; clear:both; }
+
+.reveal .columns{ display:flex; gap:2%; align-items:flex-start; }
+.reveal .columns > .col{ flex:1 1 0; }
+
+/* ============================================================
+   TITLE SLIDE — CORRECT IMPLEMENTATION
+   Logo is a real block (no background hacks)
+   ============================================================ */
+
+/* Base title slide */
+.reveal .slides section#title-slide{
+  background-color: #fff !important;
+  padding-left: 0 !important;
+  text-align: left !important;
+}
+
+/* Insert logo as a real block ABOVE content */
+.reveal .slides section#title-slide::before{
+  content: "";
+  display: block;
+
+  /* Logo image */
+  background-image: url("../img/logo/ScPo-econ.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: contain;
+
+  /* REAL HEIGHT → pushes content down safely */
+  height: 120px;              /* adjust once, never breaks again */
+  margin: 24px 0 20px 100px;  /* left aligns with text */
+
+  /* Prevent interaction with reveal layout */
+  pointer-events: none;
+}
+
+/* Title content */
+.reveal .slides section#title-slide .quarto-title-block{
+  display: block !important;
+  margin: 0 !important;
+  padding-left: 100px !important;
+  width: 100%;
+}
+
+/* Typography */
+.reveal .slides section#title-slide .title{
+  font-size: 45px;
+  font-weight: normal;
+  color: var(--scpo-grey);
+  margin: 0 0 10px 0;
+  line-height: 1.1;
+}
+
+.reveal .slides section#title-slide .subtitle{
+  font-size: 35px;
+  color: var(--scpo-red);
+  margin: 0 0 16px 0;
+}
+
+/* Author + date */
+.reveal .slides section#title-slide .quarto-title-authors,
+.reveal .slides section#title-slide .quarto-title-author{
+  display: block;
+  float: none;
+  margin: 0;
+}
+
+.reveal .slides section#title-slide .quarto-title-author-name,
+.reveal .slides section#title-slide .quarto-title-affiliation,
+.reveal .slides section#title-slide .date{
+  font-size: 28px;
+  color: #666;
+  margin: 0;
+  line-height: 1.15;
+}
+
+.reveal .slides section#title-slide .date{
+  margin-top: 12px;
+}
+
+/* Hide slide number */
+.reveal .slides section#title-slide .slide-number{
+  display: none !important;
+}
+
+
+/* ============================================================
+   8) Section dividers
+   ============================================================ */
+.reveal .slides section.title-slide-section-red{
+  background-color: var(--scpo-red) !important;
+  padding-left: var(--slide-pad-left);
+  text-align: left;
+}
+.reveal .slides section.title-slide-section-grey{
+  background-color: var(--scpo-grey) !important;
+  padding-left: var(--slide-pad-left);
+  text-align: left;
+}
+.reveal .slides section.title-slide-section-red h1,
+.reveal .slides section.title-slide-section-red h2,
+.reveal .slides section.title-slide-section-red h3,
+.reveal .slides section.title-slide-section-red p,
+.reveal .slides section.title-slide-section-grey h1,
+.reveal .slides section.title-slide-section-grey h2,
+.reveal .slides section.title-slide-section-grey h3,
+.reveal .slides section.title-slide-section-grey p{
+  color: #fff;
+}
+.reveal .slides section.title-slide-section-red a{ color: var(--scpo-grey); }
+
+/* Helpers */
+.reveal strong, .reveal .ScPored{ color: var(--scpo-red); }
+.reveal .blue{ color:#0000CC; font-weight:bold; }
+.reveal .grey{ color: var(--scpo-grey); }
+.reveal .lightgrey{ color: var(--scpo-lightgrey); }
+.reveal .black{ color:#000; font-weight:bold; }
+.reveal .white{ color:#fff; }
+
+@page{ margin: 0; }

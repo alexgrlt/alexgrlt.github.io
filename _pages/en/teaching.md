@@ -16,6 +16,8 @@ page_id: teaching
 *Institution:* SciencesPo. *Role:* Instructor . *Format:* 6x2h lectures + 6x2h tutorials  
 *Focus:* multivariate calculus, linear algebra, integration, optimization.  
 
+**Students**: You may access the [slides]({{ '/assets/teaching/mathcamp/' | relative_url }})
+
 ---
 
 **Policy Analysis and Policy Evaluation (1st year graduate students) -- Fall and Spring 2025-2026**  

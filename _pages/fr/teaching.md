@@ -16,6 +16,8 @@ page_id: teaching
 *Institution :* SciencesPo. *Rôle :* Enseignant. *Format :* 6x2h cours magistral + 6x2h travaux dirigés. *Langue :* anglais.   
 *Notions :* Analyse réelle, algèbre linéaire, intégration, optimisation.  
 
+**Etudiants**: Les [diapositives et exercices]({{ '/assets/teaching/mathcamp/' | relative_url }}) du cours sont accessibles avec le mot de passe qui vous a été transmis.
+
 ---
 
 **Analyse et évaluation des politiques publiques (M1 d'affaires publiques, spécalité politiques économiques) -- Automne et Printemps 2025-2026**  
