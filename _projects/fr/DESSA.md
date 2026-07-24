@@ -17,5 +17,5 @@ Nous avons testé si décaler le début des cours d'une seule heure, de 8h à 9h
 
 En fin d'année scolaire, les élèves du groupe commençant à 9 h dormaient 26 minutes de plus par nuit que leurs pairs commençant à 8 h, sans modification de leur heure de coucher. Leur anxiété et leur somnolence ont diminué, tandis qu'elles augmentaient dans le groupe commençant à 8 h. Ces tailles d'effet sont importantes au regard des standards habituels des interventions éducatives, alors même qu'elles ont été obtenues par un simple ajustement d'horaire, sans ressources supplémentaires.
 
-Cette étude a été acceptée pour publication dans la revue Scientific Reports.
+Cette étude a été publiée dans la revue [Scientific Reports](https://doi.org/10.1038/s41598-026-50892-6).
 
