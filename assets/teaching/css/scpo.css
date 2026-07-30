@@ -15,7 +15,7 @@
   --slide-pad-left:  0;
 
   /* Asset logo haut */
-  --title-logo-url: url("ScPo-econ.png");
+  --title-logo-url: url("../img/logo/ScPo-econ.png");
 
   /* ===== Logo haut-gauche : ajustez ces deux variables ===== */
   --title-logo-height:      120px;  /* hauteur du bloc logo              */
