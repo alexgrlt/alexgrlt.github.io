@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.9.38">
 
   <meta name="author" content="Alexandre Grellet">
-  <meta name="dcterms.date" content="2026-07-31">
+  <meta name="dcterms.date" content="2026-08-26">
   <title>Math Camp</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -32,6 +32,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
     /* CSS for citations */
     div.csl-bib-body { }
     div.csl-entry {
@@ -194,7 +260,7 @@ Alexandre Grellet
 </div>
 </div>
 
-  <p class="date">2026-07-31</p>
+  <p class="date">2026-08-26</p>
 </section>
 <section>
 <section id="section" class="title-slide slide level1 standout-red center">
@@ -293,8 +359,8 @@ Alexandre Grellet
 </div>
 </div>
 </section>
-<section id="a-non-example-when-closure-fails" class="slide level2">
-<h2>A non-example: when closure fails</h2>
+<section id="a-negative-example-when-closure-fails" class="slide level2">
+<h2>A negative example: when closure fails</h2>
 <div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -373,7 +439,7 @@ Alexandre Grellet
 </section>
 <section id="example-linear-dependence-in-mathbbr2" class="slide level2">
 <h2>Example: linear dependence in <span class="math inline">\(\mathbb{R}^2\)</span></h2>
-<p>Let <span class="math inline">\(v_1 = (1,2),\quad v_2 = (2,4)\)</span>. We ask: does there exist <span class="math inline">\(c_1, c_2 \neq 0\)</span> such that <span class="math inline">\(c_1 v_1 + c_2 v_2 = (0,0)\)</span>?</p>
+<p>Let <span class="math inline">\(v_1 = (1,2),\quad v_2 = (2,4)\)</span>. We ask: does there exist <span class="math inline">\(c_1, c_2 \neq (0,0)\)</span> such that <span class="math inline">\(c_1 v_1 + c_2 v_2 = (0,0)\)</span>?</p>
 <div class="fragment">
 <div class="callout callout-note no-icon callout-style-simple">
 <div class="callout-body">
@@ -431,33 +497,6 @@ c_1=c_2=c_3=0,\]</span></p>
 </div>
 </div>
 <p>Three mutually perpendicular directions, none reachable from the other two (the most standard basis there is).</p>
-</section>
-<section id="why-do-we-care" class="slide level2">
-<h2>Why do we care?</h2>
-<ul>
-<li><strong>A.</strong> Economists love complicated things.</li>
-<li><strong>B.</strong> It’s random teaching to verify whether you are alive.</li>
-<li><strong>C.</strong> It turns out to be crucial for techniques that establish relationships between outcomes and causes.</li>
-<li><strong>D.</strong> Mathematical rigor provides important skills in life.</li>
-<li><strong>E.</strong> You are clever students and deserve to know the math behind what you will study.</li>
-<li><strong>F.</strong> The consumer’s budget set is always represented by a linear constraint.</li>
-</ul>
-<div class="fragment">
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Answer</strong></p>
-</div>
-<div class="callout-content">
-<p>In practice, mainly <strong>C</strong> (but also <strong>D</strong> and <strong>E</strong>).</p>
-<p>Concretely: OLS, IV, PCA, dynamic stability analysis (all of these reduce to questions about column spaces, rank, and eigenvalues.</p>
-</div>
-</div>
-</div>
-</div>
 </section>
 <section id="dot-product-and-orthogonality" class="slide level2 scrollable">
 <h2>Dot product and orthogonality</h2>
@@ -527,10 +566,10 @@ c_1=c_2=c_3=0,\]</span></p>
 <div class="callout-content">
 <p><strong>Solve for it directly.</strong> <span class="math inline">\(\operatorname{proj}_v(u)\)</span> has to sit somewhere on the line spanned by <span class="math inline">\(v\)</span>, so it’s <em>some</em> multiple of <span class="math inline">\(v\)</span> (call it <span class="math inline">\(cv\)</span>). The one property that pins down <span class="math inline">\(c\)</span> is that the leftover piece must be perpendicular to <span class="math inline">\(v\)</span>:</p>
 <p><span class="math display">\[(u-cv)\cdot v = 0 \;\;\Longrightarrow\;\; u\cdot v = c\,(v\cdot v) \;\;\Longrightarrow\;\; c = \frac{u\cdot v}{v\cdot v}.\]</span></p>
-<p>Nothing to memorise: it’s just “which multiple of <span class="math inline">\(v\)</span> makes the leftover piece orthogonal to <span class="math inline">\(v\)</span>?”</p>
 </div>
 </div>
 </div>
+<p><span class="forestgreen">Would this still work if we wanted to project onto a plane instead of a line?</span></p>
 </section>
 <section id="orthogonal-projection-onto-a-line-example" class="slide level2">
 <h2>Orthogonal projection onto a line: example</h2>
@@ -553,7 +592,7 @@ c_1=c_2=c_3=0,\]</span></p>
 </section>
 <section id="orthogonal-projection-onto-a-subspace" class="slide level2 scrollable">
 <h2>Orthogonal projection onto a subspace</h2>
-<p>A line only lets you move in <em>one</em> direction. The plane <span class="math inline">\(S\)</span> has two independent directions in it, you can’t eyeball the closest point anymore: you need algebra. Here is the example we will carry through the next two slides, all the way to a finished formula:</p>
+<p>A line only lets you move in <em>one</em> direction. The plane <span class="math inline">\(S\)</span> has two independent directions in it, you can’t eyeball the closest point anymore: you need algebra.</p>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -621,8 +660,8 @@ A^\top A = \begin{pmatrix}2&amp;1\\1&amp;2\end{pmatrix}, \qquad A^\top u = \begi
 \;\;\Longrightarrow\;\; \hat u = 2a_1+1a_2 = (2,3,1), \quad u-\hat u = (1,-1,1).\]</span></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="plotly html-widget html-fill-item" id="htmlwidget-fb27f87b34a839e6ed91" style="width:960px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-fb27f87b34a839e6ed91">{"x":{"visdat":{"6748d61429b":["function () ","plotlyVisDat"]},"cur_data":"6748d61429b","attrs":{"6748d61429b":{"x":[-1,2,2,-1],"y":[-2,1,4,1],"z":[-1,-1,2,2],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"mesh3d"},"6748d61429b.1":{"x":[0,3],"y":[0,2],"z":[0,2],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d","mode":"lines","line":{"color":"#111111","width":9},"inherit":true},"6748d61429b.2":{"x":3,"y":2,"z":2,"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"cone","u":3,"v":2,"w":2,"anchor":"tip","colorscale":[[0,"#111111"],[1,"#111111"]],"showscale":false,"sizemode":"absolute","sizeref":0.5,"inherit":true},"6748d61429b.3":{"x":3.3600000000000003,"y":2.2400000000000002,"z":2.2400000000000002,"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d","mode":"text","text":"<b>u = (3,2,2)<\/b>","textfont":{"color":"#111111","size":15},"inherit":true},"6748d61429b.4":{"x":[0,2],"y":[0,3],"z":[0,1],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d","mode":"lines","line":{"color":"#1e4d8f","width":9},"inherit":true},"6748d61429b.5":{"x":2,"y":3,"z":1,"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"cone","u":2,"v":3,"w":1,"anchor":"tip","colorscale":[[0,"#1e4d8f"],[1,"#1e4d8f"]],"showscale":false,"sizemode":"absolute","sizeref":0.5,"inherit":true},"6748d61429b.6":{"x":-0.69999999999999996,"y":2.8999999999999999,"z":0.69999999999999996,"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d","mode":"text","text":"<b>proj_S(u) = (2,3,1)<\/b>","textfont":{"color":"#1e4d8f","size":14},"inherit":true},"6748d61429b.7":{"x":[2,3],"y":[3,2],"z":[1,2],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d","mode":"lines","line":{"color":"#c0392b","width":7,"dash":"dash"},"inherit":true},"6748d61429b.8":{"x":3,"y":2,"z":2,"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"cone","u":1,"v":-1,"w":1,"anchor":"tip","colorscale":[[0,"#c0392b"],[1,"#c0392b"]],"showscale":false,"sizemode":"absolute","sizeref":0.34999999999999998,"inherit":true},"6748d61429b.9":{"x":3.2999999999999998,"y":0.29999999999999999,"z":1.6000000000000001,"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d","mode":"text","text":"<b>u − proj_S(u) = (1,−1,1)<\/b>","textfont":{"color":"#c0392b","size":14},"inherit":true},"6748d61429b.10":{"x":0,"y":0,"z":0,"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d","mode":"markers+text","marker":{"size":4,"color":"#111111"},"text":"O","textposition":"bottom center","textfont":{"color":"#111111","size":14},"inherit":true},"6748d61429b.11":{"x":1.6499999999999999,"y":2.6499999999999999,"z":1.3500000000000001,"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d","mode":"text","text":"<b>⊥<\/b>","textfont":{"color":"#111111","size":20},"inherit":true},"6748d61429b.12":{"x":2.1000000000000001,"y":3.1000000000000001,"z":-1.3,"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d","mode":"text","text":"<b>S<\/b>","textfont":{"color":"#1f3a63","size":18},"inherit":true}},"layout":{"height":440,"margin":{"b":0,"l":0,"t":0,"r":0},"paper_bgcolor":"white","plot_bgcolor":"white","scene":{"xaxis":{"title":"","showticklabels":false,"showbackground":true,"backgroundcolor":"white","gridcolor":"#ddd","zerolinecolor":"#999"},"yaxis":{"title":"","showticklabels":false,"showbackground":true,"backgroundcolor":"white","gridcolor":"#ddd","zerolinecolor":"#999"},"zaxis":{"title":"","showticklabels":false,"showbackground":true,"backgroundcolor":"white","gridcolor":"#ddd","zerolinecolor":"#999"},"aspectmode":"data","camera":{"eye":{"x":1.6000000000000001,"y":1.3,"z":0.90000000000000002}}},"xaxis":{"title":[]},"yaxis":{"title":[]},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"data":[{"colorbar":{"title":"","ticklen":2},"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":true,"x":[-1,2,2,-1],"y":[-2,1,4,1],"z":[-1,-1,2,2],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"type":"mesh3d","frame":null},{"x":[0,3],"y":[0,2],"z":[0,2],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":["skip","skip"],"showlegend":false,"type":"scatter3d","mode":"lines","line":{"color":"#111111","width":9},"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"frame":null},{"colorbar":{"title":"","ticklen":2},"colorscale":[[0,"#111111"],[1,"#111111"]],"showscale":false,"x":[3],"y":[2],"z":[2],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"type":"cone","u":[3],"v":[2],"w":[2],"anchor":"tip","sizemode":"absolute","sizeref":0.5,"frame":null},{"x":[3.3600000000000003],"y":[2.2400000000000002],"z":[2.2400000000000002],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"type":"scatter3d","mode":"text","text":"<b>u = (3,2,2)<\/b>","textfont":{"color":"#111111","size":15},"marker":{"color":"rgba(214,39,40,1)","line":{"color":"rgba(214,39,40,1)"}},"error_y":{"color":"rgba(214,39,40,1)"},"error_x":{"color":"rgba(214,39,40,1)"},"line":{"color":"rgba(214,39,40,1)"},"frame":null},{"x":[0,2],"y":[0,3],"z":[0,1],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":["skip","skip"],"showlegend":false,"type":"scatter3d","mode":"lines","line":{"color":"#1e4d8f","width":9},"marker":{"color":"rgba(148,103,189,1)","line":{"color":"rgba(148,103,189,1)"}},"error_y":{"color":"rgba(148,103,189,1)"},"error_x":{"color":"rgba(148,103,189,1)"},"frame":null},{"colorbar":{"title":"","ticklen":2},"colorscale":[[0,"#1e4d8f"],[1,"#1e4d8f"]],"showscale":false,"x":[2],"y":[3],"z":[1],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"type":"cone","u":[2],"v":[3],"w":[1],"anchor":"tip","sizemode":"absolute","sizeref":0.5,"frame":null},{"x":[-0.69999999999999996],"y":[2.8999999999999999],"z":[0.69999999999999996],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"type":"scatter3d","mode":"text","text":"<b>proj_S(u) = (2,3,1)<\/b>","textfont":{"color":"#1e4d8f","size":14},"marker":{"color":"rgba(227,119,194,1)","line":{"color":"rgba(227,119,194,1)"}},"error_y":{"color":"rgba(227,119,194,1)"},"error_x":{"color":"rgba(227,119,194,1)"},"line":{"color":"rgba(227,119,194,1)"},"frame":null},{"x":[2,3],"y":[3,2],"z":[1,2],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":["skip","skip"],"showlegend":false,"type":"scatter3d","mode":"lines","line":{"color":"#c0392b","width":7,"dash":"dash"},"marker":{"color":"rgba(127,127,127,1)","line":{"color":"rgba(127,127,127,1)"}},"error_y":{"color":"rgba(127,127,127,1)"},"error_x":{"color":"rgba(127,127,127,1)"},"frame":null},{"colorbar":{"title":"","ticklen":2},"colorscale":[[0,"#c0392b"],[1,"#c0392b"]],"showscale":false,"x":[3],"y":[2],"z":[2],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"type":"cone","u":[1],"v":[-1],"w":[1],"anchor":"tip","sizemode":"absolute","sizeref":0.34999999999999998,"frame":null},{"x":[3.2999999999999998],"y":[0.29999999999999999],"z":[1.6000000000000001],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"type":"scatter3d","mode":"text","text":"<b>u − proj_S(u) = (1,−1,1)<\/b>","textfont":{"color":"#c0392b","size":14},"marker":{"color":"rgba(23,190,207,1)","line":{"color":"rgba(23,190,207,1)"}},"error_y":{"color":"rgba(23,190,207,1)"},"error_x":{"color":"rgba(23,190,207,1)"},"line":{"color":"rgba(23,190,207,1)"},"frame":null},{"x":[0],"y":[0],"z":[0],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"type":"scatter3d","mode":"markers+text","marker":{"color":"#111111","size":4,"line":{"color":"rgba(31,119,180,1)"}},"text":"O","textposition":"bottom center","textfont":{"color":"#111111","size":14},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"frame":null},{"x":[1.6499999999999999],"y":[2.6499999999999999],"z":[1.3500000000000001],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"type":"scatter3d","mode":"text","text":"<b>⊥<\/b>","textfont":{"color":"#111111","size":20},"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"line":{"color":"rgba(255,127,14,1)"},"frame":null},{"x":[2.1000000000000001],"y":[3.1000000000000001],"z":[-1.3],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"type":"scatter3d","mode":"text","text":"<b>S<\/b>","textfont":{"color":"#1f3a63","size":18},"marker":{"color":"rgba(44,160,44,1)","line":{"color":"rgba(44,160,44,1)"}},"error_y":{"color":"rgba(44,160,44,1)"},"error_x":{"color":"rgba(44,160,44,1)"},"line":{"color":"rgba(44,160,44,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-5292c06f7ea5ae5b395b" style="width:960px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-5292c06f7ea5ae5b395b">{"x":{"visdat":{"53e8462161bb":["function () ","plotlyVisDat"]},"cur_data":"53e8462161bb","attrs":{"53e8462161bb":{"x":[-1,2,2,-1],"y":[-2,1,4,1],"z":[-1,-1,2,2],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"mesh3d"},"53e8462161bb.1":{"x":[0,3],"y":[0,2],"z":[0,2],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d","mode":"lines","line":{"color":"#111111","width":9},"inherit":true},"53e8462161bb.2":{"x":3,"y":2,"z":2,"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"cone","u":3,"v":2,"w":2,"anchor":"tip","colorscale":[[0,"#111111"],[1,"#111111"]],"showscale":false,"sizemode":"absolute","sizeref":0.5,"inherit":true},"53e8462161bb.3":{"x":3.3600000000000003,"y":2.2400000000000002,"z":2.2400000000000002,"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d","mode":"text","text":"<b>u = (3,2,2)<\/b>","textfont":{"color":"#111111","size":15},"inherit":true},"53e8462161bb.4":{"x":[0,2],"y":[0,3],"z":[0,1],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d","mode":"lines","line":{"color":"#1e4d8f","width":9},"inherit":true},"53e8462161bb.5":{"x":2,"y":3,"z":1,"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"cone","u":2,"v":3,"w":1,"anchor":"tip","colorscale":[[0,"#1e4d8f"],[1,"#1e4d8f"]],"showscale":false,"sizemode":"absolute","sizeref":0.5,"inherit":true},"53e8462161bb.6":{"x":-0.69999999999999996,"y":2.8999999999999999,"z":0.69999999999999996,"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d","mode":"text","text":"<b>proj_S(u) = (2,3,1)<\/b>","textfont":{"color":"#1e4d8f","size":14},"inherit":true},"53e8462161bb.7":{"x":[2,3],"y":[3,2],"z":[1,2],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d","mode":"lines","line":{"color":"#c0392b","width":7,"dash":"dash"},"inherit":true},"53e8462161bb.8":{"x":3,"y":2,"z":2,"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"cone","u":1,"v":-1,"w":1,"anchor":"tip","colorscale":[[0,"#c0392b"],[1,"#c0392b"]],"showscale":false,"sizemode":"absolute","sizeref":0.34999999999999998,"inherit":true},"53e8462161bb.9":{"x":3.2999999999999998,"y":0.29999999999999999,"z":1.6000000000000001,"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d","mode":"text","text":"<b>u − proj_S(u) = (1,−1,1)<\/b>","textfont":{"color":"#c0392b","size":14},"inherit":true},"53e8462161bb.10":{"x":0,"y":0,"z":0,"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d","mode":"markers+text","marker":{"size":4,"color":"#111111"},"text":"O","textposition":"bottom center","textfont":{"color":"#111111","size":14},"inherit":true},"53e8462161bb.11":{"x":1.6499999999999999,"y":2.6499999999999999,"z":1.3500000000000001,"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d","mode":"text","text":"<b>⊥<\/b>","textfont":{"color":"#111111","size":20},"inherit":true},"53e8462161bb.12":{"x":2.1000000000000001,"y":3.1000000000000001,"z":-1.3,"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d","mode":"text","text":"<b>S<\/b>","textfont":{"color":"#1f3a63","size":18},"inherit":true}},"layout":{"height":440,"margin":{"b":0,"l":0,"t":0,"r":0},"paper_bgcolor":"white","plot_bgcolor":"white","scene":{"xaxis":{"title":"","showticklabels":false,"showbackground":true,"backgroundcolor":"white","gridcolor":"#ddd","zerolinecolor":"#999"},"yaxis":{"title":"","showticklabels":false,"showbackground":true,"backgroundcolor":"white","gridcolor":"#ddd","zerolinecolor":"#999"},"zaxis":{"title":"","showticklabels":false,"showbackground":true,"backgroundcolor":"white","gridcolor":"#ddd","zerolinecolor":"#999"},"aspectmode":"data","camera":{"eye":{"x":1.6000000000000001,"y":1.3,"z":0.90000000000000002}}},"xaxis":{"title":[]},"yaxis":{"title":[]},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"data":[{"colorbar":{"title":"","ticklen":2},"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":true,"x":[-1,2,2,-1],"y":[-2,1,4,1],"z":[-1,-1,2,2],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"type":"mesh3d","frame":null},{"x":[0,3],"y":[0,2],"z":[0,2],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":["skip","skip"],"showlegend":false,"type":"scatter3d","mode":"lines","line":{"color":"#111111","width":9},"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"frame":null},{"colorbar":{"title":"","ticklen":2},"colorscale":[[0,"#111111"],[1,"#111111"]],"showscale":false,"x":[3],"y":[2],"z":[2],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"type":"cone","u":[3],"v":[2],"w":[2],"anchor":"tip","sizemode":"absolute","sizeref":0.5,"frame":null},{"x":[3.3600000000000003],"y":[2.2400000000000002],"z":[2.2400000000000002],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"type":"scatter3d","mode":"text","text":"<b>u = (3,2,2)<\/b>","textfont":{"color":"#111111","size":15},"marker":{"color":"rgba(214,39,40,1)","line":{"color":"rgba(214,39,40,1)"}},"error_y":{"color":"rgba(214,39,40,1)"},"error_x":{"color":"rgba(214,39,40,1)"},"line":{"color":"rgba(214,39,40,1)"},"frame":null},{"x":[0,2],"y":[0,3],"z":[0,1],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":["skip","skip"],"showlegend":false,"type":"scatter3d","mode":"lines","line":{"color":"#1e4d8f","width":9},"marker":{"color":"rgba(148,103,189,1)","line":{"color":"rgba(148,103,189,1)"}},"error_y":{"color":"rgba(148,103,189,1)"},"error_x":{"color":"rgba(148,103,189,1)"},"frame":null},{"colorbar":{"title":"","ticklen":2},"colorscale":[[0,"#1e4d8f"],[1,"#1e4d8f"]],"showscale":false,"x":[2],"y":[3],"z":[1],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"type":"cone","u":[2],"v":[3],"w":[1],"anchor":"tip","sizemode":"absolute","sizeref":0.5,"frame":null},{"x":[-0.69999999999999996],"y":[2.8999999999999999],"z":[0.69999999999999996],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"type":"scatter3d","mode":"text","text":"<b>proj_S(u) = (2,3,1)<\/b>","textfont":{"color":"#1e4d8f","size":14},"marker":{"color":"rgba(227,119,194,1)","line":{"color":"rgba(227,119,194,1)"}},"error_y":{"color":"rgba(227,119,194,1)"},"error_x":{"color":"rgba(227,119,194,1)"},"line":{"color":"rgba(227,119,194,1)"},"frame":null},{"x":[2,3],"y":[3,2],"z":[1,2],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":["skip","skip"],"showlegend":false,"type":"scatter3d","mode":"lines","line":{"color":"#c0392b","width":7,"dash":"dash"},"marker":{"color":"rgba(127,127,127,1)","line":{"color":"rgba(127,127,127,1)"}},"error_y":{"color":"rgba(127,127,127,1)"},"error_x":{"color":"rgba(127,127,127,1)"},"frame":null},{"colorbar":{"title":"","ticklen":2},"colorscale":[[0,"#c0392b"],[1,"#c0392b"]],"showscale":false,"x":[3],"y":[2],"z":[2],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"type":"cone","u":[1],"v":[-1],"w":[1],"anchor":"tip","sizemode":"absolute","sizeref":0.34999999999999998,"frame":null},{"x":[3.2999999999999998],"y":[0.29999999999999999],"z":[1.6000000000000001],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"type":"scatter3d","mode":"text","text":"<b>u − proj_S(u) = (1,−1,1)<\/b>","textfont":{"color":"#c0392b","size":14},"marker":{"color":"rgba(23,190,207,1)","line":{"color":"rgba(23,190,207,1)"}},"error_y":{"color":"rgba(23,190,207,1)"},"error_x":{"color":"rgba(23,190,207,1)"},"line":{"color":"rgba(23,190,207,1)"},"frame":null},{"x":[0],"y":[0],"z":[0],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"type":"scatter3d","mode":"markers+text","marker":{"color":"#111111","size":4,"line":{"color":"rgba(31,119,180,1)"}},"text":"O","textposition":"bottom center","textfont":{"color":"#111111","size":14},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"frame":null},{"x":[1.6499999999999999],"y":[2.6499999999999999],"z":[1.3500000000000001],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"type":"scatter3d","mode":"text","text":"<b>⊥<\/b>","textfont":{"color":"#111111","size":20},"marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"line":{"color":"rgba(255,127,14,1)"},"frame":null},{"x":[2.1000000000000001],"y":[3.1000000000000001],"z":[-1.3],"i":[0,0],"j":[1,2],"k":[2,3],"facecolor":["#a9c2e8","#a9c2e8"],"opacity":0.55000000000000004,"hoverinfo":"skip","showlegend":false,"type":"scatter3d","mode":"text","text":"<b>S<\/b>","textfont":{"color":"#1f3a63","size":18},"marker":{"color":"rgba(44,160,44,1)","line":{"color":"rgba(44,160,44,1)"}},"error_y":{"color":"rgba(44,160,44,1)"},"error_x":{"color":"rgba(44,160,44,1)"},"line":{"color":"rgba(44,160,44,1)"},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -731,7 +770,7 @@ A\begin{pmatrix}x\\y\end{pmatrix}
 <p><span class="math display">\[Ax = \sum_{j=1}^n x_j\, c_j(A) \quad\text{(a weighted sum of columns)}, \qquad
 (Ax)_i = r_i(A)^\top x \quad\text{(row $i$ dotted with $x$)}.\]</span></p>
 <p><strong>This can be important: some professors like to fill matrices with row vectors, other with column vectors</strong>…</p>
-<p><span class="forestgreen">If <span class="math inline">\(X\)</span> is <span class="math inline">\(N\times K\)</span>, what are the dimensions of <span class="math inline">\(c_k(X)\)</span> and <span class="math inline">\(r_i(X)\)</span>?</span></p>
+<p><span class="forestgreen">If <span class="math inline">\(X\)</span> is <span class="math inline">\(N\times K\)</span>, what are the sizes of <span class="math inline">\(c_k(X)\)</span> and <span class="math inline">\(r_i(X)\)</span>?</span></p>
 </section>
 <section id="matrix-notations" class="slide level2">
 <h2>Matrix notations</h2>
@@ -771,6 +810,86 @@ A\begin{pmatrix}x\\y\end{pmatrix}
 <p><span class="math display">\[Ax = 1\cdot c_1(A) + 1\cdot c_2(A) = (5,7,9)\]</span></p>
 <p><span class="math display">\[Ax = \bigl(r_1(A)^\top x,\; r_2(A)^\top x,\; r_3(A)^\top x\bigr) = (1{+}4,\,2{+}5,\,3{+}6) = (5,7,9).\]</span></p>
 <p>Same matrix, same vector, same answer: two different ways of bookkeeping the exact same computation.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="multiplying-two-matrices" class="slide level2">
+<h2>Multiplying two matrices</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Definition</strong></p>
+</div>
+<div class="callout-content">
+<p>If <span class="math inline">\(A \in \mathbb{M}_{m\times n}\)</span> and <span class="math inline">\(B \in \mathbb{M}_{n\times p}\)</span>, then <span class="math inline">\(AB \in \mathbb{M}_{m\times p}\)</span> with</p>
+<p><span class="math display">\[(AB)_{ij} = r_i(A)^\top c_j(B) = \sum_{k=1}^{n} a_{ik}\,b_{kj}.\]</span></p>
+<p>Entry <span class="math inline">\((i,j)\)</span> is <em>row <span class="math inline">\(i\)</span> of <span class="math inline">\(A\)</span> dotted with column <span class="math inline">\(j\)</span> of <span class="math inline">\(B\)</span></em>: exactly the two ways of slicing a matrix from the previous slide, used at the same time. The inner dimensions must match (<span class="math inline">\(n = n\)</span>); the outer dimensions survive.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>What multiplication actually <em>means</em></strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math inline">\(AB\)</span> is the matrix of the <strong>composed map</strong>: apply <span class="math inline">\(B\)</span> first, then <span class="math inline">\(A\)</span>.</p>
+<p><span class="math display">\[(AB)x = A(Bx).\]</span></p>
+<p>Everything else follows from this. Associativity <span class="math inline">\((AB)C = A(BC)\)</span> (composing maps is associative). BUT <span class="math inline">\(AB \ne BA\)</span> in general. [When is it even defined?{.forestgreen}</p>
+</div>
+</div>
+</div>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Two habits that will save you</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li><strong>Check dimensions before you compute.</strong> <span class="math inline">\((m\times n)(n\times p) = (m\times p)\)</span>. If the inner numbers disagree, the product does not exist: there is no answer to get wrong.</li>
+<li><strong>Order matters, always.</strong> <span class="math inline">\((AB)^\top = B^\top A^\top\)</span>, not <span class="math inline">\(A^\top B^\top\)</span>. The reversal is not a typo, and it will come back on the very next slide.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="multiplying-two-matrices-worked-example" class="slide level2">
+<h2>Multiplying two matrices: worked example</h2>
+<p><span class="math display">\[A = \begin{pmatrix}1&amp;2\\0&amp;1\\3&amp;1\end{pmatrix}\ (3\times 2), \qquad
+B = \begin{pmatrix}2&amp;0&amp;1\\1&amp;1&amp;0\end{pmatrix}\ (2\times 3)
+\quad\Longrightarrow\quad AB \text{ is } 3\times 3.\]</span></p>
+<p><span class="math display">\[AB = \begin{pmatrix}
+1(2)+2(1) &amp; 1(0)+2(1) &amp; 1(1)+2(0)\\
+0(2)+1(1) &amp; 0(0)+1(1) &amp; 0(1)+1(0)\\
+3(2)+1(1) &amp; 3(0)+1(1) &amp; 3(1)+1(0)
+\end{pmatrix}
+= \begin{pmatrix}4&amp;2&amp;1\\1&amp;1&amp;0\\7&amp;1&amp;3\end{pmatrix}.\]</span></p>
+<p><span class="forestgreen">And <span class="math inline">\(BA\)</span>? Is it even defined? Is it the same size?</span></p>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong><span class="math inline">\(BA\)</span> is defined, and it is a different object entirely</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math inline">\(B\)</span> is <span class="math inline">\(2\times3\)</span> and <span class="math inline">\(A\)</span> is <span class="math inline">\(3\times2\)</span>, so <span class="math inline">\(BA\)</span> is <span class="math inline">\(2\times 2\)</span>:</p>
+<p><span class="math display">\[BA = \begin{pmatrix}2(1)+0(0)+1(3) &amp; 2(2)+0(1)+1(1)\\ 1(1)+1(0)+0(3) &amp; 1(2)+1(1)+0(1)\end{pmatrix}
+= \begin{pmatrix}5&amp;5\\1&amp;3\end{pmatrix}.\]</span></p>
+<p><span class="math inline">\(AB\)</span> is <span class="math inline">\(3\times3\)</span>, <span class="math inline">\(BA\)</span> is <span class="math inline">\(2\times2\)</span>: they are not even comparable. Non-commutativity is not an edge case, it is the normal situation.</p>
+</div>
 </div>
 </div>
 </div>
@@ -893,8 +1012,8 @@ A\begin{pmatrix}x\\y\end{pmatrix}
 </div>
 </div>
 </section>
-<section id="ranknullity-theorem-sometimes-called-the-fundamental-theorem-of-linear-algebra" class="slide level2 scrollable">
-<h2>Rank–nullity theorem (sometimes called the fundamental theorem of linear algebra)</h2>
+<section id="ranknullity-theorem" class="slide level2 scrollable">
+<h2>Rank–nullity theorem</h2>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -926,7 +1045,7 @@ A\begin{pmatrix}x\\y\end{pmatrix}
 <div class="callout-content">
 <p>In OLS with <span class="math inline">\(N\)</span> observations and <span class="math inline">\(K\)</span> predictors, residuals <span class="math inline">\(\hat\varepsilon\)</span> denote the prediction errors you are making. By construction, these errors are orthogonal to <span class="math inline">\(X\)</span> (an OLS amounts to an orthogonal projection), thus <span class="math inline">\(\hat\varepsilon\)</span> lies in <span class="math inline">\(\ker(X^\top)\)</span>. By rank–nullity:</p>
 <p><span class="math display">\[\mathrm{rank}(X^\top) + \dim(\ker(X^\top)) = N \;\Rightarrow\; \dim(\ker(X^\top)) = N - K.\]</span></p>
-<p>Later, in econometrics, you will see that the variance for the estimator <span class="math inline">\(\beta\)</span> that tries to predict an outcome <span class="math inline">\(Y\)</span> with characteristics <span class="math inline">\(X\)</span> is: <span class="math display">\[\hat\sigma^2 = \frac{\hat\varepsilon^\top\hat\varepsilon}{N-K}.\]</span></p>
+<p>Later, in econometrics, you will see that the variance for the estimation error when you try to predict an outcome <span class="math inline">\(Y\)</span> with characteristics <span class="math inline">\(X\)</span> is: <span class="math display">\[\hat\sigma^2 = \frac{\hat\varepsilon^\top\hat\varepsilon}{N-K}.\]</span></p>
 <p>The reason why division is by <span class="math inline">\(N - K\)</span>, not <span class="math inline">\(N\)</span> follows from rank-nullity theorem.</p>
 </div>
 </div>
@@ -947,6 +1066,345 @@ a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m.
 \end{cases}\]</span></p>
 <p>Define the coefficient matrix <span class="math inline">\(A = [a_{ij}]_{m\times n}\)</span>, the variable vector <span class="math inline">\(\mathbf{x} = (x_1,\ldots,x_n)^\top\)</span>, and the constant vector <span class="math inline">\(\mathbf{b} = (b_1,\ldots,b_m)^\top\)</span>.</p>
 <p>The system compacts to: <span class="math display">\[A\mathbf{x} = \mathbf{b}.\]</span></p>
+</section>
+<section id="fundamental-theorem" class="slide level2">
+<h2>Rank and solvability</h2>
+<p>The solution set <span class="math inline">\(\mathrm{Sol}(b,f) = \{x \mid f(x)=b,\; x \in \mathbb{R}^n\}\)</span></p>
+<ul>
+<li>is an <em>affine subspace</em> <span class="math inline">\(x^* + \ker(f)\)</span> of <span class="math inline">\(\mathbb{R}^n\)</span>,</li>
+<li>with dimension equal to the nullity: <span class="math inline">\(\dim(\mathrm{Sol}(b,f)) = \dim(\ker(f))\)</span>.</li>
+</ul>
+<p><strong>Rank determines solution structure:</strong></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Condition</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>At least one solution for all <span class="math inline">\(b\)</span></td>
+<td><span class="math inline">\(\operatorname{Rank}(f) = m\)</span></td>
+<td><span class="math inline">\(f\)</span> is <strong>surjective</strong></td>
+</tr>
+<tr class="even">
+<td>At most one solution for all <span class="math inline">\(b\)</span></td>
+<td><span class="math inline">\(\operatorname{Rank}(f) = n\)</span></td>
+<td><span class="math inline">\(f\)</span> is <strong>injective</strong></td>
+</tr>
+<tr class="odd">
+<td>Exactly one solution for all <span class="math inline">\(b\)</span></td>
+<td><span class="math inline">\(\operatorname{Rank}(f) = m = n\)</span></td>
+<td><span class="math inline">\(f\)</span> is <strong>bijective</strong> (invertible)</td>
+</tr>
+</tbody>
+</table>
+<p>Invertible function <span class="math inline">\(\Leftrightarrow\)</span> Invertible associated matrix A <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(A\)</span> is square (but the converse is false!)</p>
+</section>
+<section id="example-reading-the-rank-table" class="slide level2">
+<h2>Example: reading the rank table</h2>
+<p>Three small maps, three outcomes:</p>
+<p><span class="math display">\[A_1 = \begin{pmatrix}1&amp;0&amp;0\\0&amp;1&amp;0\end{pmatrix}: \mathbb{R}^3\to\mathbb{R}^2, \qquad
+A_2 = \begin{pmatrix}1&amp;0\\0&amp;1\\1&amp;1\end{pmatrix}: \mathbb{R}^2\to\mathbb{R}^3, \qquad
+A_3 = \begin{pmatrix}2&amp;1\\1&amp;2\end{pmatrix}: \mathbb{R}^2\to\mathbb{R}^2.\]</span></p>
+<ul>
+<li><span class="math inline">\(\operatorname{Rank}(A_1) = 2 = m &lt; n\)</span>: <strong>surjective</strong>, not injective (e.g.&nbsp;<span class="math inline">\((0,0,1) \in \ker(A_1)\)</span>).</li>
+<li><span class="math inline">\(\operatorname{Rank}(A_2) = 2 = n &lt; m\)</span>: <strong>injective</strong>, not surjective (its image is only a 2-dimensional plane sitting inside <span class="math inline">\(\mathbb{R}^3\)</span>).</li>
+<li><span class="math inline">\(\operatorname{Rank}(A_3) = 2 = m = n\)</span> (our matrix from before!): <strong>bijective</strong> (for every <span class="math inline">\(b\in\mathbb{R}^2\)</span> there is exactly one <span class="math inline">\(x\)</span> with <span class="math inline">\(A_3x=b\)</span>).</li>
+</ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Rule of thumb</strong></p>
+</div>
+<div class="callout-content">
+<p>“Wide” matrices (<span class="math inline">\(n&gt;m\)</span>) can be surjective but never injective: too many inputs collapse onto too few outputs. “Tall” matrices (<span class="math inline">\(m&gt;n\)</span>) can be injective but never surjective: not enough inputs to reach everywhere. Only <strong>square, full-rank</strong> matrices can be bijective.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="the-inverse-of-a-matrix" class="slide level2">
+<h2>The inverse of a matrix</h2>
+<p>We want to solve <span class="math inline">\(A\mathbf{x} = \mathbf{b}\)</span>. With ordinary numbers, <span class="math inline">\(ax = b\)</span> is solved by multiplying both sides by <span class="math inline">\(1/a\)</span> (and we all know the one case where that fails: <span class="math inline">\(a=0\)</span>).</p>
+<p><span class="forestgreen">What would the matrix version of “<span class="math inline">\(1/a\)</span>” have to satisfy?</span></p>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Definition</strong></p>
+</div>
+<div class="callout-content">
+<p>Let <span class="math inline">\(A \in \mathbb{M}_{n\times n}\)</span>. A matrix <span class="math inline">\(A^{-1} \in \mathbb{M}_{n\times n}\)</span> is the <strong>inverse</strong> of <span class="math inline">\(A\)</span> if</p>
+<p><span class="math display">\[A^{-1}A = AA^{-1} = I_n.\]</span></p>
+<p>If such a matrix exists, <span class="math inline">\(A\)</span> is <strong>invertible</strong> (or <em>nonsingular</em>), and then</p>
+<p><span class="math display">\[A\mathbf{x} = \mathbf{b} \;\;\Longleftrightarrow\;\; \mathbf{x} = A^{-1}\mathbf{b}.\]</span></p>
+</div>
+</div>
+</div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>The inverse is unique (a one-line proof worth seeing)</strong></p>
+</div>
+<div class="callout-content">
+<p>Suppose <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span> both invert <span class="math inline">\(A\)</span>. Then</p>
+<p><span class="math display">\[B = B I = B(AC) = (BA)C = I C = C.\]</span></p>
+<p>Nothing but associativity. So “<em>the</em>” inverse is legitimate: there is never more than one.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Only square matrices can have an inverse</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math inline">\(A^{-1}A\)</span> and <span class="math inline">\(AA^{-1}\)</span> must <em>both</em> make sense and both equal an identity: this forces <span class="math inline">\(A\)</span> to be <span class="math inline">\(n\times n\)</span>. This is the algebraic echo of the rank table: only a <strong>bijective</strong> map can be undone. A <span class="math inline">\(3\times 2\)</span> matrix maps <span class="math inline">\(\mathbb{R}^2\)</span> into <span class="math inline">\(\mathbb{R}^3\)</span> and can never be surjective, so there is nothing to invert.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="when-does-the-inverse-exist" class="slide level2">
+<h2>When does the inverse exist?</h2>
+<p>Nothing new here: we already have the answer, phrased four different ways. For <span class="math inline">\(A \in \mathbb{M}_{n\times n}\)</span>, the following are <strong>equivalent</strong>:</p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>The invertibility list</strong></p>
+</div>
+<div class="callout-content">
+<ol type="1">
+<li><span class="math inline">\(A^{-1}\)</span> exists.</li>
+<li><span class="math inline">\(\operatorname{Rank}(A) = n\)</span> (full rank).</li>
+<li>The columns of <span class="math inline">\(A\)</span> are linearly independent.</li>
+<li><span class="math inline">\(\ker(A) = \{0\}\)</span>: the only solution of <span class="math inline">\(Ax = 0\)</span> is <span class="math inline">\(x = 0\)</span>.</li>
+<li><span class="math inline">\(A\mathbf{x}=\mathbf{b}\)</span> has exactly one solution for every <span class="math inline">\(\mathbf{b}\)</span>.</li>
+<li><span class="math inline">\(\det(A) \ne 0\)</span> (once we reach determinants, two slides from now).</li>
+<li><span class="math inline">\(0\)</span> is not an eigenvalue of <span class="math inline">\(A\)</span> (once we reach Part iv).</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Square is necessary, not sufficient</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math display">\[A = \begin{pmatrix}1&amp;2\\2&amp;4\end{pmatrix}\]</span></p>
+<p>is perfectly square and has <strong>no inverse</strong>: its second column is twice the first, so <span class="math inline">\(\operatorname{Rank}(A)=1&lt;2\)</span> and <span class="math inline">\((2,-1)^\top \in \ker(A)\)</span>. The map squashes the whole plane onto a line, and no matrix can un-squash it: the information is gone.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="properties-of-the-inverse" class="slide level2">
+<h2>Properties of the inverse</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>The rules</strong></p>
+</div>
+<div class="callout-content">
+<p>For invertible <span class="math inline">\(A, B \in \mathbb{M}_{n\times n}\)</span> and scalar <span class="math inline">\(c \ne 0\)</span>:</p>
+<p><span class="math display">\[(A^{-1})^{-1} = A, \qquad (cA)^{-1} = \tfrac{1}{c}A^{-1}, \qquad (A^\top)^{-1} = (A^{-1})^\top,\]</span></p>
+<p><span class="math display">\[\boxed{(AB)^{-1} = B^{-1}A^{-1}} \qquad \text{(note the reversal!)}\]</span></p>
+</div>
+</div>
+</div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Why the order flips: socks and shoes</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math inline">\(AB\)</span> means “do <span class="math inline">\(B\)</span>, then do <span class="math inline">\(A\)</span>”. To undo it you must undo the <em>last</em> thing first: take off your shoes, then your socks. Check it algebraically:</p>
+<p><span class="math display">\[(AB)(B^{-1}A^{-1}) = A\underbrace{(BB^{-1})}_{I}A^{-1} = AA^{-1} = I. \;\checkmark\]</span></p>
+<p>Try it in the wrong order and the middle does not collapse.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Three things that are false</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li><span class="math inline">\((A+B)^{-1} \ne A^{-1} + B^{-1}\)</span>. (Already false for <span class="math inline">\(1\times1\)</span>: <span class="math inline">\(\tfrac{1}{2+3}\ne\tfrac12+\tfrac13\)</span>.)</li>
+<li><span class="math inline">\(A^{-1}\)</span> is <strong>not</strong> “<span class="math inline">\(A\)</span> with each entry inverted”.</li>
+<li><span class="math inline">\(AB = AC\)</span> does <strong>not</strong> give <span class="math inline">\(B = C\)</span> unless <span class="math inline">\(A\)</span> is invertible. There is no cancellation law for singular matrices.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="inverting-a-2times-2-matrix" class="slide level2">
+<h2>Inverting a <span class="math inline">\(2\times 2\)</span> matrix</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>The formula to memorise</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math display">\[A = \begin{pmatrix}a&amp;b\\c&amp;d\end{pmatrix}
+\quad\Longrightarrow\quad
+A^{-1} = \frac{1}{ad-bc}\begin{pmatrix}d&amp;-b\\-c&amp;a\end{pmatrix},
+\qquad \text{provided } ad-bc \ne 0.\]</span></p>
+<p>In words: <strong>swap the diagonal entries, flip the sign of the off-diagonal ones, divide by <span class="math inline">\(ad-bc\)</span>.</strong> (That quantity <span class="math inline">\(ad-bc\)</span> is the determinant, which we meet properly in a few slides.)</p>
+</div>
+</div>
+</div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Worked example: the matrix from Part i</strong></p>
+</div>
+<div class="callout-content">
+<p>Remember <span class="math inline">\(A^\top A = \begin{pmatrix}2&amp;1\\1&amp;2\end{pmatrix}\)</span> from the projection example, where we asserted its inverse without justification. Now we can produce it: <span class="math inline">\(ad-bc = 4-1 = 3\)</span>, so</p>
+<p><span class="math display">\[\begin{pmatrix}2&amp;1\\1&amp;2\end{pmatrix}^{-1} = \frac{1}{3}\begin{pmatrix}2&amp;-1\\-1&amp;2\end{pmatrix}.\]</span></p>
+<p>Verify: <span class="math inline">\(\displaystyle \frac13\begin{pmatrix}2&amp;1\\1&amp;2\end{pmatrix}\begin{pmatrix}2&amp;-1\\-1&amp;2\end{pmatrix}
+= \frac13\begin{pmatrix}3&amp;0\\0&amp;3\end{pmatrix} = I_2.\;\checkmark\)</span></p>
+<p>Always verify. It costs one multiplication and catches every sign error.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>The formula does not generalise</strong></p>
+</div>
+<div class="callout-content">
+<p>There is no comparably short recipe for <span class="math inline">\(3\times3\)</span> and beyond. For those we need an <em>algorithm</em>: next slide.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="the-general-method-gaussjordan-elimination" class="slide level2 scrollable">
+<h2>The general method: Gauss–Jordan elimination</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>The recipe</strong></p>
+</div>
+<div class="callout-content">
+<p>Write <span class="math inline">\(A\)</span> and <span class="math inline">\(I\)</span> side by side as one augmented <span class="math inline">\(n \times 2n\)</span> array, then run row operations (swap rows, scale a row, add a multiple of one row to another) until the left half becomes <span class="math inline">\(I\)</span>:</p>
+<p><span class="math display">\[\big[\,A \;\big|\; I\,\big] \;\xrightarrow{\ \text{row operations}\ }\; \big[\,I \;\big|\; A^{-1}\,\big].\]</span></p>
+<p>Whatever the left half becomes, apply the <em>same</em> operations to the right half. If the left half cannot be reduced to <span class="math inline">\(I\)</span> (a row of zeros appears), then <span class="math inline">\(A\)</span> is <strong>not invertible</strong>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Why on earth does this work?</strong></p>
+</div>
+<div class="callout-content">
+<p>Each row operation is itself a matrix multiplication on the left by an <em>elementary matrix</em> <span class="math inline">\(E\)</span>. Reducing <span class="math inline">\(A\)</span> to <span class="math inline">\(I\)</span> means finding <span class="math inline">\(E_k \cdots E_2 E_1\)</span> with</p>
+<p><span class="math display">\[\underbrace{E_k\cdots E_1}_{=: M} A = I \;\;\Longrightarrow\;\; M = A^{-1}.\]</span></p>
+<p>And what does that same sequence do to the <span class="math inline">\(I\)</span> sitting in the right half? It produces <span class="math inline">\(E_k \cdots E_1 I = M = A^{-1}\)</span>. The right half is <em>recording the product for you</em> while the left half does the work. Nothing magical: you are building <span class="math inline">\(A^{-1}\)</span> one row operation at a time.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Worked example (the Sylvester matrix, again)</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math display">\[A = \begin{pmatrix}2&amp;1&amp;0\\1&amp;2&amp;1\\0&amp;1&amp;2\end{pmatrix}.\]</span></p>
+<p><span class="math display">\[\left[\begin{array}{ccc|ccc}
+2&amp;1&amp;0&amp;1&amp;0&amp;0\\ 1&amp;2&amp;1&amp;0&amp;1&amp;0\\ 0&amp;1&amp;2&amp;0&amp;0&amp;1
+\end{array}\right]
+\xrightarrow[\;R_2 \leftarrow R_2 - R_1\;]{\;R_1 \leftarrow \frac12 R_1\;}
+\left[\begin{array}{ccc|ccc}
+1&amp;\frac12&amp;0&amp;\frac12&amp;0&amp;0\\ 0&amp;\frac32&amp;1&amp;-\frac12&amp;1&amp;0\\ 0&amp;1&amp;2&amp;0&amp;0&amp;1
+\end{array}\right]\]</span></p>
+<p><span class="math display">\[\xrightarrow[\;R_1 \leftarrow R_1 - \frac12 R_2,\;\; R_3 \leftarrow R_3 - R_2\;]{\;R_2 \leftarrow \frac23 R_2\;}
+\left[\begin{array}{ccc|ccc}
+1&amp;0&amp;-\frac13&amp;\frac23&amp;-\frac13&amp;0\\ 0&amp;1&amp;\frac23&amp;-\frac13&amp;\frac23&amp;0\\ 0&amp;0&amp;\frac43&amp;\frac13&amp;-\frac23&amp;1
+\end{array}\right]\]</span></p>
+<p><span class="math display">\[\xrightarrow[\;R_1 \leftarrow R_1 + \frac13 R_3,\;\; R_2 \leftarrow R_2 - \frac23 R_3\;]{\;R_3 \leftarrow \frac34 R_3\;}
+\left[\begin{array}{ccc|ccc}
+1&amp;0&amp;0&amp;\frac34&amp;-\frac12&amp;\frac14\\ 0&amp;1&amp;0&amp;-\frac12&amp;1&amp;-\frac12\\ 0&amp;0&amp;1&amp;\frac14&amp;-\frac12&amp;\frac34
+\end{array}\right]\]</span></p>
+<p><span class="math display">\[\Longrightarrow\quad A^{-1} = \frac14\begin{pmatrix}3&amp;-2&amp;1\\-2&amp;4&amp;-2\\1&amp;-2&amp;3\end{pmatrix}.\]</span></p>
+<p>Sanity check on row 1 of <span class="math inline">\(A\)</span> against column 1 of <span class="math inline">\(A^{-1}\)</span>: <span class="math inline">\(\tfrac14\bigl(2(3) + 1(-2) + 0(1)\bigr) = \tfrac44 = 1\)</span>. ✓ And note <span class="math inline">\(A^{-1}\)</span> came out symmetric, as it must: <span class="math inline">\((A^\top)^{-1}=(A^{-1})^\top\)</span>, and <span class="math inline">\(A=A^\top\)</span> here.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="what-inversion-does-geometrically" class="slide level2">
+<h2>What inversion does geometrically</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="session2_linear_algebra_new_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center" width="441"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:45%;">
+<p>With <span class="math inline">\(A=\begin{pmatrix}2&amp;1\\1&amp;2\end{pmatrix}\)</span>, the unit square (blue) is stretched into the green parallelogram: area <span class="math inline">\(1 \to 3\)</span>.</p>
+<p><span class="math inline">\(A^{-1}\)</span> is the map that puts it back, so it must shrink area by exactly <span class="math inline">\(1/3\)</span>:</p>
+<p><span class="math display">\[\det(A^{-1}) = \frac{1}{\det(A)}.\]</span></p>
+<p><strong>This is why <span class="math inline">\(\det A = 0\)</span> kills invertibility.</strong> If a map flattens area to zero, no map can restore it: you would need to divide by zero.</p>
+</div></div>
 </section>
 <section id="application-the-leontief-inputoutput-model" class="slide level2 scrollable">
 <h2>Application: the leontief input–output model</h2>
@@ -1055,72 +1513,6 @@ a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m.
 </div>
 </div>
 </section>
-<section id="fundamental-theorem" class="slide level2">
-<h2>Rank and solvability</h2>
-<p>The solution set <span class="math inline">\(\mathrm{Sol}(b,f) = \{x \mid f(x)=b,\; x \in \mathbb{R}^n\}\)</span></p>
-<ul>
-<li>is an <em>affine subspace</em> <span class="math inline">\(x^* + \ker(f)\)</span> of <span class="math inline">\(\mathbb{R}^n\)</span>,</li>
-<li>with dimension equal to the nullity: <span class="math inline">\(\dim(\mathrm{Sol}(b,f)) = \dim(\ker(f))\)</span>.</li>
-</ul>
-<p><strong>Rank determines solution structure:</strong></p>
-<table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th>Condition</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>At least one solution for all <span class="math inline">\(b\)</span></td>
-<td><span class="math inline">\(\operatorname{Rank}(f) = m\)</span></td>
-<td><span class="math inline">\(f\)</span> is <strong>surjective</strong></td>
-</tr>
-<tr class="even">
-<td>At most one solution for all <span class="math inline">\(b\)</span></td>
-<td><span class="math inline">\(\operatorname{Rank}(f) = n\)</span></td>
-<td><span class="math inline">\(f\)</span> is <strong>injective</strong></td>
-</tr>
-<tr class="odd">
-<td>Exactly one solution for all <span class="math inline">\(b\)</span></td>
-<td><span class="math inline">\(\operatorname{Rank}(f) = m = n\)</span></td>
-<td><span class="math inline">\(f\)</span> is <strong>bijective</strong> (invertible)</td>
-</tr>
-</tbody>
-</table>
-<p>Invertible function <span class="math inline">\(\Leftrightarrow\)</span> Invertible associated matrix A <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(A\)</span> is square (but the converse is false!)</p>
-</section>
-<section id="example-reading-the-rank-table" class="slide level2">
-<h2>Example: reading the rank table</h2>
-<p>Three small maps, three outcomes:</p>
-<p><span class="math display">\[A_1 = \begin{pmatrix}1&amp;0&amp;0\\0&amp;1&amp;0\end{pmatrix}: \mathbb{R}^3\to\mathbb{R}^2, \qquad
-A_2 = \begin{pmatrix}1&amp;0\\0&amp;1\\1&amp;1\end{pmatrix}: \mathbb{R}^2\to\mathbb{R}^3, \qquad
-A_3 = \begin{pmatrix}2&amp;1\\1&amp;2\end{pmatrix}: \mathbb{R}^2\to\mathbb{R}^2.\]</span></p>
-<ul>
-<li><span class="math inline">\(\operatorname{Rank}(A_1) = 2 = m &lt; n\)</span>: <strong>surjective</strong>, not injective (e.g.&nbsp;<span class="math inline">\((0,0,1) \in \ker(A_1)\)</span>).</li>
-<li><span class="math inline">\(\operatorname{Rank}(A_2) = 2 = n &lt; m\)</span>: <strong>injective</strong>, not surjective (its image is only a 2-dimensional plane sitting inside <span class="math inline">\(\mathbb{R}^3\)</span>).</li>
-<li><span class="math inline">\(\operatorname{Rank}(A_3) = 2 = m = n\)</span> (our matrix from before!): <strong>bijective</strong> (for every <span class="math inline">\(b\in\mathbb{R}^2\)</span> there is exactly one <span class="math inline">\(x\)</span> with <span class="math inline">\(A_3x=b\)</span>).</li>
-</ul>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Rule of thumb</strong></p>
-</div>
-<div class="callout-content">
-<p>“Wide” matrices (<span class="math inline">\(n&gt;m\)</span>) can be surjective but never injective: too many inputs collapse onto too few outputs. “Tall” matrices (<span class="math inline">\(m&gt;n\)</span>) can be injective but never surjective: not enough inputs to reach everywhere. Only <strong>square, full-rank</strong> matrices can be bijective.</p>
-</div>
-</div>
-</div>
-</section>
 <section id="determinant-definition-and-properties" class="slide level2">
 <h2>Determinant: definition and properties</h2>
 <div class="callout callout-note callout-titled callout-style-default">
@@ -1181,7 +1573,7 @@ A_3 = \begin{pmatrix}2&amp;1\\1&amp;2\end{pmatrix}: \mathbb{R}^2\to\mathbb{R}^2.
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="session2_linear_algebra_new_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center" width="384"></p>
+<p><img data-src="session2_linear_algebra_new_files/figure-revealjs/unnamed-chunk-10-1.png" class="quarto-figure quarto-figure-center" width="384"></p>
 </figure>
 </div>
 </div>
@@ -1200,7 +1592,7 @@ A_3 = \begin{pmatrix}2&amp;1\\1&amp;2\end{pmatrix}: \mathbb{R}^2\to\mathbb{R}^2.
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="session2_linear_algebra_new_files/figure-revealjs/unnamed-chunk-10-1.png" class="quarto-figure quarto-figure-center" width="412"></p>
+<p><img data-src="session2_linear_algebra_new_files/figure-revealjs/unnamed-chunk-11-1.png" class="quarto-figure quarto-figure-center" width="412"></p>
 </figure>
 </div>
 </div>
@@ -1220,7 +1612,7 @@ A_3 = \begin{pmatrix}2&amp;1\\1&amp;2\end{pmatrix}: \mathbb{R}^2\to\mathbb{R}^2.
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="session2_linear_algebra_new_files/figure-revealjs/unnamed-chunk-11-1.png" class="quarto-figure quarto-figure-center" width="384"></p>
+<p><img data-src="session2_linear_algebra_new_files/figure-revealjs/unnamed-chunk-12-1.png" class="quarto-figure quarto-figure-center" width="384"></p>
 </figure>
 </div>
 </div>
@@ -1240,7 +1632,7 @@ A_3 = \begin{pmatrix}2&amp;1\\1&amp;2\end{pmatrix}: \mathbb{R}^2\to\mathbb{R}^2.
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="session2_linear_algebra_new_files/figure-revealjs/unnamed-chunk-12-1.png" class="quarto-figure quarto-figure-center" width="412"></p>
+<p><img data-src="session2_linear_algebra_new_files/figure-revealjs/unnamed-chunk-13-1.png" class="quarto-figure quarto-figure-center" width="412"></p>
 </figure>
 </div>
 </div>
@@ -1309,6 +1701,262 @@ A_3 = \begin{pmatrix}2&amp;1\\1&amp;2\end{pmatrix}: \mathbb{R}^2\to\mathbb{R}^2.
 </div>
 <div class="callout-content">
 <p>Solving <span class="math inline">\(A\mathbf{x} = \mathbf{b}\)</span> with a unique solution is equivalent to <span class="math inline">\(A\)</span> being invertible. When <span class="math inline">\(A\)</span> is invertible: <span class="math inline">\(\mathbf{x}^* = A^{-1}\mathbf{b}\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="the-cofactor-formula-for-a-1" class="slide level2">
+<h2>The cofactor formula for <span class="math inline">\(A^{-1}\)</span></h2>
+<p>Now that we have determinants, we can write <span class="math inline">\(A^{-1}\)</span> in closed form (no algorithm, just a formula).</p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Adjugate formula</strong></p>
+</div>
+<div class="callout-content">
+<p>With cofactors <span class="math inline">\(C_{ij} = (-1)^{i+j}M_{ij}\)</span> as defined in the appendix, let <span class="math inline">\(\operatorname{adj}(A) = C^\top\)</span> (the transpose of the cofactor matrix). Then</p>
+<p><span class="math display">\[A^{-1} = \frac{1}{\det A}\,\operatorname{adj}(A).\]</span></p>
+<p>For <span class="math inline">\(n=2\)</span> this collapses to exactly the swap-and-flip rule you already know.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Same matrix, third method</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math inline">\(A = \begin{pmatrix}2&amp;1&amp;0\\1&amp;2&amp;1\\0&amp;1&amp;2\end{pmatrix}\)</span>, with <span class="math inline">\(\det A = 4\)</span> (computed on the Sylvester slide). The cofactors are</p>
+<p><span class="math display">\[C = \begin{pmatrix}3&amp;-2&amp;1\\-2&amp;4&amp;-2\\1&amp;-2&amp;3\end{pmatrix}
+\;\Longrightarrow\;
+A^{-1} = \frac14\begin{pmatrix}3&amp;-2&amp;1\\-2&amp;4&amp;-2\\1&amp;-2&amp;3\end{pmatrix},\]</span></p>
+<p>matching Gauss–Jordan exactly.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Never use this to actually compute</strong></p>
+</div>
+<div class="callout-content">
+<p>The adjugate needs <span class="math inline">\(n^2\)</span> determinants of size <span class="math inline">\((n-1)\)</span>: catastrophically slow beyond <span class="math inline">\(3\times3\)</span>. Its value is <strong>theoretical</strong>: it shows that each entry of <span class="math inline">\(A^{-1}\)</span> is a <em>ratio of polynomials</em> in the entries of <span class="math inline">\(A\)</span>. So <span class="math inline">\(A \mapsto A^{-1}\)</span> is a smooth function wherever <span class="math inline">\(\det A \ne 0\)</span> — which is precisely what the implicit function theorem will need when you do comparative statics.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="cramers-rule" class="slide level2">
+<h2>Cramer’s rule</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Statement</strong></p>
+</div>
+<div class="callout-content">
+<p>If <span class="math inline">\(\det A \ne 0\)</span>, the unique solution of <span class="math inline">\(A\mathbf{x}=\mathbf{b}\)</span> has components</p>
+<p><span class="math display">\[x_i = \frac{\det(A_i)}{\det(A)},\]</span></p>
+<p>where <span class="math inline">\(A_i\)</span> is <span class="math inline">\(A\)</span> with its <span class="math inline">\(i\)</span>-th column replaced by <span class="math inline">\(\mathbf{b}\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Why economists still teach it</strong></p>
+</div>
+<div class="callout-content">
+<p>It gives you <strong>one</strong> unknown without solving for the others, as an explicit ratio of determinants. That is exactly the shape of a comparative-statics answer: “how does the equilibrium interest rate move when government spending rises?” is a question about <em>one</em> coordinate of <span class="math inline">\(x\)</span>, and Cramer hands you a sign you can read off directly from the determinants, without ever inverting anything.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>But not for computation</strong></p>
+</div>
+<div class="callout-content">
+<p>Cramer needs <span class="math inline">\(n+1\)</span> determinants. For <span class="math inline">\(n = 20\)</span> this is hopeless; Gauss–Jordan handles it instantly. Use Cramer to <em>reason</em>, never to <em>compute</em>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="should-you-ever-compute-an-inverse" class="slide level2 scrollable">
+<h2>Should you ever compute an inverse?</h2>
+<p><span class="forestgreen">We have spent four slides learning to invert matrices. The truth is: in practice you should almost never do it yourself.</span></p>
+<div class="fragment">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Solving beats inverting</strong></p>
+</div>
+<div class="callout-content">
+<p>To get <span class="math inline">\(\mathbf{x}\)</span> from <span class="math inline">\(A\mathbf{x}=\mathbf{b}\)</span>, do <strong>not</strong> form <span class="math inline">\(A^{-1}\)</span> and multiply. Solve the system directly (Gaussian elimination / LU / QR under the hood). It is faster and numerically far more stable: forming <span class="math inline">\(A^{-1}\)</span> does strictly more work than solving, and every extra operation is a chance to accumulate rounding error.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a>A <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>), <span class="at">nrow =</span> <span class="dv">2</span>)</span>
+<span id="cb1-2"><a href=""></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">4</span>)</span>
+<span id="cb1-3"><a href=""></a></span>
+<span id="cb1-4"><a href=""></a><span class="fu">solve</span>(A, b)          <span class="co"># do this:  solves the system</span></span>
+<span id="cb1-5"><a href=""></a><span class="fu">solve</span>(A) <span class="sc">%*%</span> b       <span class="co"># not this: builds A^-1, then multiplies</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>What this means for your econometrics code</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math inline">\(\hat\beta = (X^\top X)^{-1}X^\top Y\)</span> is how we <em>write</em> OLS, and it is the right way to <strong>think</strong> about it: the projection formula from Part i. But <code>lm()</code> in R does not compute <span class="math inline">\((X^\top X)^{-1}\)</span> at all — it uses a QR decomposition of <span class="math inline">\(X\)</span>. The formula is a statement about geometry; the software is doing something equivalent and better conditioned.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Near-singular is the real enemy</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math inline">\(\det A = 0\)</span> is a knife edge you will essentially never land on exactly with real data. What actually happens is <span class="math inline">\(\det A \approx 0\)</span>: two regressors are <em>nearly</em> collinear, <span class="math inline">\(X^\top X\)</span> is <em>technically</em> invertible, and <span class="math inline">\((X^\top X)^{-1}\)</span> has enormous entries. The inverse exists, the computer returns numbers, and those numbers are close to meaningless — huge standard errors, coefficients that swing wildly when you add one observation.</p>
+<p>This is <strong>multicollinearity</strong>, and you now know exactly what it is geometrically: the columns of <span class="math inline">\(X\)</span> span a subspace, but only barely.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="checking-you-are-alive" class="slide level2">
+<h2>Checking you are alive</h2>
+<p><span style="color: forestgreen;"><span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are invertible <span class="math inline">\(n\times n\)</span> matrices. Which statement is TRUE?</span></p>
+<div class="fragment">
+<ul>
+<li><strong>A.</strong> <span class="math inline">\((AB)^{-1} = A^{-1}B^{-1}\)</span>.</li>
+<li><strong>B.</strong> <span class="math inline">\((A+B)^{-1} = A^{-1}+B^{-1}\)</span>.</li>
+<li><strong>C.</strong> <span class="math inline">\((A^\top)^{-1} = (A^{-1})^\top\)</span>.</li>
+<li><strong>D.</strong> If <span class="math inline">\(\det A = -3\)</span>, then <span class="math inline">\(A\)</span> is not invertible.</li>
+</ul>
+</div>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Answer: C</strong></p>
+</div>
+<div class="callout-content">
+<p>Transpose and inverse commute: take the transpose of <span class="math inline">\(A^{-1}A = I\)</span> to get <span class="math inline">\(A^\top (A^{-1})^\top = I\)</span>, which says <span class="math inline">\((A^{-1})^\top\)</span> inverts <span class="math inline">\(A^\top\)</span>.</p>
+<p><strong>Common mistakes:</strong></p>
+<ul>
+<li><strong>A</strong> forgets the reversal: <span class="math inline">\((AB)^{-1} = B^{-1}A^{-1}\)</span> (socks and shoes).</li>
+<li><strong>B</strong> is false even for <span class="math inline">\(1\times1\)</span> numbers.</li>
+<li><strong>D</strong> confuses <em>sign</em> with <em>vanishing</em>: <span class="math inline">\(\det A = -3 \ne 0\)</span>, so <span class="math inline">\(A\)</span> is invertible — the negative sign just means the map reverses orientation.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="where-inverses-show-up-in-economics" class="slide level2 scrollable">
+<h2>Where inverses show up in economics</h2>
+<div class="columns">
+<div class="column" style="width:48%;">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>You have already seen two</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li><strong>Leontief:</strong> <span class="math inline">\(x = (I-A)^{-1}d\)</span>. The inverse <em>is</em> the multiplier: entry <span class="math inline">\((i,j)\)</span> says how much sector <span class="math inline">\(i\)</span> must produce per unit of final demand for <span class="math inline">\(j\)</span>.</li>
+<li><strong>OLS:</strong> <span class="math inline">\(\hat\beta = (X^\top X)^{-1}X^\top Y\)</span>. Invertibility of <span class="math inline">\(X^\top X\)</span> is the full-rank condition, i.e.&nbsp;no perfect multicollinearity.</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:48%;">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Coming later</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li><strong>Comparative statics:</strong> equilibrium conditions <span class="math inline">\(F(x,\theta)=0\)</span> give <span class="math inline">\(\dfrac{\partial x}{\partial \theta} = -\,J_x^{-1}J_\theta\)</span>. Nearly every “what happens if” answer in micro and macro is an inverse Jacobian.</li>
+<li><strong>Markov chains / dynamic systems:</strong> <span class="math inline">\((I-\beta P)^{-1}\)</span> for discounted sums.</li>
+</ul>
+</div>
+</div>
+</div>
+</div></div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>The unifying idea</strong></p>
+</div>
+<div class="callout-content">
+<p>An inverse answers <strong>“what input produced this output?”</strong> Leontief: what production plan produces this consumption? OLS: what coefficients produce this fitted line? Comparative statics: what change in equilibrium produces this response to a shock? The recurring economic question is inverse by nature, which is why this one operation keeps reappearing all year.</p>
+</div>
+</div>
+</div>
+<!-- ======================= APPENDIX ======================= -->
+</section>
+<section id="block-inverse" class="slide level2">
+<h2>Inverting a block matrix</h2>
+<p>For a partitioned matrix (using the block notation from Part ii), with <span class="math inline">\(A\)</span> and the <strong>Schur complement</strong> <span class="math inline">\(S = D - CA^{-1}B\)</span> both invertible:</p>
+<p><span class="math display">\[\begin{pmatrix}A&amp;B\\C&amp;D\end{pmatrix}^{-1}
+= \begin{pmatrix}
+A^{-1}+A^{-1}BS^{-1}CA^{-1} &amp; -A^{-1}BS^{-1}\\
+-S^{-1}CA^{-1} &amp; S^{-1}
+\end{pmatrix}.\]</span></p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>This is Frisch–Waugh–Lovell in disguise</strong></p>
+</div>
+<div class="callout-content">
+<p>Split regressors as <span class="math inline">\(X = [X_1\;\;X_2]\)</span>. Then</p>
+<p><span class="math display">\[X^\top X = \begin{pmatrix}X_1^\top X_1 &amp; X_1^\top X_2\\ X_2^\top X_1 &amp; X_2^\top X_2\end{pmatrix},\]</span></p>
+<p>and the Schur complement of the top-left block is <span class="math inline">\(X_2^\top X_2 - X_2^\top X_1 (X_1^\top X_1)^{-1}X_1^\top X_2 = X_2^\top M_{X_1} X_2\)</span>: the variation in <span class="math inline">\(X_2\)</span> <strong>left over after partialling out <span class="math inline">\(X_1\)</span></strong>. The bottom-right block of the inverse then delivers <span class="math inline">\(\hat\beta_2\)</span> from residualised data alone. FWL is not a separate theorem so much as one corner of this formula.</p>
 </div>
 </div>
 </div>
@@ -1399,7 +2047,7 @@ A_3 = \begin{pmatrix}2&amp;1\\1&amp;2\end{pmatrix}: \mathbb{R}^2\to\mathbb{R}^2.
 f\bigl([x,y]^\top\bigr) = \begin{pmatrix}2x+y\\x+2y\end{pmatrix}.\]</span></p>
 <p>Eigenvectors satisfy <span class="math inline">\(f(v) = \lambda v\)</span>: direction preserved, only scaled.</p>
 
-<img data-src="session2_linear_algebra_new_files/figure-revealjs/unnamed-chunk-13-1.png" class="quarto-figure quarto-figure-center r-stretch" width="460"><p><span class="math inline">\(v_1\)</span> is scaled by <span class="math inline">\(3\)</span> (stretched); <span class="math inline">\(v_2\)</span> is unchanged (<span class="math inline">\(\lambda_2 = 1\)</span>). Both keep their direction.</p>
+<img data-src="session2_linear_algebra_new_files/figure-revealjs/unnamed-chunk-15-1.png" class="quarto-figure quarto-figure-center r-stretch" width="460"><p><span class="math inline">\(v_1\)</span> is scaled by <span class="math inline">\(3\)</span> (stretched); <span class="math inline">\(v_2\)</span> is unchanged (<span class="math inline">\(\lambda_2 = 1\)</span>). Both keep their direction.</p>
 </section>
 <section id="computing-eigenvalues-and-eigenvectors" class="slide level2">
 <h2>Computing eigenvalues and eigenvectors</h2>
@@ -1767,7 +2415,7 @@ P^{-1} = \frac{1}{2}\begin{pmatrix}1&amp;1\\1&amp;-1\end{pmatrix}.\]</span></p>
 <p><span class="math display">\[\hat Y = X\hat\beta = \Big(\tfrac{9}{7},\tfrac{18}{7},\tfrac{27}{7}\Big), \qquad
 \hat\varepsilon = Y-\hat Y = \Big(\tfrac{5}{7},-\tfrac{4}{7},\tfrac{1}{7}\Big).\]</span></p>
 
-<img data-src="session2_linear_algebra_new_files/figure-revealjs/unnamed-chunk-14-1.png" class="quarto-figure quarto-figure-center r-stretch" width="480"><p>Orthogonality check: <span class="math inline">\(X^\top\hat\varepsilon = 1\cdot\tfrac{5}{7} + 2\cdot(-\tfrac{4}{7}) + 3\cdot\tfrac{1}{7} = \tfrac{5-8+3}{7} = 0.\)</span> ✓</p>
+<img data-src="session2_linear_algebra_new_files/figure-revealjs/unnamed-chunk-16-1.png" class="quarto-figure quarto-figure-center r-stretch" width="480"><p>Orthogonality check: <span class="math inline">\(X^\top\hat\varepsilon = 1\cdot\tfrac{5}{7} + 2\cdot(-\tfrac{4}{7}) + 3\cdot\tfrac{1}{7} = \tfrac{5-8+3}{7} = 0.\)</span> ✓</p>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
