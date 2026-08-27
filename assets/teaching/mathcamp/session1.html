@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.9.38">
 
   <meta name="author" content="Alexandre Grellet">
-  <meta name="dcterms.date" content="2026-07-30">
+  <meta name="dcterms.date" content="2026-08-24">
   <title>Math Camp</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -194,7 +194,7 @@ Alexandre Grellet
 </div>
 </div>
 
-  <p class="date">2026-07-30</p>
+  <p class="date">2026-08-24</p>
 </section>
 <section id="getting-to-know-each-other" class="slide level2">
 <h2>Getting to know each other</h2>
@@ -204,7 +204,7 @@ Alexandre Grellet
 <li>Why did you choose the master’s in economics?</li>
 <li>Give 1 (non-academic) hobby.</li>
 </ul>
-<p>The purpose is that you get to know each other. That’s also the role of the pre-semester week!</p>
+<p>The purpose is that you <strong>get to know each other</strong>. That’s also the role of the pre-semester week!</p>
 </section>
 <section>
 <section id="why-study-mathematics" class="title-slide slide level1 center">
@@ -214,9 +214,9 @@ Alexandre Grellet
 <section id="a-very-central-place-in-economics" class="slide level2">
 <h2>A very central place in economics</h2>
 <ul>
-<li>Econometrics (limits, convergence, linear algebra, matrices, etc.)</li>
-<li>Microeconomics (optimization, convex analysis, differentiation, Bayesian probabilities, etc.)</li>
-<li>Macroeconomics (optimal control, Bellman equations, log-linearization, etc.)</li>
+<li>Econometrics: the study of cause and effects (limits, convergence, linear algebra, matrices, etc.)</li>
+<li>Microeconomics: the study of individual agents and their interactions (optimization, convex analysis, differentiation, Bayesian probabilities, etc.)</li>
+<li>Macroeconomics: the study of aggregates/economies as a whole (optimal control, Bellman equations, log-linearization, etc.)</li>
 </ul>
 </section>
 <section id="this-course" class="slide level2">
@@ -238,7 +238,7 @@ Alexandre Grellet
 <section id="the-program" class="slide level2">
 <h2>The program</h2>
 <ul>
-<li><strong>Session 1</strong>: Foundations, sequences, and linearity <em>← you are here</em></li>
+<li><strong>Session 1: Foundations, sequences, and linearity</strong></li>
 <li>Session 2: Linear algebra and OLS</li>
 <li>Session 3: Integration</li>
 <li>Session 4: Compactness, convexity and optimization I</li>
@@ -247,9 +247,9 @@ Alexandre Grellet
 </section>
 <section id="todays-roadmap" class="slide level2">
 <h2>Today’s roadmap</h2>
-<ol type="1">
-<li><strong>Continuity</strong>: what it means for functions to behave nicely</li>
+<ol start="0" type="1">
 <li><strong>Sequences</strong>: the language of limits and convergence</li>
+<li><strong>Continuity</strong>: what it means for functions to behave nicely</li>
 <li><strong>Rates of convergence</strong>: making “close” precise with big-O and little-o notations</li>
 <li><strong>Linearization</strong>: MVT, Taylor, Jacobians, and the implicit function theorem</li>
 </ol>
@@ -272,7 +272,7 @@ Alexandre Grellet
 <h2>Why sequences?</h2>
 <p>Sequences are ubiquitous in mathematical analysis. Virtually every limit, every notion of convergence, and every continuity argument can be expressed as a statement about sequences.</p>
 <p>Later in the master’s, <strong>sequences will reappear constantly in statistics and econometrics</strong>: estimators are sequences indexed by sample size, and the central question is whether they converge, and how fast.</p>
-<p>You may check more complete ressources on sequences. For instance, chapter 9 in <span class="citation" data-cites="cummingsRealAnalysisLongform2021">Cummings (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span></p>
+<p>You may check more complete resources on sequences. For instance, chapter 9 in <span class="citation" data-cites="cummingsRealAnalysisLongform2021">Cummings (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span></p>
 </section>
 <section id="sequences-definition-and-notation" class="slide level2">
 <h2>Sequences: definition and notation</h2>
@@ -319,7 +319,7 @@ Alexandre Grellet
 </div>
 </div>
 </div>
-<p><strong>Unpacking the quantifiers as if it was a game:</strong></p>
+<p><strong>Unpacking the quantifiers as if it was a 2-players game:</strong></p>
 <ul>
 <li><span class="math inline">\(\forall \varepsilon &gt; 0\)</span>: the other player picks any positive tolerance, however tiny.</li>
 <li><span class="math inline">\(\exists N\)</span>: <em>you</em> get to choose a threshold, which may depend on <span class="math inline">\(\varepsilon\)</span>.</li>
@@ -330,21 +330,6 @@ Alexandre Grellet
 <h2>Convergence: intuition</h2>
 
 <img data-src="session1_Linearity_files/figure-revealjs/convergence-plot-1.png" class="quarto-figure quarto-figure-center r-stretch" width="864"><p>Both sequences converge to 0: one monotonically, one by oscillating. The <span class="math inline">\(\varepsilon\)</span>-band makes convergence visible: past some threshold <span class="math inline">\(N\)</span>, every term stays inside it.</p>
-</section>
-<section id="sequences-and-continuity-the-connection" class="slide level2">
-<h2>Sequences and continuity: the connection</h2>
-<p>We can now state precisely what the sequential definition of continuity means:</p>
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Proposition</strong></p>
-</div>
-<div class="callout-content">
-<p><span class="math inline">\(f\)</span> is continuous at <span class="math inline">\(x\)</span> if and only if for every sequence <span class="math inline">\((x_n)\)</span> with <span class="math inline">\(x_n \to x\)</span>, we have <span class="math inline">\(f(x_n) \to f(x)\)</span>.</p>
-</div>
-</div>
-</div>
-<p>This is not just another formulation. It is often the <em>most useful</em> one in practice: to check continuity, you check whether the function commutes with limits. To disprove continuity, you exhibit one sequence that fails.</p>
 </section>
 <section id="quick-check-convergence" class="slide level2">
 <h2>🧠 Quick check: convergence</h2>
@@ -410,7 +395,7 @@ Alexandre Grellet
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>Theorem: Completeness of <span class="math inline">\(\mathbb{R}\)</span></strong></p>
+<p><strong>Theorem: Cauchy sequences converge</strong></p>
 </div>
 <div class="callout-content">
 <p>In <span class="math inline">\(\mathbb{R}\)</span>: a sequence converges if and only if it is Cauchy.</p>
@@ -441,7 +426,8 @@ Alexandre Grellet
 </div>
 </div>
 </div>
-<p>This is not obvious. The sequence <span class="math inline">\(((-1)^n)\)</span> oscillates and never converges, yet it has two convergent subsequences: <span class="math inline">\((1, 1, 1, \ldots)\)</span> and <span class="math inline">\((-1, -1, -1, \ldots)\)</span>.</p>
+<div class="fragment">
+<p>A simple example: the sequence <span class="math inline">\(((-1)^n)\)</span> oscillates and never converges, yet it has two convergent subsequences: <span class="math inline">\((1, 1, 1, \ldots)\)</span> and <span class="math inline">\((-1, -1, -1, \ldots)\)</span>.</p>
 <div class="callout callout-warning no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -449,6 +435,7 @@ Alexandre Grellet
 </div>
 <div class="callout-content">
 <p>Bolzano-Weierstrass underpins existence proofs. When you need to extract a convergent subsequence from a sequence of strategies, prices, or allocations, this theorem does the work. It reappears in the proof of the extreme value theorem.</p>
+</div>
 </div>
 </div>
 </div>
@@ -468,7 +455,8 @@ Alexandre Grellet
 </div>
 </div>
 </div>
-<p><strong>This is one of the most practically useful results in the course.</strong> To show convergence, you just need two things:</p>
+<div class="fragment">
+<p><strong>One of the most practically useful results in the course.</strong> To show convergence, you just need two things:</p>
 <ol type="1">
 <li>The sequence is monotone (check the sign of <span class="math inline">\(a_{n+1} - a_n\)</span>)</li>
 <li>The sequence is bounded (find a ceiling or a floor)</li>
@@ -481,6 +469,7 @@ Alexandre Grellet
 </div>
 <div class="callout-content">
 <p>In dynamic programming, the iteration <span class="math inline">\(V_{n+1}(x) = \max_a [r(x,a) + \delta V_n(x')]\)</span> produces a sequence <span class="math inline">\((V_n)\)</span>. Under standard conditions this sequence is monotone and bounded, so it converges to the true value function <span class="math inline">\(V^*\)</span>. The monotone convergence theorem is at the core of that proof.</p>
+</div>
 </div>
 </div>
 </div>
@@ -513,6 +502,12 @@ Alexandre Grellet
 </div>
 </div>
 </div>
+</div>
+<div class="fragment">
+<p>A small check: <span class="forestgreen">how do you interpret the quantifiers in the <span class="math inline">\(\varepsilon\)</span>-definition of continuity? And what does this imply?</span></p>
+</div>
+<div class="fragment">
+<p>You might choose a different <span class="math inline">\(\delta\)</span> for different combinations of <span class="math inline">\((x,\varepsilon)\)</span>!</p>
 </div>
 </section>
 <section id="continuity-vs-uniform-continuity" class="slide level2">
