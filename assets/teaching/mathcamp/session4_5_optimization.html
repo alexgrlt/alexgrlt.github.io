@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.9.38">
 
   <meta name="author" content="Alexandre Grellet">
-  <meta name="dcterms.date" content="2026-08-28">
+  <meta name="dcterms.date" content="2026-09-03">
   <title>Math Camp</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -175,7 +175,7 @@ Alexandre Grellet
 </div>
 </div>
 
-  <p class="date">2026-08-28</p>
+  <p class="date">2026-09-03</p>
 </section>
 <section id="section" class="slide level2 standout-red">
 <h2></h2>
@@ -869,6 +869,53 @@ D(\theta)\colon\text{Feasible set for a given }\theta.\]</span></p>
 <p>…exactly the value of <span class="math inline">\(\lambda\)</span>!</p>
 </div>
 </section>
+<section id="the-envelope-theorem-unconstrained-case" class="slide level2">
+<h2>The envelope theorem: unconstrained case</h2>
+<div title="Theorem: Envelope theorem (unconstrained optimization)">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Theorem: Envelope theorem (unconstrained optimization)</strong></p>
+</div>
+<div class="callout-content">
+<p>If <span class="math inline">\(x^*(\theta)\)</span> is an interior maximizer and both <span class="math inline">\(f\)</span> and <span class="math inline">\(x^*(\cdot)\)</span> are <span class="math inline">\(C^1\)</span>, then <span class="math display">\[V'(\theta)=\frac{\partial f}{\partial \theta}\bigl(x^*(\theta),\theta\bigr).\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<p><strong>Proof (chain rule):</strong> <span class="math display">\[V'(\theta)=\underbrace{\nabla_x f(x^*(\theta),\theta)^\top}_{=\,0\ \text{by the FOC}}\,\frac{dx^*}{d\theta}+\frac{\partial f}{\partial\theta}(x^*(\theta),\theta).\]</span></p>
+<div class="fragment">
+<p>At an optimum the <em>indirect</em> effect (re-optimizing <span class="math inline">\(x\)</span>) is second-order. You only need the <em>direct</em> effect of <span class="math inline">\(\theta\)</span> on the objective.</p>
+</div>
+</section>
+<section id="the-envelope-theorem-constrained-case" class="slide level2">
+<h2>The envelope theorem: constrained case</h2>
+<p><span class="math display">\[V(\theta)=\max_x f(x,\theta)\quad\text{s.t. } g_j(x,\theta)=0,\ j=1,\dots,m.\]</span></p>
+<div title="Theorem: Envelope theorem (Lagrangian form)">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Theorem: Envelope theorem (Lagrangian form)</strong></p>
+</div>
+<div class="callout-content">
+<p>Under the assumptions of Lagrange’s theorem, with <span class="math inline">\((x^*(\theta),\lambda^*(\theta))\)</span> <span class="math inline">\(C^1\)</span>: <span class="math display">\[V'(\theta)=\frac{\partial \mathcal{L}}{\partial\theta}\bigl(x^*(\theta),\lambda^*(\theta)\bigr)
+=\frac{\partial f}{\partial\theta}(x^*,\theta)-\sum_{j=1}^m\lambda_j^*\,\frac{\partial g_j}{\partial\theta}(x^*,\theta).\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<p>Differentiate the Lagrangian, not the objective: the constraint moves too, and <span class="math inline">\(\lambda^*\)</span> prices that movement.</p>
+<div class="fragment">
+<p><strong>Back to study–leisure.</strong> Here <span class="math inline">\(\theta=T\)</span> and <span class="math inline">\(g(x,T)=x_1+x_2-T\)</span>, so <span class="math inline">\(\partial f/\partial T=0\)</span> and <span class="math inline">\(\partial g/\partial T=-1\)</span>: <span class="math display">\[V'(T)=0-\lambda^*(-1)=\lambda^*=\alpha^\alpha(1-\alpha)^{1-\alpha}=0.5 .\]</span></p>
+<p>So the “+0.5 utility per extra hour” from two slides ago was not a numerical accident: the shadow-price interpretation of <span class="math inline">\(\lambda\)</span> comes from the envelope theorem!</p>
+</div>
+</section>
 <section id="lagranges-theorem" class="slide level2">
 <h2>Lagrange’s theorem</h2>
 <div title="Theorem: Lagrange's Theorem">
@@ -1331,20 +1378,118 @@ D(\theta)\colon\text{Feasible set for a given }\theta.\]</span></p>
 <p>From stationarity in <span class="math inline">\(x_1\)</span>:</p>
 <p><span class="math display">\[\frac{1}{3} - 2\left(\frac{1}{4}\right) + \mu_1 = 0\quad\Rightarrow\quad \mu_1 = \frac{1}{6}\]</span></p>
 </section>
-<section id="key-takeaways" class="slide level2">
-<h2>Key takeaways</h2>
-<ol type="1">
-<li>Put constraints in <span class="math inline">\(g_i(x)\le 0\)</span> form and build the Lagrangian.</li>
-<li>Write stationarity, feasibility, and complementary slackness.</li>
-<li>Then 2 approaches:
+<section id="envelope-theorem-with-inequality-constraints" class="slide level2">
+<h2>Envelope theorem with inequality constraints</h2>
+<p><span class="math display">\[V(\theta)=\max_x f(x,\theta)\ \ \text{s.t.}\ \ g_i(x,\theta)\le 0,\ \ h_j(x,\theta)=0 .\]</span></p>
+<p><span style="color: forestgreen;">We now have constraints that may or may not bind. Does that break the chain-rule argument?</span></p>
+<div class="fragment">
+<div title="Theorem: Envelope theorem (KKT form)">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Theorem: Envelope theorem (KKT form)</strong></p>
+</div>
+<div class="callout-content">
+<p>Let <span class="math inline">\((x^*(\theta),\lambda^*(\theta),\mu^*(\theta))\)</span> satisfy the KKT conditions. Suppose LICQ holds, the second-order sufficient condition holds, and <strong>strict complementarity</strong> holds (<span class="math inline">\(\lambda_i^*&gt;0\)</span> for every active <span class="math inline">\(g_i\)</span>). Then <span class="math inline">\(x^*,\lambda^*,\mu^*\)</span> are <span class="math inline">\(C^1\)</span> near <span class="math inline">\(\theta\)</span>, and</p>
+<p><span class="math display">\[V'(\theta)=\frac{\partial\mathcal{L}}{\partial\theta}
+\bigl(x^*(\theta),\lambda^*(\theta),\mu^*(\theta)\bigr)
+=\frac{\partial f}{\partial\theta}
+-\sum_{i=1}^m\lambda_i^*\frac{\partial g_i}{\partial\theta}
+-\sum_{j=1}^l\mu_j^*\frac{\partial h_j}{\partial\theta}.\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<p>Same formula as before. <strong>Slack constraints contribute nothing</strong>: <span class="math inline">\(\lambda_i^*=0\)</span> kills their term. Only the active set prices into <span class="math inline">\(V'\)</span>.</p>
+</div>
+</section>
+<section id="what-the-multipliers-now-mean" class="slide level2">
+<h2>What the multipliers now mean</h2>
+<p>Write the constraints with an explicit right-hand side, <span class="math inline">\(g_i(x)\le c_i\)</span>. Then</p>
+<p><span class="math display">\[\frac{\partial V}{\partial c_i}=\lambda_i^*\ \ge 0 .\]</span></p>
+<div title="Scarcity pricing">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Scarcity pricing</strong></p>
+</div>
+<div class="callout-content">
 <ul>
-<li>“Brute force” / FOC then restriction on multipliers;</li>
-<li>Use intuition to guess the active set, then solve for <span class="math inline">\((x,\lambda)\)</span> – rule out from the beginning some cases.</li>
-</ul></li>
-<li>In convex problems with Slater, KKT is necessary and sufficient; multipliers have clear shadow-price meanings.</li>
-</ol>
+<li><strong>Binding</strong> constraint <span class="math inline">\(\Rightarrow \lambda_i^*&gt;0\)</span>: the resource is scarce, and <span class="math inline">\(\lambda_i^*\)</span> is what one more unit is worth to you.</li>
+<li><strong>Slack</strong> constraint <span class="math inline">\(\Rightarrow \lambda_i^*=0\)</span>: you would pay nothing for more of it. It is not scarce <em>for you, at this optimum</em>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<p>This is the whole logic of a shadow price: complementary slackness says a good is either scarce or free. You will meet the same statement again as the condition for a market to clear, as the price of a rationed good, and as the cost of a policy constraint.</p>
+</section>
+<section id="when-multiplier-is-not-identified" class="slide level2">
+<h2>When multiplier is not identified</h2>
+<p>A simple example: baking. Assume every cake needs exactly one egg and one cup of flour. You have <span class="math inline">\(E\)</span> eggs and <span class="math inline">\(F\)</span> cups of flour, so you can bake</p>
+<p><span class="math display">\[V(E,F)=\min\{E,\,F\}\ \text{ cakes.}\]</span></p>
+<p>You currently hold <span class="math inline">\(E=F=10\)</span>. Both constraints bind: no eggs left over, no flour left over.</p>
+<p><span style="color: forestgreen;">I give you one more egg. How many extra cakes?</span></p>
+<div class="fragment">
+<p><strong>Zero.</strong> You have run out of flour.</p>
+<p><span style="color: forestgreen;">I take one egg away. How many cakes do you lose?</span></p>
+</div>
+<div class="fragment">
+<p><strong>One.</strong> Now the eggs are what stops you.</p>
+<div title="The answer depends on the direction">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>The answer depends on the direction</strong></p>
+</div>
+<div class="callout-content">
+<p>An egg is worth <span class="math inline">\(0\)</span> if you are gaining one, and <span class="math inline">\(1\)</span> if you are losing one. There is no single number “the value of an egg” — so there is no single multiplier <span class="math inline">\(\lambda_{\text{egg}}\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="ties-kinks-and-multipliers" class="slide level2">
+<h2>Ties, kinks, and multipliers</h2>
+<p>Fix <span class="math inline">\(F=10\)</span> and vary the eggs. The value function is <span class="math inline">\(V(E)=\min\{E,10\}\)</span>:</p>
 
+<img data-src="session4_5_optimization_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center r-stretch" width="624"><p>The multiplier is trying to be <strong>the slope of <span class="math inline">\(V\)</span></strong>. To the left the slope is <span class="math inline">\(1\)</span>; to the right it is <span class="math inline">\(0\)</span>. At the kink, every dashed line in between touches the graph without crossing it… and every one of those slopes solves the KKT system.</p>
+<div class="fragment">
+<div title="The diagnostic, in one line">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>The diagnostic, in one line</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Tied constraints <span class="math inline">\(\Rightarrow\)</span> many multipliers <span class="math inline">\(\Rightarrow\)</span> kink in <span class="math inline">\(V\)</span>.</strong> The envelope formula still holds on each side separately, just with different multipliers left and right.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>What fails here is that gradients of the active constraints are <strong>not</strong> linearly independent.</p>
+</div>
 </section></section>
+<section id="section-3" class="title-slide slide level1 standout-red center">
+<h1></h1>
+<p>Questions?</p>
+
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
