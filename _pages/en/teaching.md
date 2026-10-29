@@ -12,23 +12,23 @@ page_id: teaching
 
 ## Current Courses
 
-**Introduction to mathematics for economists (1st year graduate students) -- Fall 2025-2026**  
-*Institution:* SciencesPo. *Role:* Instructor . *Format:* 6x2h lectures + 6x2h tutorials  
+**Introduction to mathematics for economists (1st year graduate students) -- since Fall 2025 (ongoing)**  
+*Institution:* SciencesPo. *Role:* Instructor. *Format:* 6x2h lectures + 6x2h tutorials  
 *Focus:* multivariate calculus, linear algebra, integration, optimization.  
 
-**Students**: You may access the [slides]({{ '/assets/teaching/mathcamp/' | relative_url }})
+**Students**: The [slides and exercise sheets]({{ '/teaching/mathcamp/' | relative_url }}) are available with the password you were given.
 
 ---
 
-**Policy Analysis and Policy Evaluation (1st year graduate students) -- Fall and Spring 2025-2026**  
+**Policy Analysis and Policy Evaluation (1st year graduate students) -- since 2025-2026 (ongoing)**  
 *Institution:* SciencesPo. *Role:* Teaching Assistant -- lecturer: [Clément Imbert](https://sites.google.com/site/clemimbert/) (fall) and [Justine Knebelmann](https://sites.google.com/view/justine-knebelmann/home) (spring). *Format:* 12x2h tutorials in each semester  
 *Focus:* RCTs, regressions, matching, DiD, RDD
 
-**Students**: You may access the [slides]({{ '/assets/teaching/PAPE/' | relative_url }})
+**Students**: The [slides and exercise sheets]({{ '/teaching/PAPE/' | relative_url }}) are available with the password you were given.
 
 ---
 
-**Causal statistics for treatment models (3rd year undergraduate students) -- Spring 2025-2026 and Spring 2024-2025**  
+**Causal statistics for treatment models (3rd year undergraduate students) -- since Spring 2025 (ongoing)**  
 *Institution:* Ecole Normale Supérieure. *Role:* Assistant lecturer (main lecturer: Marc Gurgand). *Format:* 12x2h lectures (teaching 3x2h)  
 *Focus:* RCTs, regressions, matching, DiD, RDD, intro to ML (trees and forests)
 

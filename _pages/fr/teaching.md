@@ -12,25 +12,25 @@ page_id: teaching
 
 ## Cours actuellement enseignés
 
-**Introduction aux mathématiques pour les économistes (M1 de recherche en économie) -- Automne 2025-2026**  
+**Introduction aux mathématiques pour les économistes (M1 de recherche en économie) -- depuis l'automne 2025 (en cours)**  
 *Institution :* SciencesPo. *Rôle :* Enseignant. *Format :* 6x2h cours magistral + 6x2h travaux dirigés. *Langue :* anglais.   
 *Notions :* Analyse réelle, algèbre linéaire, intégration, optimisation.  
 
-**Etudiants**: Les [diapositives et exercices]({{ '/assets/teaching/mathcamp/' | relative_url }}) du cours sont accessibles avec le mot de passe qui vous a été transmis.
+**Étudiants**: Les [diapositives et exercices]({{ '/teaching/mathcamp/' | relative_url }}) du cours sont accessibles avec le mot de passe qui vous a été transmis.
 
 ---
 
-**Analyse et évaluation des politiques publiques (M1 d'affaires publiques, spécalité politiques économiques) -- Automne et Printemps 2025-2026**  
+**Analyse et évaluation des politiques publiques (M1 d'affaires publiques, spécialité politiques économiques) -- depuis 2025-2026 (en cours)**  
 *Institution :* SciencesPo. *Rôle :* Assistant d'enseignement -- professeurs : [Clément Imbert](https://sites.google.com/site/clemimbert/) (automne) et [Justine Knebelmann](https://sites.google.com/view/justine-knebelmann/home) (printemps). *Format:* 12x2h travaux dirigés par semestre. *Langue :* anglais.  
-*Notions:* évaluation d'impact randomisée, régressions, méthodes d'appariemment, DiD, RDD
+*Notions:* évaluation d'impact randomisée, régressions, méthodes d'appariement, DiD, RDD
 
-**Etudiants**: Les [diapositives et exercices]({{ '/assets/teaching/PAPE/' | relative_url }}) du cours sont accessibles avec le mot de passe qui vous a été transmis.
+**Étudiants**: Les [diapositives et exercices]({{ '/teaching/PAPE/' | relative_url }}) du cours sont accessibles avec le mot de passe qui vous a été transmis.
 
 ---
 
-**Causal statistics for treatment models (L3 d'économie et M1 de sciences cognitives) -- Printemps 2025-2026 et Printemps 2024-2025**  
+**Causal statistics for treatment models (L3 d'économie et M1 de sciences cognitives) -- depuis le printemps 2025 (en cours)**  
 *Institution:* Ecole Normale Supérieure. *Rôle:* Assistant d'enseignement -- professeur: Marc Gurgand. *Format:* 12x2h cours (3 cours enseignés par mes soins). *Langue :* anglais.    
-*Notions:* évaluation d'impact randomisée, régressions, méthodes d'appariemment, DiD, RDD, introduction aux méthodes d'apprentissages automatiques (arbres et forêts)
+*Notions:* évaluation d'impact randomisée, régressions, méthodes d'appariement, DiD, RDD, introduction aux méthodes d'apprentissages automatiques (arbres et forêts)
 
 
 <hr style="height:6px; background-color:gray; border:none; margin:auto;" />

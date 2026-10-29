@@ -1,14 +1,15 @@
 ---
 layout: about
-title: A propos
+title: À propos
 permalink: /
-subtitle: <a href='https://www.sciencespo.fr/department-economics/'>Département d'économie, Sciences Po</a>. 28, rue des Saints-Pères, 75007
+subtitle: <a href='https://www.sciencespo.fr/department-economics/'>Département d'économie, Sciences Po</a>. 28, rue des Saints-Pères, 75007 Paris
 lang: fr
 page_id: presentation
 
 profile:
   align: right
   image: Main_CV_pic.jpg
+  image_alt: Portrait d'Alexandre Grellet
   image_circular: false # crops the image to make it circular
   more_info: # can use "<" to read what is on next line 
 

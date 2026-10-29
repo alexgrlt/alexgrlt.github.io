@@ -1,11 +1,20 @@
 ---
 page_id: PAPE
 layout: page
-title: Advanced Policy Analysis and Policy Evaluation 
+title: Policy Analysis and Policy Evaluation
+permalink: /teaching/PAPE/
 lang: en
 ---
 
-You will find below the ressources for each tutorial:
+You will find below the resources for each tutorial.
+
+## 2026–2027
+
+- Tutorial 1: [slides]({{ '/assets/teaching/PAPE/2026_2027/Semester1/PAPE_Tutorial_01.html' | relative_url }})
+- Tutorial 2: [slides]({{ '/assets/teaching/PAPE/2026_2027/Semester1/tutorial_02/PAPE_Tutorial_02.html' | relative_url }})
+- Tutorial 3: [slides]({{ '/assets/teaching/PAPE/2026_2027/Semester1/tutorial_03/PAPE_Tutorial_03.html' | relative_url }})
+
+## Previous year (2025–2026)
 
 - Tutorial 1: [exercise sheet]({{ '/assets/teaching/PAPE/Tutorial_01/Seminar1_Q.pdf' | relative_url }}) and [slides]({{ '/assets/teaching/PAPE/Tutorial_01/Tutorial_01.html' | relative_url }})
 - Tutorial 2: [exercise sheet]({{ '/assets/teaching/PAPE/Tutorial_02/Tutorial_02.pdf' | relative_url }}) and [slides]({{ '/assets/teaching/PAPE/Tutorial_02/Tutorial_02.html' | relative_url }})

@@ -2,13 +2,14 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='https://www.sciencespo.fr/department-economics/'>Department of Economics, Sciences Po</a>. 28, rue des Saints-Pères, 75007
+subtitle: <a href='https://www.sciencespo.fr/department-economics/'>Department of Economics, Sciences Po</a>. 28, rue des Saints-Pères, 75007 Paris
 lang: en
 page_id: presentation
 
 profile:
   align: right
   image: Main_CV_pic.jpg
+  image_alt: Portrait of Alexandre Grellet
   image_circular: false # crops the image to make it circular
   more_info: 
 
