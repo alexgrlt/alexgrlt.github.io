@@ -30,13 +30,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "news-with-a-pluridisciplinary-team-from-university-of-lyon-1-and-paris-school-of-econonomics-we-released-the-results-of-a-research-about-delaying-school-start-in-high-school-in-france-you-can-check-it-out-here",
-          title: 'With a pluridisciplinary team from University of Lyon 1 and Paris School of...',
+        },{id: "news-with-a-multidisciplinary-team-from-university-of-lyon-1-and-paris-school-of-economics-we-released-the-results-of-a-study-on-delaying-school-start-in-french-lower-secondary-schools-collège-you-can-check-it-out-here",
+          title: 'With a multidisciplinary team from University of Lyon 1 and Paris School of...',
           description: "",
-          section: "News",},{id: "news-the-results-from-our-sleep-experiment-was-published-in-scientific-reports-we-showed-that-delaying-school-start-by-1-hour-can-meaningfully-improve-cognitive-performance-in-adolescents",
-          title: 'The results from our sleep experiment was published in Scientific reports. We showed...',
+          section: "News",},{id: "news-the-results-from-our-sleep-experiment-were-published-in-scientific-reports-we-showed-that-delaying-school-start-by-1-hour-can-meaningfully-improve-cognitive-performance-in-adolescents",
+          title: 'The results from our sleep experiment were published in Scientific Reports. We showed...',
           description: "",
-          section: "News",},{id: "news-we-presented-the-preliminary-results-of-our-rct-evaluating-the-effectiveness-of-lalilo-an-edtech-aiming-to-improvement-first-grade-students-reading-skills-during-the-conference-celebrating-the-achievements-of-the-idee-program-you-can-a-summary-of-the-results-on-the-idee-website-as-well-as-an-accompanying-blog-post-by-lalilo-our-next-steps-explain-in-greater-depth-the-use-of-lalilo-and-explore-heterogeneous-effects",
+          section: "News",},{id: "news-we-presented-the-preliminary-results-of-our-rct-evaluating-the-effectiveness-of-lalilo-an-edtech-aiming-to-improve-first-grade-students-reading-skills-during-the-conference-celebrating-the-achievements-of-the-idee-program-you-can-find-a-summary-of-the-results-on-the-idee-website-as-well-as-an-accompanying-blog-post-by-lalilo-our-next-steps-explain-in-greater-depth-the-use-of-lalilo-and-explore-heterogeneous-effects",
           title: 'We presented the preliminary results of our RCT evaluating the effectiveness of Lalilo,...',
           description: "",
           section: "News",},{id: "projects-delaying-school-start-in-adolescence-dessa",
@@ -55,6 +55,20 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("mailto:%61%6C%65%78%61%6E%64%72%65.%67%72%65%6C%6C%65%74@%73%63%69%65%6E%63%65%73%70%6F.%66%72", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/alexgrlt", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/alexandre-grellet", "_blank");
         },
       },{
         id: 'social-scholar',

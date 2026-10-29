@@ -3,8 +3,8 @@ const ninja = document.querySelector('ninja-keys');
 
 // add the home and posts menu items
 ninja.data = [{
-    id: "nav-a-propos",
-    title: "A propos",
+    id: "nav-à-propos",
+    title: "À propos",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
@@ -33,7 +33,7 @@ ninja.data = [{
         },{id: "news-conjointement-avec-une-équipe-du-centre-de-recherche-en-neurosciences-de-lyon-nous-venons-de-publier-une-note-présentant-une-expérimentation-sur-le-report-d-horaire-de-début-des-cours-vous-pouvez-en-savoir-plus-en-lisant-cette-note-sur-le-site-du-conseil-scientifique-de-l-education-nationale-csen",
           title: 'Conjointement avec une équipe du Centre de Recherche en Neurosciences de Lyon, nous...',
           description: "",
-          section: "News",},{id: "news-les-résultats-de-notre-étude-sur-le-report-de-l-heure-de-début-des-cours-ont-été-publié-dans-la-revue-scientific-reports-nous-y-détaillons-les-effets-positifs-d-un-décalage-d-une-heure-du-début-des-cours-au-collège-sur-les-performances-cognitives-des-collégiens",
+          section: "News",},{id: "news-les-résultats-de-notre-étude-sur-le-report-de-l-heure-de-début-des-cours-ont-été-publiés-dans-la-revue-scientific-reports-nous-y-détaillons-les-effets-positifs-d-un-décalage-d-une-heure-du-début-des-cours-au-collège-sur-les-performances-cognitives-des-collégiens",
           title: 'Les résultats de notre étude sur le report de l’heure de début des...',
           description: "",
           section: "News",},{id: "news-nous-avons-présenté-les-premiers-résultats-de-notre-évaluation-de-l-impact-de-lalilo-sur-les-élèves-de-cp-lalilo-est-un-outil-d-apprentissage-de-la-lecture-opérant-via-un-modèle-de-technologie-adaptative-vous-pouvez-trouver-un-résumé-de-ces-résultats-préliminaires-sur-le-site-d-idee-ainsi-que-sur-le-blog-de-lalilo-a-venir-une-exploration-des-effets-hétérogènes-et-une-meilleure-compréhension-des-dynamiques-d-utilisation-de-lalilo",
@@ -41,7 +41,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-delaying-school-start-in-adolescence-dessa",
           title: 'Delaying School Start in Adolescence (DESSA)',
-          description: "Co-authors: Stéphanie Mazza, Eve Reynaud, Amandine Rey, Lucie Malevergne, Adrien Pawlik, Marc Gurgand",
+          description: "Co-auteurs : Stéphanie Mazza, Eve Reynaud, Amandine Rey, Lucie Malevergne, Adrien Pawlik, Marc Gurgand",
           section: "Projects",handler: () => {
               window.location.href = "/projects/DESSA/";
             },},{id: "projects-apprendre-à-lire-avec-l-39-ia-la-technologie-peut-elle-faciliter-l-39-acquisition-de-la-lecture-et-améliorer-l-39-égalité-entre-élèves",
@@ -55,6 +55,20 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("mailto:%61%6C%65%78%61%6E%64%72%65.%67%72%65%6C%6C%65%74@%73%63%69%65%6E%63%65%73%70%6F.%66%72", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/alexgrlt", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/alexandre-grellet", "_blank");
         },
       },{
         id: 'social-scholar',
