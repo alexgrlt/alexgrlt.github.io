@@ -3,7 +3,7 @@ page_id: dessa
 layout: page
 title: Delaying School Start in Adolescence (DESSA)
 description: >
-    Co-auteurs : Stéphanie Mazza, Eve Reynaud, Amandine Rey, Lucie Malevergne, Adrien Pawlik, Marc Gurgand
+    Co-auteurs : [Stéphanie Mazza](https://emc.univ-lyon2.fr/mazza-stephanie), Eve Reynaud, [Amandine Rey](https://inspe.univ-lyon1.fr/recherche/annuaire-des-chercheurs-ses/amandine-rey), Lucie Malevergne, [Adrien Pawlik](https://www.idee-education.fr/), [Marc Gurgand](https://www.parisschoolofeconomics.eu/en/gurgand-marc/)
 img: /assets/img/DESSA.jpg
 importance: 2
 category: education

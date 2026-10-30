@@ -3,7 +3,7 @@ page_id: heat_waves
 layout: page
 title: Too Hot to Succeed? Heat Waves, Exam Performance, and Noisy Signals in College Admissions
 description: >
-    Co-author: [Leïla Costil]{https://leilacstl.github.io/}
+    Co-author: [Leïla Costil](https://leilacstl.github.io/)
 img: /assets/img/heat_waves.png
 importance: 1
 category: education

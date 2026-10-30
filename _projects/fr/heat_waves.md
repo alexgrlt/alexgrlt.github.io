@@ -3,7 +3,7 @@ page_id: heat_waves
 layout: page
 title: Trop chaud pour réussir ? Vagues de chaleur, résultats aux examens et accès à l'enseignement supérieur
 description: >
-    Co-autrice : [Leïla Costil]{https://leilacstl.github.io/}
+    Co-autrice : [Leïla Costil](https://leilacstl.github.io/)
 img: /assets/img/heat_waves.png
 importance: 1
 category: éducation

@@ -19,7 +19,7 @@ layout: default
         {% endif %}
       </h1>
     {% endunless %}
-    <p class="post-description">{{ page.description }}</p>
+    <p class="post-description">{{ page.description | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
   </header>
 
   <article>
