@@ -3,7 +3,7 @@ page_id: lalilo
 layout: page
 title: Apprendre à lire avec l'IA. La technologie peut-elle faciliter l'acquisition de la lecture et améliorer l'égalité entre élèves ?
 description: >
-    Co-auteurs: [Carlo Barone](https://www.sciencespo.fr/liepp/fr/annuaire/barone-carlo/), [Marc Gurgand](https://www.parisschoolofeconomics.eu/en/gurgand-marc/), [Elise Huillery](https://sites.google.com/site/elisehuillery), [Thomas Villemonteix](https://ufr-psycho.univ-paris8.fr/VILLEMONTEIX-Thomas)
+    Co-auteurs: [Carlo Barone](https://www.sciencespo.fr/liepp/fr/annuaire/barone-carlo/), [Lucie Fourel](https://www.idee-education.fr/), [Marc Gurgand](https://www.parisschoolofeconomics.eu/en/gurgand-marc/), [Elise Huillery](https://sites.google.com/site/elisehuillery), [Thomas Villemonteix](https://ufr-psycho.univ-paris8.fr/VILLEMONTEIX-Thomas)
 img: /assets/img/Livre_Lalilo_Pixabay.jpg
 importance: 1
 category: éducation
