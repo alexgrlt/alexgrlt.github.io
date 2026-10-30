@@ -675,6 +675,15 @@ footer.sticky-bottom {
   .card {
     img {
       width: 100%;
+      // Same size for every project image, whatever its original ratio
+      aspect-ratio: 3 / 2;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    figure {
+      margin-bottom: 0;
     }
   }
 
