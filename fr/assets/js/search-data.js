@@ -46,7 +46,7 @@ ninja.data = [{
               window.location.href = "/projects/DESSA/";
             },},{id: "projects-apprendre-à-lire-avec-l-39-ia-la-technologie-peut-elle-faciliter-l-39-acquisition-de-la-lecture-et-améliorer-l-39-égalité-entre-élèves",
           title: 'Apprendre à lire avec l&amp;#39;IA. La technologie peut-elle faciliter l&amp;#39;acquisition de la lecture...',
-          description: "Co-auteurs: [Carlo Barone](https://www.sciencespo.fr/liepp/fr/annuaire/barone-carlo/), [Marc Gurgand](https://www.parisschoolofeconomics.eu/en/gurgand-marc/), [Elise Huillery](https://sites.google.com/site/elisehuillery), [Thomas Villemonteix](https://ufr-psycho.univ-paris8.fr/VILLEMONTEIX-Thomas)",
+          description: "Co-auteurs: [Carlo Barone](https://www.sciencespo.fr/liepp/fr/annuaire/barone-carlo/), [Lucie Fourel](https://www.idee-education.fr/), [Marc Gurgand](https://www.parisschoolofeconomics.eu/en/gurgand-marc/), [Elise Huillery](https://sites.google.com/site/elisehuillery), [Thomas Villemonteix](https://ufr-psycho.univ-paris8.fr/VILLEMONTEIX-Thomas)",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Lalilo/";
             },},{id: "projects-trop-chaud-pour-réussir-vagues-de-chaleur-résultats-aux-examens-et-accès-à-l-39-enseignement-supérieur",

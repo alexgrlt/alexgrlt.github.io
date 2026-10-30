@@ -46,7 +46,7 @@ ninja.data = [{
               window.location.href = "/projects/DESSA/";
             },},{id: "projects-reading-with-ai-can-technology-foster-reading-acquisition-and-promote-educational-equity",
           title: 'Reading with AI. Can Technology Foster Reading Acquisition and Promote Educational Equity?',
-          description: "Co-authors: [Carlo Barone](https://www.sciencespo.fr/liepp/en/directory/barone-carlo/), [Marc Gurgand](https://www.parisschoolofeconomics.eu/en/gurgand-marc/), [Elise Huillery](https://sites.google.com/site/elisehuillery), [Thomas Villemonteix](https://ufr-psycho.univ-paris8.fr/VILLEMONTEIX-Thomas)",
+          description: "Co-authors: [Carlo Barone](https://www.sciencespo.fr/liepp/en/directory/barone-carlo/), [Lucie Fourel](https://www.idee-education.fr/), [Marc Gurgand](https://www.parisschoolofeconomics.eu/en/gurgand-marc/), [Elise Huillery](https://sites.google.com/site/elisehuillery), [Thomas Villemonteix](https://ufr-psycho.univ-paris8.fr/VILLEMONTEIX-Thomas)",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Lalilo/";
             },},{id: "projects-too-hot-to-succeed-heat-waves-exam-performance-and-noisy-signals-in-college-admissions",
