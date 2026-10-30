@@ -49,6 +49,11 @@ ninja.data = [{
           description: "Co-auteurs: Carlo Barone, Marc Gurgand, Elise Huillery, Thomas Villemonteix",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Lalilo/";
+            },},{id: "projects-trop-chaud-pour-réussir-vagues-de-chaleur-résultats-aux-examens-et-accès-à-l-39-enseignement-supérieur",
+          title: 'Trop chaud pour réussir ? Vagues de chaleur, résultats aux examens et accès...',
+          description: "Co-autrice : Leïla Costil",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/heat_waves/";
             },},{
         id: 'social-email',
         title: 'email',
