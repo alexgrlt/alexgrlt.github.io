@@ -51,7 +51,7 @@ ninja.data = [{
               window.location.href = "/projects/Lalilo/";
             },},{id: "projects-too-hot-to-succeed-heat-waves-exam-performance-and-noisy-signals-in-college-admissions",
           title: 'Too Hot to Succeed? Heat Waves, Exam Performance, and Noisy Signals in College...',
-          description: "Co-author: Leïla Costil",
+          description: "Co-author: [Leïla Costil]{https://leilacstl.github.io/}",
           section: "Projects",handler: () => {
               window.location.href = "/projects/heat_waves/";
             },},{

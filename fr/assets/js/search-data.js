@@ -51,7 +51,7 @@ ninja.data = [{
               window.location.href = "/projects/Lalilo/";
             },},{id: "projects-trop-chaud-pour-réussir-vagues-de-chaleur-résultats-aux-examens-et-accès-à-l-39-enseignement-supérieur",
           title: 'Trop chaud pour réussir ? Vagues de chaleur, résultats aux examens et accès...',
-          description: "Co-autrice : Leïla Costil",
+          description: "Co-autrice : [Leïla Costil]{https://leilacstl.github.io/}",
           section: "Projects",handler: () => {
               window.location.href = "/projects/heat_waves/";
             },},{
