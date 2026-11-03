@@ -933,9 +933,9 @@ Y_i(0) &amp;: \text{the result of the student if she is NOT taught with the AI a
 </section>
 <section id="assessing-unconfoundedness-placebo-checks" class="slide level2">
 <h2>Assessing unconfoundedness: placebo checks</h2>
-<p>Unconfoundedness (Assumption 2) is <strong>not testable</strong>: it is a statement about <span class="math inline">\(Y_i(0)\)</span> for the treated, which we never observe.</p>
+<p>Unconfoundedness is <strong>not directly testable</strong>: it is a statement about untreated potential outcome <span class="math inline">\(Y_i(0)\)</span> for the treated, which we never observe.</p>
 <div class="fragment">
-<p>What we <em>can</em> do: find situations where we <strong>know the true effect is zero</strong>, and run <strong>the same estimator</strong> (same covariates <span class="math inline">\(X\)</span>, same matching). If it still finds an “effect”, the treated and control groups differ in something that <span class="math inline">\(X\)</span> does not capture.</p>
+<p>We can however <strong>test a proxy</strong>: find variables for which we <strong>know the true effect is zero</strong>, and run <strong>the same estimator</strong> (same covariates <span class="math inline">\(X\)</span>, same matching). If it still finds an “effect”, the treated and control groups differ in something that <span class="math inline">\(X\)</span> does not capture.</p>
 </div>
 <div class="fragment">
 <div class="columns">
@@ -979,16 +979,16 @@ Y_i(0) &amp;: \text{the result of the student if she is NOT taught with the AI a
 <h2>Example</h2>
 <p>Imagine you are evaluating the effectiveness of renovating schools. We estimate its effect on the end-of-year math score by regression (or matching) on <span class="math inline">\(X\)</span>: priority-education status of the school, class size, teacher experience, student gender and month of birth.</p>
 <div class="fragment">
-<p><strong>Placebo 1: an outcome renovation should not change.</strong> Same regression, but with <strong>student SES</strong> (parents’ occupation, recorded at enrolment) as the outcome: <span class="math display">\[
+<p><strong>Placebo 1: pick an outcome renovation should not change.</strong> Same regression, but with <strong>student SES</strong> (e.g.&nbsp;parents’ occupation) as the outcome: <span class="math display">\[
 \text{SES}_i = \alpha + \tau^{\text{placebo}}\, T_i + X_i'\beta + u_i
 \]</span></p>
 </div>
 <div class="fragment">
-<p><strong>Placebo 2: two groups that didn’t get their school renovated.</strong> Compare the math scores of (a) classes in schools that need renovation but were not renovated, and (b) classes in schools that didn’t need renovation.</p>
+<p><strong>Placebo 2: two groups that didn’t get the school renovated.</strong> Compare the math scores of (a) classes in schools that need renovation but were not renovated, and (b) classes in schools that didn’t need renovation.</p>
 </div>
 </section>
-<section id="reading-the-placebo-results-simulated-numbers" class="slide level2">
-<h2>Reading the placebo results (simulated numbers)</h2>
+<section id="reading-the-placebo-results-fake-numbers-here" class="slide level2">
+<h2>Reading the placebo results (fake numbers here)</h2>
 
 <img data-src="Tutorial_04_files/figure-revealjs/placebo-lalilo-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1950"><ul>
 <li><strong>Scenario A</strong>: the estimator finds nothing where there is nothing to find. Consistent with unconfoundedness, so the 0.20 s.d. effect is more credible.</li>
@@ -998,7 +998,7 @@ Y_i(0) &amp;: \text{the result of the student if she is NOT taught with the AI a
 <section id="why-only-suggestive" class="slide level2">
 <h2>Why only <em>suggestive</em>?</h2>
 <ul>
-<li><strong>Passing does not prove</strong> unconfoundedness. The placebos only check selection on SES, baseline scores, or signing up. Something else could still drive both renovaton and math progress without showing up in SES.</li>
+<li><strong>Passing the <em>proxy test</em> does not prove</strong> unconfoundedness. The placebos only check selection on SES, baseline scores, etc. Something else could still drive both renovation and math progress without showing up in SES.</li>
 <li><strong>Failing is more informative</strong>: the estimator does not even balance the groups on things we <em>can</em> see, so we should doubt it on things we cannot.</li>
 <li>The placebo outcome must be <strong>truly unaffected</strong>: measured <strong>before</strong> the treatment, or a (very) plausibly unaffected variable.</li>
 </ul>
@@ -1009,8 +1009,8 @@ Y_i(0) &amp;: \text{the result of the student if she is NOT taught with the AI a
 <h1>Overlap and functional form</h1>
 
 </section>
-<section id="overlap-assumption-3-why-we-need-it" class="slide level2">
-<h2>Overlap (Assumption 3): why we need it</h2>
+<section id="overlap-when-we-need-it" class="slide level2">
+<h2>Overlap: when we need it</h2>
 <p><strong>Overlap</strong> (common support): for every value <span class="math inline">\(x\)</span> of the covariates, we can find both treated and control individuals: <span class="math display">\[
 0 &lt; P(D = 1 \mid X = x) &lt; 1 \quad \text{for all } x.
 \]</span></p>
@@ -1030,7 +1030,7 @@ Y_i(0) &amp;: \text{the result of the student if she is NOT taught with the AI a
 </div>
 <div class="callout-content">
 <p>When we don’t have overlap, there are some values <span class="math inline">\(x\)</span> of <span class="math inline">\(X\)</span> where there are <strong>no control units</strong> (resp. treatment units), the second (resp. first) term is never observed: the data are silent about some counterfactuals.</p>
-<p>The way linear regression works is by <strong>extrapolation</strong>: learn <span class="math inline">\(\E[Y \mid D = 0, X]\)</span> where controls exist, and <em>assume</em> it keeps the same shape where they do not. This is the <strong>functional form assumption</strong>.</p>
+<p>The way linear regression works is by <strong>extrapolation</strong>: learn <span class="math inline">\(\E[Y \mid D = 0, X]\)</span> where controls exist, and <em>assume</em> it keeps the same shape where they do not. This is the <strong>functional form assumption</strong> implicit in linear regression.</p>
 </div>
 </div>
 </div>
@@ -1043,17 +1043,18 @@ Y_i(0) &amp;: \text{the result of the student if she is NOT taught with the AI a
 \E[Y(0) \mid X = x] = \alpha + \beta x
 \quad \text{for all } x, \text{ including those where there is no control unit.}
 \]</span></p>
-<p>In practice this is what we impose when we run <span class="math inline">\(Y_i = \alpha + \tau D_i + \beta X_i + u_i\)</span> by OLS: the counterfactual of a treated individual with <span class="math inline">\(X_i = x_t\)</span> is predicted by <span class="math inline">\(\hat\alpha + \hat\beta\, x_t\)</span>, a value <strong>outside</strong> the range of the controls.</p>
+<div class="fragment">
 <ul>
 <li>With overlap, the same model only <strong>interpolates</strong> between observed points: we can check it against the data, and a mistake is small.</li>
 <li>Without overlap, it <strong>extrapolates</strong>: nothing in the data can confirm or reject the assumption. The estimate rests on the model, not on the data.</li>
 </ul>
+</div>
 </section>
 <section id="no-overlap-linear-truth-vs.-non-linear-truth" class="slide level2">
 <h2>No overlap: linear truth vs.&nbsp;non-linear truth</h2>
 
 <img data-src="Tutorial_04_files/figure-revealjs/overlap-functional-form-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1950"><ul>
-<li><strong>Left</strong>: the linear shape really does continue beyond the controls, so the extrapolated line is a good counterfactual and <span class="math inline">\(\hat\tau \approx \tau\)</span>.</li>
+<li><strong>Left</strong>: the linear shape really does continue beyond the controls, so the extrapolated line is a good counterfactual.</li>
 <li><strong>Right</strong>: the true <span class="math inline">\(Y(0)\)</span> flattens out, but the data on controls cannot tell us so: the line overshoots, and the estimated ATE is <strong>biased</strong>.</li>
 </ul>
 </section>
@@ -1096,7 +1097,7 @@ Y_i(0) &amp;: \text{the result of the student if she is NOT taught with the AI a
 <li>The CEF <span class="math inline">\(m(x)\)</span> can be arbitrarily complex and non-linear.</li>
 <li>Regression offers a parametric approximation: <span class="math inline">\(m(x) \approx \beta_0 + \beta_1 x\)</span>.</li>
 <li>OLS finds the <span class="math inline">\(\beta_0, \beta_1\)</span> that minimise <span class="math inline">\(\E\big[(Y - \beta_0 - \beta_1 X)^2\big]\)</span>.</li>
-<li>Thus OLS estimates the <strong>best linear approximation</strong> to the true CEF: <span class="math display">\[
+<li>OLS gives the <strong>best linear unbiased estimator</strong> (BLUE) to the true CEF: <span class="math display">\[
 \E[Y \mid X] \approx \E[Y] + \beta_1\big(X - \E[X]\big).
 \]</span></li>
 </ul>
@@ -1191,11 +1192,12 @@ V(\hat\beta_j)
 <p><em>“When residuals are homoskedastic, we use the constant variance <span class="math inline">\(\sigma^2\)</span> to estimate the variance of the coefficients. But how can the variance of the residuals be constant at all? It is never perfectly constant in a sample, so which value do we take?”</em></p>
 </div>
 <div class="fragment">
-<p><strong>Motivation.</strong> <span class="math inline">\(\hat\beta\)</span> is computed from <strong>one</strong> sample. With another sample, we would get another <span class="math inline">\(\hat\beta\)</span>. To know whether our estimate is precise (standard errors, <span class="math inline">\(t\)</span>-tests, confidence intervals), we need to know <strong>how much <span class="math inline">\(\hat\beta\)</span> would vary</strong> from one sample to the next.</p>
-<p>The previous slide gave the answer with one covariate: <span class="math display">\[
+<p>Remind: <span class="math display">\[
 V(\hat\beta) = \frac{\color{#d90502}{V(\text{residual})}}{(n - 1)\cdot s^2_X}
 \]</span></p>
-<p>The noisier the outcome around the regression line, the less precise <span class="math inline">\(\hat\beta\)</span>. To understand <span class="math inline">\(\color{#d90502}{V(\text{residual})}\)</span>, we must answer two questions: <strong>what is random</strong> here, and <strong>the variance of what</strong>?</p>
+</div>
+<div class="fragment">
+<p>Thus, the variance of <span class="math inline">\(\hat\beta\)</span> is a function of the variance of the error term (here approximated by the sample variance of the residuals).</p>
 </div>
 </section>
 <section id="what-is-random-the-frequentist-view" class="slide level2">
@@ -1205,18 +1207,18 @@ y_i = \beta_0 + \beta_1 x_i + u_i
 \]</span></p>
 <ul>
 <li><span class="math inline">\(\beta_0, \beta_1\)</span>: <strong>fixed</strong> but unknown numbers (population parameters). In frequentist statistics, they are <strong>not</strong> random.</li>
-<li><span class="math inline">\(x_i\)</span>: treated as <strong>given</strong> (we reason conditionally on <span class="math inline">\(X\)</span>).</li>
-<li><span class="math inline">\(u_i\)</span>, the <strong>error</strong>: everything else that moves <span class="math inline">\(y_i\)</span> (omitted factors, luck, measurement error). <strong>This is the random part.</strong></li>
+<li><span class="math inline">\(x_i\)</span>: treated as <strong>given</strong> (we reason conditionally on <span class="math inline">\(X\)</span>). Thus, it’s NOT the source of uncertainty / randomness.</li>
+<li><span class="math inline">\(u_i\)</span>, the <strong>error</strong>: everything else that moves <span class="math inline">\(y_i\)</span> (omitted factors, luck, measurement error). This is the <strong>random part.</strong></li>
 </ul>
 <div class="fragment">
-<div title="The frequentist thought experiment">
+<div title="A simple thought experiment">
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>The frequentist thought experiment</strong></p>
+<p><strong>A simple thought experiment</strong></p>
 </div>
 <div class="callout-content">
 <p>Imagine drawing the sample <strong>again and again</strong>. Each time, the <span class="math inline">\(u_i\)</span> come out differently <span class="math inline">\(\Rightarrow\)</span> the <span class="math inline">\(y_i\)</span> differ <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(\hat\beta\)</span> differs. All the sampling variability of <span class="math inline">\(\hat\beta\)</span> comes from <span class="math inline">\(u\)</span>: the variance of <span class="math inline">\(\hat\beta\)</span> <strong>inherits</strong> the variance of <span class="math inline">\(u\)</span>.</p>
@@ -1226,25 +1228,35 @@ y_i = \beta_0 + \beta_1 x_i + u_i
 </div>
 </div>
 <div class="fragment">
-<div title="Error vs. residual">
-<div class="callout callout-warning callout-titled callout-style-default">
+<div title="sidenote: why &quot;the frequentist view&quot;?">
+<div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Error vs.&nbsp;residual</strong></p>
+<p><strong>sidenote: why “the frequentist view”?</strong></p>
 </div>
 <div class="callout-content">
-<p>The <strong>error</strong> <span class="math inline">\(u_i = y_i - \beta_0 - \beta_1 x_i\)</span> is never observed. The <strong>residual</strong> <span class="math inline">\(\hat u_i = y_i - \hat\beta_0 - \hat\beta_1 x_i\)</span> is its estimate from our sample. Assumptions are about <span class="math inline">\(u\)</span>, not about <span class="math inline">\(\hat u\)</span>.</p>
+<p>2 main approaches to statistics</p>
+<ul>
+<li><p>Frequentist (dominant): <span class="math inline">\(\beta\)</span>s are fixed, data are random <span class="math inline">\(\Rightarrow\)</span> uncertainty = sampling variability (comes from the error term).</p></li>
+<li><p>Bayesian (less common): data are fixed, <span class="math inline">\(\beta\)</span>s described by a probability distribution <span class="math inline">\(\Rightarrow\)</span> uncertainty = posterior distribution.</p></li>
+</ul>
+<p>In practice, main difference is about the question asked: “How would <span class="math inline">\(\hat\beta\)</span> vary across samples? (due to randomness of the data draw)” vs.&nbsp;“What do I believe about <span class="math inline">\(\beta\)</span> given this sample? (given my prior beliefs and the new data I have)”</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="since-it-is-random-we-describe-its-distribution" class="slide level2">
-<h2>Since it is random, we describe its distribution</h2>
+<section id="digression-general-culture-not-important-for-pape-frequentist-vs-bayesian-approaches" class="slide level2">
+<h2>Digression (general culture, not important for PAPE): frequentist vs bayesian approaches</h2>
+<iframe data-external="1" src="https://www.youtube.com/embed/r76oDIvwETI" width="75%" height="450" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<p>You might also watch the full <a href="https://youtu.be/YsJ4W1k0hUg?si=_umLaK0E7fCWAdqR">video series</a>. Note: the video is clear, but partial in the sense that it’s taught by a researcher strongly advocating for bayesian stats.</p>
+</section>
+<section id="distribution-of-the-error-term" class="slide level2">
+<h2>Distribution of the error term</h2>
 <p>We cannot know each <span class="math inline">\(u_i\)</span>, but we can make <strong>assumptions about the distribution it is drawn from</strong>. The classical one: <span class="math display">\[
 u_i \mid X_i \;\sim\; \mathcal{N}(0,\ \sigma^2)
 \]</span></p>
@@ -1257,22 +1269,17 @@ u_i \mid X_i \;\sim\; \mathcal{N}(0,\ \sigma^2)
 \]</span></li>
 </ul>
 <div class="fragment">
-<p>So “constant variance” describes the <strong>distribution</strong> each error is drawn from, not the numbers in our sample: the realised <span class="math inline">\(u_i\)</span> are all different. (Normality is not needed for OLS to be unbiased, and in large samples not even for inference, but it makes the picture concrete.)</p>
+<p>So “constant variance” describes the <strong>distribution</strong> each error is drawn from, not the numbers in our sample: the realised <span class="math inline">\(u_i\)</span> are all different.</p>
 </div>
 </section>
 <section id="the-picture-one-bell-curve-at-each-value-of-x" class="slide level2">
 <h2>The picture: one bell curve at each value of <span class="math inline">\(X\)</span></h2>
 
-<img data-src="Tutorial_04_files/figure-revealjs/homo-hetero-bells-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1950"><ul>
-<li>Red line: <span class="math inline">\(\E[Y \mid X]\)</span>. Teal curves: the distribution of <span class="math inline">\(u\)</span> at <span class="math inline">\(X = 2, 5, 8\)</span>. Grey dots: <strong>one</strong> draw per individual.</li>
-<li>Left: every dot comes from a bell curve of the <strong>same width</strong> <span class="math inline">\(\sigma^2\)</span>, yet the dots are all at different distances from the line.</li>
-</ul>
-</section>
+<img data-src="Tutorial_04_files/figure-revealjs/homo-hetero-bells-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1950"></section>
 <section id="why-do-we-need-an-assumption-on-the-variance" class="slide level2">
 <h2>Why do we need an assumption on the variance?</h2>
 <ul>
 <li>For each individual we observe <strong>one</strong> <span class="math inline">\(y_i\)</span>, hence <strong>one</strong> draw of <span class="math inline">\(u_i\)</span> (and only through <span class="math inline">\(\hat u_i\)</span>). One draw cannot reveal the variance of the distribution it came from.</li>
-<li><strong>Degrees of freedom</strong>: we have <span class="math inline">\(n\)</span> observations, and already spend <span class="math inline">\(k\)</span> of them on the coefficients. If each individual had their own variance <span class="math inline">\(\sigma_i^2\)</span>, we would add <span class="math inline">\(n\)</span> unknowns: <strong>more unknowns than data</strong>.</li>
 <li><strong>Homoskedasticity</strong> reduces this to <strong>one</strong> unknown, <span class="math inline">\(\sigma^2\)</span>, which we can estimate by <strong>pooling</strong> all the residuals.</li>
 </ul>
 <div class="fragment">
@@ -1287,8 +1294,8 @@ u_i \mid X_i \;\sim\; \mathcal{N}(0,\ \sigma^2)
 </div>
 <div class="callout-content">
 <ul>
-<li><strong>Parametric</strong>: assume a <em>shape</em> for <span class="math inline">\(\sigma^2(x)\)</span>, e.g. <span class="math inline">\(\sigma^2(x) = \gamma_0 + \gamma_1 x\)</span>: a few more parameters to estimate (weighted / feasible GLS).</li>
-<li><strong>Non-parametric</strong>: no shape at all. Either estimate <span class="math inline">\(\sigma^2(x)\)</span> by smoothing <span class="math inline">\(\hat u_i^2\)</span> against <span class="math inline">\(x\)</span> (needs a lot of data), or use <strong>robust standard errors</strong>, which never need each <span class="math inline">\(\sigma_i^2\)</span> separately and are valid in large samples.</li>
+<li><strong>Parametric</strong>: assume a <em>shape</em> for <span class="math inline">\(\sigma^2(x)\)</span>, e.g. <span class="math inline">\(\sigma^2(x) = \gamma_0 + \gamma_1 x\)</span>: a few more parameters to estimate (weighted / feasible GLS). See e.g. <span class="citation" data-cites="boydMeasuringTestMeasurement2013a">Boyd et al. (<a href="#/references" role="doc-biblioref" onclick="">2013</a>)</span></li>
+<li><strong>Non-parametric</strong>: either estimate <span class="math inline">\(\sigma^2(x)\)</span> by smoothing <span class="math inline">\(\hat u_i^2\)</span> against <span class="math inline">\(x\)</span> (needs a lot of data), or use <strong>robust standard errors</strong>, which never need each <span class="math inline">\(\sigma_i^2\)</span> separately and are valid in large samples.</li>
 </ul>
 </div>
 </div>
@@ -1298,7 +1305,7 @@ u_i \mid X_i \;\sim\; \mathcal{N}(0,\ \sigma^2)
 </section>
 <section id="from-one-error-to-all-n-errors-the-matrix-omega" class="slide level2">
 <h2>From one error to all <span class="math inline">\(n\)</span> errors: the matrix <span class="math inline">\(\Omega\)</span></h2>
-<p>So far we described <strong>one</strong> error <span class="math inline">\(u_i\)</span>. The regression involves the whole vector <span class="math inline">\(u = (u_1, \dots, u_n)'\)</span>, whose variance–covariance matrix is <span class="math display">\[
+<p>So far we described <strong>one</strong> error <span class="math inline">\(u_i\)</span>. The regression involves the whole vector <span class="math inline">\(u = (u_1, \dots, u_n)'\)</span> (<span class="math inline">\(1,\ldots,n\)</span> indexes observation units), whose variance–covariance matrix is <span class="math display">\[
 \Var(u \mid X) =
 \begin{pmatrix}
 \Var(u_1 \mid X) &amp; \Cov(u_1, u_2 \mid X) &amp; \cdots &amp; \Cov(u_1, u_n \mid X) \\
@@ -1310,12 +1317,11 @@ u_i \mid X_i \;\sim\; \mathcal{N}(0,\ \sigma^2)
 \]</span></p>
 <ul>
 <li><strong>Diagonal</strong>: the width of each individual’s bell curve, <span class="math inline">\(\sigma_i^2\)</span>. Homoskedasticity <span class="math inline">\(\Rightarrow\)</span> all equal to <span class="math inline">\(\sigma^2\)</span>.</li>
-<li><strong>Off-diagonal</strong>: do the draws of two individuals move together? With independent draws (random sampling), they are <span class="math inline">\(0\)</span>.</li>
-<li><span class="math inline">\(\Omega\)</span> has <span class="math inline">\(n(n+1)/2\)</span> distinct entries for <span class="math inline">\(n\)</span> observations: the same degrees-of-freedom problem, which assumptions solve.</li>
+<li><strong>Off-diagonal</strong>: do the draws of two individuals move together? With independent draws (e.g.&nbsp;random sampling), they are <span class="math inline">\(0\)</span>.</li>
 </ul>
 </section>
-<section id="three-assumptions-about-omega-illustration-with-n-4" class="slide level2">
-<h2>Three assumptions about <span class="math inline">\(\Omega\)</span> (illustration with <span class="math inline">\(n = 4\)</span>)</h2>
+<section id="three-possible-assumptions-about-omega-illustration-with-n-4" class="slide level2">
+<h2>Three possible assumptions about <span class="math inline">\(\Omega\)</span> (illustration with <span class="math inline">\(n = 4\)</span>)</h2>
 <div class="columns" style="font-size: 80%;">
 <div class="col">
 <div title="Homoskedastic, uncorrelated">
@@ -1397,24 +1403,9 @@ u_i \mid X_i \;\sim\; \mathcal{N}(0,\ \sigma^2)
 <div class="fragment">
 <p>In all three cases <span class="math inline">\(\hat\beta\)</span> is <strong>unbiased</strong> (this only needs <span class="math inline">\(\E[u \mid X] = 0\)</span>). What changes is its <strong>variance</strong>: <span class="math display">\[
 \Var(\hat\beta \mid X) = (X'X)^{-1}\, X'\Omega X\, (X'X)^{-1}
-\;\overset{\Omega = \sigma^2 I}{=}\; \sigma^2 (X'X)^{-1}.
 \]</span></p>
-</div>
-</section>
-<section id="so-which-value-do-we-plug-in" class="slide level2">
-<h2>So which value do we plug in?</h2>
-<p><span class="math inline">\(\sigma^2\)</span> is a <strong>population parameter</strong>, never observed. We <strong>estimate</strong> it with a single number, the average squared residual, corrected for degrees of freedom: <span class="math display">\[
-\hat\sigma^2 = \frac{1}{n - k}\sum_{i=1}^n \hat u_i^2 = \frac{\text{RSS}}{n - k}
-\qquad (k = \text{number of estimated coefficients}).
-\]</span></p>
-<ul>
-<li>If all errors share the same variance, <strong>every</strong> <span class="math inline">\(\hat u_i^2\)</span> is a noisy estimate of the same <span class="math inline">\(\sigma^2\)</span>, so we <strong>pool</strong> them: that is the benefit of the assumption.</li>
-<li>The sample is never <em>exactly</em> homoskedastic, and does not need to be: the assumption concerns the population. We only worry if the spread <strong>visibly</strong> changes with <span class="math inline">\(X\)</span> (residual plot, Breusch–Pagan or White test).</li>
-<li>If in doubt, do not assume it: <strong>robust standard errors</strong> let each individual keep their own <span class="math inline">\(\hat u_i^2\)</span>, <span class="math display">\[
-\hat V(\hat\beta) = (X'X)^{-1}\Big(\sum_{i=1}^n \hat u_i^2\, x_i x_i'\Big)(X'X)^{-1},
-\]</span> and <strong>clustered</strong> standard errors do the same when errors are correlated within groups.</li>
-</ul>
 <p><a href="#/overview" class="button back">Back to overview</a></p>
+</div>
 </section></section>
 <section>
 <section id="sec-interp" class="title-slide slide level1 center">
@@ -1662,13 +1653,12 @@ P(Y = 1 \mid X) = P(\epsilon &gt; -X\beta \mid X)
 <div class="callout-question" data-title="Student question">
 <p><em>“The slides define the significance level as <span class="math inline">\(\alpha\)</span>, the probability of rejecting the null when it is true (Type I error). But they also say that statistical significance is ‘how unlikely it is that we commit a Type I error’, i.e.&nbsp;<span class="math inline">\(1 - \alpha\)</span>. Which is it?”</em></p>
 </div>
-<p>Both, because they are <strong>complements</strong>. Fix the state of the world: <span class="math inline">\(H_0\)</span> is true. Then our test can only do <strong>one of two things</strong>, and they exclude each other: <span class="math display">\[
+<p>Both, because they are <strong>complements</strong>. Fix the state of the world: <span class="math inline">\(H_0\)</span> is true. Then our test can only do <strong>one of two things</strong>, which are mutually exclusive: <span class="math display">\[
 \underbrace{P(\text{reject } H_0 \mid H_0 \text{ true})}_{\alpha\;=\;\text{Type I error}}
 \;+\;
 \underbrace{P(\text{do not reject } H_0 \mid H_0 \text{ true})}_{1 - \alpha\;=\;\text{no Type I error}}
 \;=\; 1
 \]</span></p>
-<p>Like a coin: <span class="math inline">\(P(\text{heads}) + P(\text{tails}) = 1\)</span>, so <span class="math inline">\(P(\text{no heads}) = 1 - P(\text{heads})\)</span>. If <span class="math inline">\(H_0\)</span> is true and we ran the same study 1,000 times with <span class="math inline">\(\alpha = 5\%\)</span>, we expect about <strong>50</strong> false rejections and <strong>950</strong> correct non-rejections.</p>
 </section>
 <section id="the-four-possible-outcomes-of-a-test" class="slide level2">
 <h2>The four possible outcomes of a test</h2>
@@ -1690,7 +1680,7 @@ P(Y = 1 \mid X) = P(\epsilon &gt; -X\beta \mid X)
 <tr class="odd">
 <td><strong>Reject <span class="math inline">\(H_0\)</span></strong></td>
 <td style="text-align: center;"><strong>Type I error</strong> (false positive)<br>probability <span class="math inline">\(\alpha\)</span></td>
-<td style="text-align: center;">Correct decision<br>probability <span class="math inline">\(1 - \beta\)</span> (<strong>power</strong>)</td>
+<td style="text-align: center;">Correct decision<br>probability <span class="math inline">\(1 - \beta\)</span></td>
 </tr>
 <tr class="even">
 <td><strong>Do not reject <span class="math inline">\(H_0\)</span></strong></td>
@@ -1706,72 +1696,24 @@ P(Y = 1 \mid X) = P(\epsilon &gt; -X\beta \mid X)
 </table>
 </div>
 <p>Complementarity holds <strong>within a column</strong> (same state of the world), never across columns: <span class="math inline">\(\alpha + \beta \neq 1\)</span>.</p>
-</section>
-<section id="errors-probabilities-and-names" class="slide level2">
-<h2>Errors, probabilities and names</h2>
-<div class="fine-lines small-reg">
-<table class="caption-top">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Truth</th>
-<th>Decision</th>
-<th>Outcome</th>
-<th style="text-align: center;">Probability</th>
-<th>Name of this probability</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(H_0\)</span> true</td>
-<td>Reject</td>
-<td><strong>Type I error</strong> (false positive)</td>
-<td style="text-align: center;"><span class="math inline">\(\alpha\)</span></td>
-<td>significance level, size</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(H_0\)</span> true</td>
-<td>Do not reject</td>
-<td>Correct</td>
-<td style="text-align: center;"><span class="math inline">\(1 - \alpha\)</span></td>
-<td>confidence level</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(H_0\)</span> false</td>
-<td>Do not reject</td>
-<td><strong>Type II error</strong> (false negative)</td>
-<td style="text-align: center;"><span class="math inline">\(\beta\)</span></td>
-<td>(miss rate)</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(H_0\)</span> false</td>
-<td>Reject</td>
-<td>Correct</td>
-<td style="text-align: center;"><span class="math inline">\(1 - \beta\)</span></td>
-<td><strong>power</strong></td>
-</tr>
-</tbody>
-</table>
+<div class="fragment">
+<p><span class="forestgreen">Which of these is statistical power?</span></p>
 </div>
-<p>We <strong>choose</strong> <span class="math inline">\(\alpha\)</span> (conventionally 5%) when we set the critical value. <span class="math inline">\(\beta\)</span> then depends on the sample size, the effect size and the noise; for a given sample, lowering <span class="math inline">\(\alpha\)</span> raises <span class="math inline">\(\beta\)</span>.</p>
 </section>
-<section id="the-picture-alpha-beta-and-power" class="slide level2">
-<h2>The picture: <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span> and power</h2>
-
-<img data-src="Tutorial_04_files/figure-revealjs/type1-type2-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1800"><p>Moving the critical value to the right shrinks <span class="math inline">\(\alpha\)</span> (red) but enlarges <span class="math inline">\(\beta\)</span> (blue): the usual trade-off.</p>
-</section>
-<section id="what-1---alpha-is-not" class="slide level2">
-<h2>What <span class="math inline">\(1 - \alpha\)</span> is not</h2>
+<section id="statistical-power" class="slide level2">
+<h2>Statistical power</h2>
+<p><span class="math display">\[\text{Power } = P\left(\text{Reject the null}\mid \text{The null is false}\right)\]</span> Moreover, remind that:</p>
+<p><span class="math display">\[\text{Reject the null} \Leftrightarrow |t|\geq1.96\]</span> Hence:</p>
+<p><span class="math display">\[\text{Power } = P\left(|t|\geq1.96\mid \tau \neq 0\right)\]</span></p>
+<p>Consequence:</p>
 <ul>
-<li><strong>Not</strong> the probability that a rejection is correct. <span class="math inline">\(1 - \alpha\)</span> is computed <strong>assuming <span class="math inline">\(H_0\)</span> is true</strong>. The probability that <span class="math inline">\(H_0\)</span> is false <em>given</em> that we rejected is a different conditional probability, and it also depends on how often <span class="math inline">\(H_0\)</span> is true in the first place.</li>
-<li><strong>Not</strong> the <span class="math inline">\(p\)</span>-value. The <span class="math inline">\(p\)</span>-value is computed on <strong>our sample</strong>: it is the smallest <span class="math inline">\(\alpha\)</span> at which we would reject. We call a result <em>statistically significant at level <span class="math inline">\(\alpha\)</span></em> when <span class="math inline">\(p &lt; \alpha\)</span>.</li>
-<li>It <strong>is</strong> the <strong>confidence level</strong>: a <span class="math inline">\(95\%\)</span> confidence interval is built so that, over repeated samples, it contains the true value with probability <span class="math inline">\(1 - \alpha = 95\%\)</span>.</li>
+<li>Since power depends on <span class="math inline">\(t = \frac{\hat\tau}{se}\)</span>:
+<ul>
+<li>it depends on <strong>sample size</strong> (because the larger the sample size, the smaller the standard error).</li>
+<li>It also depends on the <strong>covariates in the regression</strong>, because they lower the error.</li>
+<li>It relies on the <strong>structure of the errors</strong>: heteroskedastic errors imply the standard error is larger. Same for clustered errors.</li>
+</ul></li>
+<li>Power depends on the actual effect <span class="math inline">\(\tau\)</span>: the larger <span class="math inline">\(\tau\)</span>, the more likely <span class="math inline">\(\hat\tau\)</span> is far from 0.</li>
 </ul>
 </section></section>
 <section>
@@ -2039,7 +1981,7 @@ P(Y = 1 \mid X) = P(\epsilon &gt; -X\beta \mid X)
 <div class="callout-content">
 <ol type="1">
 <li><strong>Sign</strong>: direction of the effect on the probability. Interpretable.</li>
-<li><strong>Significance</strong>: read the notes! Here parentheses are <strong><span class="math inline">\(t\)</span>-ratios</strong>, not standard errors: <span class="math inline">\(|t| &gt; 1.96\)</span> <span class="math inline">\(\Rightarrow\)</span> 5%, <span class="math inline">\(|t| &gt; 1.65\)</span> <span class="math inline">\(\Rightarrow\)</span> 10%.</li>
+<li><strong>Significance</strong>: read the table notes! Here parentheses are <strong><span class="math inline">\(t\)</span>-ratios</strong>, not standard errors: <span class="math inline">\(|t| &gt; 1.96\)</span> <span class="math inline">\(\Rightarrow\)</span> 5%, <span class="math inline">\(|t| &gt; 1.65\)</span> <span class="math inline">\(\Rightarrow\)</span> 10%.</li>
 <li><strong>Magnitude</strong>: the coefficient is on the latent index, <em>not</em> a change in probability. Marginal effect <span class="math inline">\(= \beta_k\, \phi(X\beta)\)</span>, largest where <span class="math inline">\(P \approx 0.5\)</span>.</li>
 </ol>
 </div>
@@ -2049,112 +1991,99 @@ P(Y = 1 \mid X) = P(\epsilon &gt; -X\beta \mid X)
 </div>
 <div class="fragment">
 <p><strong>Here</strong>: positive and significant: average landlessness <em>in the region</em>, share of heads in low professions / agricultural work, Grameen Bank, a recent shock. Village-level landlessness and illiteracy do <strong>not</strong> predict selection, and the regressors are <strong>not jointly significant</strong> (<span class="math inline">\(p = 0.138\)</span>): poorer villages are not clearly favoured, beyond poorer regions. These are <strong>predictors</strong>, not causal effects.</p>
-</div>
-</section>
-<section id="reminder-the-tobit-model" class="slide level2">
-<h2>Reminder: the Tobit model</h2>
-<p><strong>When?</strong> The outcome is continuous but <strong>piles up at a corner</strong>, usually zero: hours worked, spending on a good, charitable donations, a budget allocated to a village… A large share of observations are exactly 0, the rest are positive.</p>
-<div class="fragment">
-<p><strong>The model.</strong> A latent (unobserved) variable <span class="math inline">\(y^\star\)</span>, of which we only see the positive part: <span class="math display">\[
-y_i^\star = X_i\beta + \varepsilon_i, \qquad \varepsilon_i \sim \mathcal{N}(0, \sigma^2),
-\qquad
-y_i = \begin{cases} y_i^\star &amp; \text{if } y_i^\star &gt; 0 \\ 0 &amp; \text{if } y_i^\star \le 0 \end{cases}
-\]</span></p>
-</div>
-<div class="fragment">
-<p><strong>Estimation</strong> by maximum likelihood, combining two pieces:</p>
-<ul>
-<li>a <strong>probit part</strong> for the zeros: <span class="math inline">\(P(y_i = 0 \mid X_i) = 1 - \Phi(X_i\beta / \sigma)\)</span>;</li>
-<li>a <strong>regression part</strong> for the positive values: density of <span class="math inline">\(\mathcal{N}(X_i\beta, \sigma^2)\)</span> at <span class="math inline">\(y_i\)</span>.</li>
-</ul>
-<p>The Tobit is “a probit and a linear regression sharing the <strong>same <span class="math inline">\(\beta\)</span></strong>”.</p>
-<p><span class="grey" style="font-size: 75%;">For more: <span class="citation" data-cites="hansen2022econometrics">Hansen (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span>, ch.&nbsp;27 “Censoring and selection”.</span></p>
-</div>
-</section>
-<section id="reminder-why-not-ols" class="slide level2">
-<h2>Reminder: why not OLS?</h2>
-
-<img data-src="Tutorial_04_files/figure-revealjs/tobit-sim-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1800"><ul>
-<li><strong>OLS on everything</strong>: the mass of zeros flattens the line, so the slope is <strong>biased towards zero</strong>.</li>
-<li><strong>OLS on positives only</strong>: we keep the units with a large <span class="math inline">\(\varepsilon\)</span> when <span class="math inline">\(X\beta\)</span> is low, which is <strong>selection bias</strong>, again towards zero.</li>
-</ul>
-<p><span class="grey" style="font-size: 75%;">See <span class="citation" data-cites="hansen2022econometrics">Hansen (<a href="#/references" role="doc-biblioref" onclick="">2022</a>, ch.&nbsp;27)</span> for the formal derivation of both biases.</span></p>
-</section>
-<section id="reminder-interpreting-tobit-coefficients" class="slide level2">
-<h2>Reminder: interpreting Tobit coefficients</h2>
-<p><span class="math inline">\(\beta\)</span> is the effect on the <strong>latent</strong> variable <span class="math inline">\(y^\star\)</span>, which is rarely the quantity of interest. Three marginal effects, from the same <span class="math inline">\(\beta\)</span>:</p>
-<div class="fine-lines small-reg">
-<table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Effect of <span class="math inline">\(x_k\)</span> on…</th>
-<th>Formula</th>
-<th>Reading</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>the latent variable <span class="math inline">\(\E[y^\star \mid X]\)</span></td>
-<td><span class="math inline">\(\beta_k\)</span></td>
-<td>“desired” amount, including negative</td>
-</tr>
-<tr class="even">
-<td>the probability of a positive value</td>
-<td><span class="math inline">\(\dfrac{\beta_k}{\sigma}\,\phi\!\left(\dfrac{X\beta}{\sigma}\right)\)</span></td>
-<td>extensive margin</td>
-</tr>
-<tr class="odd">
-<td>the observed outcome <span class="math inline">\(\E[y \mid X]\)</span></td>
-<td><span class="math inline">\(\beta_k\, \Phi\!\left(\dfrac{X\beta}{\sigma}\right)\)</span></td>
-<td>overall effect, smaller than <span class="math inline">\(\beta_k\)</span></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="fragment">
-<div title="Things to keep in mind">
-<div class="callout callout-warning callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Things to keep in mind</strong></p>
-</div>
-<div class="callout-content">
-<ul>
-<li><strong>Sign and significance</strong> carry over directly; magnitudes need these formulas.</li>
-<li>A probit on <span class="math inline">\(1\{y &gt; 0\}\)</span> estimates <span class="math inline">\(\beta / \sigma\)</span>: probit and Tobit coefficients are on <strong>different scales</strong> and cannot be compared in size.</li>
-<li><strong>Strong assumptions</strong>: normality and homoskedasticity, and one <span class="math inline">\(\beta\)</span> for <em>both</em> “whether” and “how much”. If these margins plausibly differ, use a <strong>two-part (hurdle) model</strong>: a probit for <span class="math inline">\(y &gt; 0\)</span>, then OLS on the positives.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<p><span class="grey" style="font-size: 75%;">Derivations of these marginal effects, and of the Heckman sample-selection model: <span class="citation" data-cites="hansen2022econometrics">Hansen (<a href="#/references" role="doc-biblioref" onclick="">2022</a>, ch.&nbsp;27)</span>.</span></p>
-</div>
-</section>
-<section id="exercise-2c-why-a-tobit" class="slide level2">
-<h2>Exercise 2c: why a Tobit?</h2>
-<div class="callout-question" data-title="Exercise 2c">
-<p>Finally they estimate a Tobit model to test which village characteristics predict the amount of money allocated to each village. Why do they use a Tobit model? What are the conclusions one can draw from this table?</p>
-</div>
-<div class="fragment">
-<p><strong>Why?</strong> The budget is <strong>censored at zero</strong>: many villages receive nothing, the others a positive amount. OLS would bias the slopes towards zero, while the Tobit uses both the information on <em>whether</em> a village is funded and on <em>how much</em> it gets.</p>
-</div>
-<div class="fragment">
-<p><strong>Conclusions.</strong></p>
-<ul>
-<li>The same variables matter as in the probit: regional landlessness, the share of heads in low professions, Grameen Bank, a recent shock.</li>
-<li>They are now <strong>jointly significant</strong> (<span class="math inline">\(p = 0.014\)</span>), but <strong>village-level</strong> poverty measures (landlessness, illiteracy) still do not predict the budget.</li>
-<li><span class="math inline">\(\Rightarrow\)</span> <strong>little evidence that the programme targets poor villages</strong> within regions.</li>
-<li>Coefficients are smaller than in the probit, but this says nothing: the two are on different scales.</li>
-</ul>
+<!-- ## Reminder: the Tobit model  -->
+<!-- **When?** The outcome is continuous but **piles up at a corner**, usually -->
+<!-- zero: hours worked, spending on a good, charitable donations, a budget -->
+<!-- allocated to a village… A large share of observations are exactly 0, the -->
+<!-- rest are positive. -->
+<!-- . . . -->
+<!-- **The model.** A latent (unobserved) variable $y^\star$, of which we only -->
+<!-- see the positive part: -->
+<!-- $$ -->
+<!-- y_i^\star = X_i\beta + \varepsilon_i, \qquad \varepsilon_i \sim \mathcal{N}(0, \sigma^2), -->
+<!-- \qquad -->
+<!-- y_i = \begin{cases} y_i^\star & \text{if } y_i^\star > 0 \\ 0 & \text{if } y_i^\star \le 0 \end{cases} -->
+<!-- $$ -->
+<!-- . . . -->
+<!-- **Estimation** by maximum likelihood, combining two pieces: -->
+<!-- - a **probit part** for the zeros: $P(y_i = 0 \mid X_i) = 1 - \Phi(X_i\beta / \sigma)$; -->
+<!-- - a **regression part** for the positive values: density of -->
+<!--   $\mathcal{N}(X_i\beta, \sigma^2)$ at $y_i$. -->
+<!-- The Tobit is "a probit and a linear regression sharing the **same -->
+<!-- $\beta$**". -->
+<!-- [For more: @hansen2022econometrics, ch. 27 "Censoring and selection".]{.grey style="font-size: 75%;"} -->
+<!-- ## Reminder: why not OLS?  -->
+<!-- ```{r} -->
+<!-- #| label: tobit-sim -->
+<!-- #| fig-width: 12 -->
+<!-- #| fig-height: 5 -->
+<!-- set.seed(1) -->
+<!-- n <- 400 -->
+<!-- x <- runif(n, -2, 3) -->
+<!-- ystar <- -1 + 1.5 * x + rnorm(n, sd = 1.5) -->
+<!-- y <- pmax(0, ystar) -->
+<!-- par(mar = c(4.5, 4.5, 1, 1), bty = "l", las = 1) -->
+<!-- plot(x, y, pch = 19, col = adjustcolor("#515151", 0.5), -->
+<!--      xlab = "x", ylab = "observed y", ylim = range(c(0, y))) -->
+<!-- abline(a = -1, b = 1.5, col = "#d90502", lwd = 3) -->
+<!-- abline(lm(y ~ x), col = "#0e7c7b", lwd = 3, lty = 2) -->
+<!-- abline(lm(y ~ x, subset = y > 0), col = "#2b6cb0", lwd = 3, lty = 3) -->
+<!-- legend("topleft", bty = "n", lwd = 3, lty = c(1, 2, 3), -->
+<!--        col = c("#d90502", "#0e7c7b", "#2b6cb0"), -->
+<!--        legend = c("True latent relation (slope 1.5)", -->
+<!--                   "OLS on all observations", -->
+<!--                   "OLS on positive observations only")) -->
+<!-- ``` -->
+<!-- - **OLS on everything**: the mass of zeros flattens the line, so the slope -->
+<!--   is **biased towards zero**. -->
+<!-- - **OLS on positives only**: we keep the units with a large $\varepsilon$ -->
+<!--   when $X\beta$ is low, which is **selection bias**, again towards zero. -->
+<!-- [See @hansen2022econometrics [ch. 27] for the formal derivation of both biases.]{.grey style="font-size: 75%;"} -->
+<!-- ## Reminder: interpreting Tobit coefficients  -->
+<!-- $\beta$ is the effect on the **latent** variable $y^\star$, which is rarely -->
+<!-- the quantity of interest. Three marginal effects, from the same $\beta$: -->
+<!-- ::: {.fine-lines .small-reg} -->
+<!-- | Effect of $x_k$ on… | Formula | Reading | -->
+<!-- |---|---|---| -->
+<!-- | the latent variable $\E[y^\star \mid X]$ | $\beta_k$ | "desired" amount, including negative | -->
+<!-- | the probability of a positive value | $\dfrac{\beta_k}{\sigma}\,\phi\!\left(\dfrac{X\beta}{\sigma}\right)$ | extensive margin | -->
+<!-- | the observed outcome $\E[y \mid X]$ | $\beta_k\, \Phi\!\left(\dfrac{X\beta}{\sigma}\right)$ | overall effect, smaller than $\beta_k$ | -->
+<!-- ::: -->
+<!-- . . . -->
+<!-- ::: {.callout-warning title="Things to keep in mind"} -->
+<!-- - **Sign and significance** carry over directly; magnitudes need these -->
+<!--   formulas. -->
+<!-- - A probit on $1\{y > 0\}$ estimates $\beta / \sigma$: probit and Tobit -->
+<!--   coefficients are on **different scales** and cannot be compared in size. -->
+<!-- - **Strong assumptions**: normality and homoskedasticity, and one $\beta$ -->
+<!--   for *both* "whether" and "how much". If these margins plausibly differ, -->
+<!--   use a **two-part (hurdle) model**: a probit for $y > 0$, then OLS on the -->
+<!--   positives. -->
+<!-- ::: -->
+<!-- [Derivations of these marginal effects, and of the Heckman sample-selection model: @hansen2022econometrics [ch. 27].]{.grey style="font-size: 75%;"} -->
+<!-- ## Exercise 2c: why a Tobit?  -->
+<!-- ::: {.callout-question data-title="Exercise 2c"} -->
+<!-- Finally they estimate a Tobit model to test which village -->
+<!-- characteristics predict the amount of money allocated to each village. Why -->
+<!-- do they use a Tobit model? What are the conclusions one can draw from this -->
+<!-- table? -->
+<!-- ::: -->
+<!-- . . . -->
+<!-- **Why?** The budget is **censored at zero**: many villages receive nothing, -->
+<!-- the others a positive amount. OLS would bias the slopes towards zero, while -->
+<!-- the Tobit uses both the information on *whether* a village is funded and on -->
+<!-- *how much* it gets. -->
+<!-- . . . -->
+<!-- **Conclusions.** -->
+<!-- - The same variables matter as in the probit: regional landlessness, the -->
+<!--   share of heads in low professions, Grameen Bank, a recent shock. -->
+<!-- - They are now **jointly significant** ($p = 0.014$), but **village-level** -->
+<!--   poverty measures (landlessness, illiteracy) still do not predict the -->
+<!--   budget. -->
+<!-- - $\Rightarrow$ **little evidence that the programme targets poor -->
+<!--   villages** within regions. -->
+<!-- - Coefficients are smaller than in the probit, but this says nothing: -->
+<!--   the two are on different scales. -->
 </div>
 </section></section>
 <section id="section-1" class="title-slide slide level1 standout-red center" data-background-color="#d90502">
@@ -2170,8 +2099,8 @@ y_i = \begin{cases} y_i^\star &amp; \text{if } y_i^\star &gt; 0 \\ 0 &amp; \text
 <section id="references" class="slide level2 smaller scrollable" data-visibility="uncounted">
 <h2>References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-hansen2022econometrics" class="csl-entry" role="listitem">
-Hansen, Bruce E. 2022. <em>Econometrics</em>. Princeton University Press.
+<div id="ref-boydMeasuringTestMeasurement2013a" class="csl-entry" role="listitem">
+Boyd, Donald, Hamilton Lankford, Susanna Loeb, and James Wyckoff. 2013. <span>“Measuring <span>Test Measurement Error</span>: <span>A General Approach</span>.”</span> <em>Journal of Educational and Behavioral Statistics</em> 38 (6): 629–63. <a href="https://www.jstor.org/stable/41999414">https://www.jstor.org/stable/41999414</a>.
 </div>
 </div>
 
