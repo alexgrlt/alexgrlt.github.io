@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Alexandre Grellet">
-  <meta name="dcterms.date" content="2026-11-03">
+  <meta name="dcterms.date" content="2026-11-05">
   <title>Policy analysis and policy evaluation</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -248,7 +248,7 @@ Alexandre Grellet
     </div>
 </div>
 
-  <p class="date">2026-11-03</p>
+  <p class="date">2026-11-05</p>
 </section>
 <section class="slide level2">
 
@@ -261,12 +261,16 @@ Alexandre Grellet
 \]</span></p>
 </div>
 </section>
+<section>
 <section id="section" class="title-slide slide level1 standout-red center" data-background-color="#d90502">
 <h1></h1>
 <p>The quiz takes place online. Please check that you have a reliable internet connection.</p>
 <p>You can connect to <em>eduroam</em> with your Sciences Po address and password.</p>
 </section>
+<section id="section-1" class="slide level2">
+<h2></h2>
 
+<img data-src="Tutorial_04_files/figure-revealjs/unnamed-chunk-1-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1500"></section></section>
 <section>
 <section id="solving-the-mock-exam" class="title-slide slide level1 center">
 <h1>Solving the mock exam</h1>
@@ -325,10 +329,10 @@ Alexandre Grellet
 <p><strong>Answer: 2</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>Recall bias</strong>: respondents have to remember every application over <strong>six months</strong>, for <strong>themselves and their family members</strong>, and across several benefits whose names are easy to confuse.</p>
+<p><strong>Recall bias</strong>: respondents have to remember every application over <strong>six months</strong>, for <strong>themselves and their family members</strong>, and across several benefits.</p>
 <ul>
-<li>Not anchoring bias: the question suggests no number or reference value.</li>
-<li>Social desirability (stigma attached to benefits) could play a role, but the long recall window and reporting for others make recall the main concern, as stated in the paper (and in the slides of the lecture).</li>
+<li>Not anchoring bias: the question suggests no reference value.</li>
+<li>Social desirability (stigma attached to benefits) could also play a role, but the long recall window (6 months) and reporting for others makes it less important than recall concerns, as stated in the paper (and in the slides of the lecture).</li>
 </ul>
 </div>
 </div>
@@ -522,13 +526,13 @@ Alexandre Grellet
 <p><span class="math display">\[
 t = \frac{\text{Column 2} - \text{Column 1}}{\text{Column 4}}
   = \frac{\text{Mean in treatment group} - \text{Mean in control group}}{\text{Standard error of the difference}}
-\]</span> Column 2 − Column 1 is Column 3, so Column 3 / Column 4 gives the same number. Column 4 is already a standard error: no need to divide it by the number of observations.</p>
+\]</span> Column 2 − Column 1 is Column 3, so Column 3 / Column 4 gives the same number. Column 4 is already a standard error: no need to divide it by the number of observations or its square root.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="question-4-omitted-variable-bias" class="slide level2">
+<section id="question-4-omitted-variable-bias" class="slide level2 scrollable">
 <h2>Question 4: omitted variable bias</h2>
 <div class="callout-question">
 <p>A research team evaluates the effect of care homes for the elderly on life expectancy. They compare age of death between people who die in care homes and people who die at home. They know that richer people live longer and are more likely to afford care homes. If they do not control for wealth, how will it affect their result?</p>
@@ -551,6 +555,13 @@ t = \frac{\text{Column 2} - \text{Column 1}}{\text{Column 4}}
 <div class="callout-content">
 <p>Omitted variable bias = (effect of wealth on age of death) × (correlation between wealth and care homes) <span class="math inline">\(= (+) \times (+) &gt; 0\)</span>.</p>
 <p>People in care homes are richer, and would have lived longer anyway: part of the gap in age of death is due to wealth, not to care homes. The estimated benefit of care homes is <strong>too large</strong>.</p>
+<p>Reminder: imagine we have the true model</p>
+<p><span class="math display">\[Y = \alpha + \tau X_1 + \gamma X_2  + \epsilon\]</span></p>
+<p>but we estimate</p>
+<p><span class="math display">\[Y = \alpha + \beta X_1   + \nu\]</span></p>
+<p>You know that the estimated coefficient will be <span class="math inline">\(\hat\beta = \frac{Cov(X_1,Y)}{V(X_1)}\)</span>, replace with the true model for <span class="math inline">\(Y\)</span>:</p>
+<p><span class="math display">\[\hat\beta =  = \frac{Cov(X_1,\alpha + \tau X_1 + \gamma X_2  + \epsilon)}{V(X_1)} = \tau + \frac{Cov(X_1, \gamma X_2)}{V(X_1)} = \tau + \gamma \frac{Cov(X_1,  X_2)}{V(X_1)}\]</span></p>
+<p>So the bias is <span class="math inline">\(\gamma \frac{Cov(X_1,  X_2)}{V(X_1)}\)</span> which is the coefficient of <span class="math inline">\(X_2\)</span> in the true model times the coefficient of <span class="math inline">\(X_1\)</span> in the regression of <span class="math inline">\(X_2\)</span> on <span class="math inline">\(X_1\)</span>.</p>
 </div>
 </div>
 </div>
@@ -913,7 +924,7 @@ Y_i(0) &amp;: \text{the result of the student if she is NOT taught with the AI a
 <p><span class="math display">\[
 \tau = \E\big(Y(1) - Y(0)\big)
 \]</span></p>
-<p>Because the “change of scenario” is nearly always a public policy (a new treatment of the student), we call this the <strong>average treatment effect</strong> (ATE).</p>
+<p>Because the “change of scenario” is keen to a new treatment of the individual, we call this the <strong>average treatment effect</strong> (ATE).</p>
 <p>Sometimes it can only be estimated for the group of treated people, <span class="math inline">\(\E\big(Y(1) - Y(0) \mid T = 1\big)\)</span>: this is the <strong>average treatment effect on the treated</strong> (ATT).</p>
 <p><a href="#/overview" class="button back">Back to overview</a></p>
 </section></section>
@@ -938,8 +949,6 @@ Y_i(0) &amp;: \text{the result of the student if she is NOT taught with the AI a
 <p>We can however <strong>test a proxy</strong>: find variables for which we <strong>know the true effect is zero</strong>, and run <strong>the same estimator</strong> (same covariates <span class="math inline">\(X\)</span>, same matching). If it still finds an “effect”, the treated and control groups differ in something that <span class="math inline">\(X\)</span> does not capture.</p>
 </div>
 <div class="fragment">
-<div class="columns">
-<div class="col">
 <div title="Placebo outcome">
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -955,36 +964,15 @@ Y_i(0) &amp;: \text{the result of the student if she is NOT taught with the AI a
 </div>
 </div>
 </div>
-</div><div class="col">
-<div title="Placebo comparison groups">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Placebo comparison groups</strong></p>
-</div>
-<div class="callout-content">
-<p>Two groups that are <strong>both untreated</strong> but differ in their characteristics (e.g.&nbsp;eligible and non-eligible non-participants).</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </div>
 </section>
 <section id="example" class="slide level2">
 <h2>Example</h2>
 <p>Imagine you are evaluating the effectiveness of renovating schools. We estimate its effect on the end-of-year math score by regression (or matching) on <span class="math inline">\(X\)</span>: priority-education status of the school, class size, teacher experience, student gender and month of birth.</p>
 <div class="fragment">
-<p><strong>Placebo 1: pick an outcome renovation should not change.</strong> Same regression, but with <strong>student SES</strong> (e.g.&nbsp;parents’ occupation) as the outcome: <span class="math display">\[
+<p><strong>Placebo: pick an outcome renovation should not change.</strong> Same regression, but with <strong>student SES</strong> (e.g.&nbsp;parents’ occupation) as the outcome: <span class="math display">\[
 \text{SES}_i = \alpha + \tau^{\text{placebo}}\, T_i + X_i'\beta + u_i
 \]</span></p>
-</div>
-<div class="fragment">
-<p><strong>Placebo 2: two groups that didn’t get the school renovated.</strong> Compare the math scores of (a) classes in schools that need renovation but were not renovated, and (b) classes in schools that didn’t need renovation.</p>
 </div>
 </section>
 <section id="reading-the-placebo-results-fake-numbers-here" class="slide level2">
@@ -1063,7 +1051,6 @@ Y_i(0) &amp;: \text{the result of the student if she is NOT taught with the AI a
 <ul>
 <li><strong>Look at overlap first</strong>: histograms of <span class="math inline">\(X\)</span> by treatment group, or of the estimated propensity score <span class="math inline">\(\hat P(D = 1 \mid X)\)</span>.</li>
 <li><strong>Restrict to the common support</strong> (trimming, matching): we then estimate the effect only <strong>where we have both groups</strong>, and say so: it is a different estimand from the ATE of the whole population.</li>
-<li>If you must extrapolate, <strong>say it</strong>, and document robustness of the results to the functional form.</li>
 </ul>
 <p><a href="#/overview" class="button back">Back to overview</a></p>
 </section></section>
@@ -1147,7 +1134,7 @@ Y_i = \alpha + \tau D_i + X_i^\top \beta + u_i,
 <div class="callout-content">
 <ul>
 <li>The regression function <span class="math inline">\(\E[Y \mid D, X] = \alpha + \tau D + X'\beta\)</span> is an approximation of the true CEF.</li>
-<li>If the model is correctly specified <strong>and</strong> ignorability holds, <span class="math inline">\(\tau\)</span> identifies the causal effect of <span class="math inline">\(D\)</span>.</li>
+<li>If the model is correctly specified <strong>and</strong> uncounfoundedness holds, <span class="math inline">\(\tau\)</span> identifies the causal effect of <span class="math inline">\(D\)</span>.</li>
 <li>Otherwise, it gives the best linear approximation to <span class="math inline">\(\E[Y \mid D, X]\)</span>.</li>
 </ul>
 </div>
@@ -1303,9 +1290,9 @@ u_i \mid X_i \;\sim\; \mathcal{N}(0,\ \sigma^2)
 </div>
 </div>
 </section>
-<section id="from-one-error-to-all-n-errors-the-matrix-omega" class="slide level2">
-<h2>From one error to all <span class="math inline">\(n\)</span> errors: the matrix <span class="math inline">\(\Omega\)</span></h2>
-<p>So far we described <strong>one</strong> error <span class="math inline">\(u_i\)</span>. The regression involves the whole vector <span class="math inline">\(u = (u_1, \dots, u_n)'\)</span> (<span class="math inline">\(1,\ldots,n\)</span> indexes observation units), whose variance–covariance matrix is <span class="math display">\[
+<section id="the-variance-covariance-matrix" class="slide level2">
+<h2>The variance covariance matrix</h2>
+<p>The regression involves the whole vector of error terms for all individuals <span class="math inline">\(u = (u_1, \dots, u_n)'\)</span>. We can put in the matrix the variance of the error-term for each unit as well as the covariances between errors terms: <span class="math display">\[
 \Var(u \mid X) =
 \begin{pmatrix}
 \Var(u_1 \mid X) &amp; \Cov(u_1, u_2 \mid X) &amp; \cdots &amp; \Cov(u_1, u_n \mid X) \\
@@ -1437,20 +1424,6 @@ y_i = \beta_0 + \beta_1 T + \beta_2 x_i + \beta_3\, T \times x_i + u_i
 <li><span class="math inline">\(\beta_3\)</span> is the <strong>difference</strong> in the treatment effect between women and men.</li>
 <li>If the treatment effect is homogeneous, <span class="math inline">\(\beta_3 = 0\)</span> and <span class="math inline">\(\beta_1\)</span> is the ATE for the full sample.</li>
 </ul>
-</section>
-<section id="potential-outcomes" class="slide level2">
-<h2>Potential outcomes</h2>
-<p>With only discrete covariates, we can write the model fully in the potential outcomes framework:</p>
-<p><span class="math display">\[
-\begin{aligned}
-Y_{1i} &amp;= \underbrace{\mu_1}_{\substack{\text{mean outcome when treated} \\ \text{for the omitted category}}}
-       + \underbrace{X_i\delta_1}_{\substack{\text{heterogeneous levels across} \\ \text{covariates, relative to omitted cat.}}}
-       + u_{1i} \\[1em]
-Y_{0i} &amp;= \underbrace{\mu_0}_{\substack{\text{mean outcome in control} \\ \text{for the omitted category}}}
-       + \underbrace{X_i\delta_0}_{\substack{\text{heterogeneous levels across} \\ \text{covariates, relative to omitted cat.}}}
-       + u_{0i}
-\end{aligned}
-\]</span></p>
 <p><a href="#/overview" class="button back">Back to overview</a></p>
 </section></section>
 <section>
@@ -1535,18 +1508,6 @@ only_x1   4.407476
 x1_and_x2 1.992831</code></pre>
 </div>
 </div>
-</section>
-<section id="a-real-life-example" class="slide level2">
-<h2>A real-life example</h2>
-<p>Let: <span class="math display">\[
-Y_i = \beta_0 + \beta_1\, SAT_i + \beta_2\, x_{1i} + \beta_3\, x_{2i} + \varepsilon_i
-\]</span> with <span class="math inline">\(Y\)</span> earnings, <span class="math inline">\(SAT\)</span> the exam score, <span class="math inline">\(x_{1i}\)</span> observed individual characteristics and <span class="math inline">\(x_{2i}\)</span> <strong>unobserved</strong> characteristics of the student.</p>
-<p>The three are related: <span class="math display">\[
-SAT_i = \delta_1 x_{1i} + \delta_2 x_{2i} + \nu_i
-\]</span></p>
-<p>But <span class="math inline">\(x_{2i}\)</span> is unobserved, so we estimate <span class="math display">\[
-Y_i = \tilde\beta_0 + \tilde\beta_1\, SAT_i + \tilde\beta_2\, x_{1i} + \tilde\varepsilon_i
-\]</span> and <span class="math inline">\(\tilde\beta_1\)</span> is <strong>biased</strong>: it captures part of the effect of <span class="math inline">\(x_{2i}\)</span>.</p>
 <p><a href="#/overview" class="button back">Back to overview</a></p>
 </section></section>
 <section>
@@ -1583,8 +1544,10 @@ Y_i = \tilde\beta_0 + \tilde\beta_1\, SAT_i + \tilde\beta_2\, x_{1i} + \tilde\va
 <p><span class="math display">\[
 P(Y = 1 \mid X) = P(Y^\star &gt; 0 \mid X)
 \]</span></p>
-<p>Suppose <span class="math inline">\(Y^\star = X\beta + \epsilon\)</span>. Then $$ P(Y = 1 X) = P(X+ &gt; 0 X) = P(&gt; -XX)</p>
-<p>$$ Assume <span class="math inline">\(\epsilon\)</span> follows a symmetric distribution with respect to 0 (eg. the standard normal, or the logistic with mean 0):</p>
+<p>Suppose <span class="math inline">\(Y^\star = X\beta + \epsilon\)</span>. Then</p>
+<p><span class="math display">\[
+P(Y = 1 \mid X) = P(X\beta + \epsilon &gt; 0 \mid X) = P(\epsilon &gt; -X\beta \mid X)
+\]</span> Assume <span class="math inline">\(\epsilon\)</span> follows a symmetric distribution with respect to 0 (eg. the standard normal, or the logistic with mean 0):</p>
 <p><span class="math display">\[
 P(Y = 1 \mid X) = P(\epsilon &gt; -X\beta \mid X)
 = P(\epsilon &lt; X\beta \mid X)
@@ -1715,282 +1678,319 @@ P(Y = 1 \mid X) = P(\epsilon &gt; -X\beta \mid X)
 </ul></li>
 <li>Power depends on the actual effect <span class="math inline">\(\tau\)</span>: the larger <span class="math inline">\(\tau\)</span>, the more likely <span class="math inline">\(\hat\tau\)</span> is far from 0.</li>
 </ul>
-</section></section>
-<section>
-<section id="sec-ps4" class="title-slide slide level1 center">
-<h1>Problem set 4</h1>
-
-</section>
-<section id="exercise-1-level-of-randomisation" class="slide level2">
-<h2>Exercise 1: level of randomisation</h2>
-<div class="callout-question" data-title="Exercise 1">
-<p>The property tax department of a large municipality wants to experiment on different methods to get people to pay: audits, letters that threaten financial penalties, and letters that shame tax delinquents. At what level would you randomize these interventions: individual taxpayer level or neighborhood level? Explain why you would choose one over the other.</p>
-</div>
-<div class="fragment">
-<p>The general trade-off: <strong>statistical power</strong> vs.&nbsp;<strong>spillovers</strong>.</p>
-<div class="columns">
-<div class="col">
-<div title="Individual level">
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Individual level</strong></p>
-</div>
-<div class="callout-content">
-<ul>
-<li>Many more units <span class="math inline">\(\Rightarrow\)</span> <strong>more power</strong> for the same sample.</li>
-<li>The city may have few neighbourhoods: a neighbourhood-level design could have too few clusters to detect anything.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div><div class="col">
-<div title="Neighbourhood level">
-<div class="callout callout-warning callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Neighbourhood level</strong></p>
-</div>
-<div class="callout-content">
-<ul>
-<li>If treatment <strong>spills over</strong> onto controls, the individual comparison is biased (sign depends on complementarities of the treatment).</li>
-<li>Here: if my neighbour is audited I may revise upwards my own audit probability, or think I am safe this year; shaming may work only if neighbours get the letter too.</li>
-<li>Randomise at the level that <strong>contains the spillovers</strong>, and cluster standard errors at that level.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div title="Choosing the unit of randomisation">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Choosing the unit of randomisation</strong></p>
-</div>
-<div class="callout-content">
-<ol type="1">
-<li><strong>Where does the treatment act?</strong> If the mechanism works through social interactions, information or local markets, the “unit” is the group.</li>
-<li><strong>Do controls get treated indirectly?</strong> Contamination of the control group biases the estimate; a larger unit protects against it.</li>
-<li><strong>How many units do I get?</strong> Larger units <span class="math inline">\(\Rightarrow\)</span> fewer independent observations <span class="math inline">\(\Rightarrow\)</span> less power (intra-cluster correlation).</li>
-<li><strong>Practical and political constraints</strong>: can a letter campaign or an audit policy credibly differ between two neighbours? Is it fair?</li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="exercise-1-level-of-randomisation-1" class="slide level2">
-<h2>Exercise 1: level of randomisation</h2>
-<div class="callout-question" data-title="Exercise 1">
-<p>The property tax department of a large municipality wants to experiment on different methods to get people to pay: audits, letters that threaten financial penalties, and letters that shame tax delinquents. At what level would you randomize these interventions: individual taxpayer level or neighborhood level? Explain why you would choose one over the other.</p>
-</div>
-<p>If spillovers are themselves interesting, a <strong>saturation design</strong> answers both questions:</p>
-<ol type="1">
-<li><p>randomise neighbourhoods into treatment intensity. Then</p></li>
-<li><p>randomise individuals within neighborhoods, and compare untreated individuals in treated vs.&nbsp;control neighbourhoods.</p></li>
-</ol>
-</section>
-<section id="crépon-et-al.-2013-the-setting" class="slide level2">
-<h2>Crépon et al.&nbsp;(2013): the setting</h2>
-<ul>
-<li>Job-placement assistance for young, educated job seekers in France</li>
-<li>Does helping some job seekers just <strong>displace</strong> others in the same labour market?</li>
-<li>Spillovers (displacement) are the question, so the design must vary how many people in a market are treated</li>
-</ul>
-</section>
-<section id="step-1-randomise-labour-markets-to-a-treatment-intensity" class="slide level2">
-<h2>Step 1: randomise labour markets to a treatment intensity</h2>
-
-<img data-src="Tutorial_04_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1350"></section>
-<section id="step-2-randomise-individuals-within-each-market" class="slide level2">
-<h2>Step 2: randomise individuals within each market</h2>
-
-<img data-src="Tutorial_04_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1800"></section>
-<section id="what-the-two-levels-let-us-compare" class="slide level2">
-<h2>What the two levels let us compare</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><strong>Direct effect</strong></p>
-<p>Treated vs.&nbsp;untreated job seekers <em>in the same area</em></p>
-<p><strong>Spillover</strong></p>
-<p>Untreated in areas with saturation &gt; 0 vs.&nbsp;untreated in the <strong>0% areas</strong>, which are never exposed</p>
-</div><div class="column" style="width:60%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="Tutorial_04_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center" width="1050"></p>
-</figure>
-</div>
-</div>
-</div>
-</div></div>
-</section>
-<section id="results-gains-for-the-assigned-displacement-for-the-rest" class="slide level2">
-<h2>Results: gains for the assigned, displacement for the rest</h2>
-
-<img data-src="Tutorial_04_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center r-stretch" width="1650"><ul>
-<li>Assigned job seekers are <strong>2.3 pp</strong> more likely to hold a long-term contract than unassigned ones <strong>in the same areas</strong></li>
-<li>Unassigned job seekers in treated areas do <strong>1.3 pp worse</strong> than those in 0% areas (not significant; −3.6 pp and significant for men)</li>
-<li><strong>Net</strong> effect of assignment vs.&nbsp;0% areas: <strong>1.0 pp</strong>, not significant</li>
-</ul>
-<p><em>Source: Crépon et al.&nbsp;(2013), Tables IV–V.</em></p>
-</section>
-<section id="exercise-2-galasso-ravallion-2005" class="slide level2 nostretch">
-<h2>Exercise 2: Galasso &amp; Ravallion (2005)</h2>
-<div class="columns cols-40-60">
-<div class="col">
-<p>Food-for-Education in Bangladesh: food rations for poor parents who send their children to school.</p>
-<div class="callout-question" data-title="Exercise 2">
-<ol type="a">
-<li><strong>Within villages</strong>: are poor households more likely to receive rations than rich ones? Two models to test this?</li>
-<li><strong>Across villages</strong>: which village characteristics predict participation (probit, col.&nbsp;1)? Interpretation?</li>
-<li>Why a <strong>Tobit</strong> for the budget allocated to each village? Conclusions?</li>
-</ol>
-</div>
-</div><div class="col">
-<p><img data-src="img/gr_table8.png" style="height: 760px; max-width: none; display: block; margin: 0 auto;"></p>
-</div>
-</div>
-</section>
-<section id="exercise-2a-two-models-for-a-binary-outcome" class="slide level2">
-<h2>Exercise 2a: two models for a binary outcome</h2>
-<div class="callout-question" data-title="Exercise 2a">
-<p>They first study within-village targeting. In particular, they want to test whether poor households are more likely to receive the rations than rich households. Describe two models they could use to test this.</p>
-</div>
-<div class="fragment">
-<p>Outcome <span class="math inline">\(D_{iv} = 1\)</span> if household <span class="math inline">\(i\)</span> in village <span class="math inline">\(v\)</span> receives rations; <span class="math inline">\(\text{Poor}_{iv}\)</span> a poverty measure (landholdings, education, expenditures…). <strong>Village fixed effects</strong> <span class="math inline">\(\alpha_v\)</span> make it a <em>within</em>-village comparison.</p>
-<div class="columns">
-<div class="col">
-<div title="Linear probability model (OLS)">
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Linear probability model (OLS)</strong></p>
-</div>
-<div class="callout-content">
-<p><span class="math display">\[D_{iv} = \alpha_v + \beta\,\text{Poor}_{iv} + X_{iv}'\gamma + u_{iv}\]</span></p>
-<ul>
-<li><span class="math inline">\(\beta\)</span> <strong>is</strong> the effect: poor households are <span class="math inline">\(\beta \times 100\)</span> pp more likely to receive rations.</li>
-<li>Easy to compare across specifications.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div><div class="col">
-<div title="Probit / logit">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Probit / logit</strong></p>
-</div>
-<div class="callout-content">
-<p><span class="math display">\[P(D_{iv} = 1 \mid \cdot) = G(\alpha_v + \beta\,\text{Poor}_{iv} + X_{iv}'\gamma)\]</span></p>
-<ul>
-<li><span class="math inline">\(G = \Phi\)</span> (probit) or the logistic CDF (logit).</li>
-<li>Predicted probabilities stay in <span class="math inline">\([0, 1]\)</span>, effects are non-linear.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="fragment">
-<div class="fine-lines small-reg">
-<table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th>Linear probability model</th>
-<th>Probit / logit</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Fits a probability?</td>
-<td>No: predictions can fall <strong>outside <span class="math inline">\([0, 1]\)</span></strong></td>
-<td><strong>Yes</strong>, by construction</td>
-</tr>
-<tr class="even">
-<td>Marginal effect</td>
-<td><strong>Constant</strong>, read directly from <span class="math inline">\(\hat\beta\)</span></td>
-<td><span class="math inline">\(\beta\, g(X\beta)\)</span>: <strong>depends on <span class="math inline">\(X\)</span></strong>, must be computed</td>
-</tr>
-<tr class="odd">
-<td>Assumptions</td>
-<td>Linear CEF; errors heteroskedastic by construction (use robust s.e.)</td>
-<td>A <strong>distribution for the error</strong> (normal / logistic)</td>
-</tr>
-<tr class="even">
-<td>Fixed effects</td>
-<td>Straightforward</td>
-<td>Many village FE: incidental parameters problem (probit)</td>
-</tr>
-<tr class="odd">
-<td>Communication</td>
-<td>“+4 pp”</td>
-<td>Coefficients only give sign and significance</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</section>
-<section id="exercise-2b-reading-a-probit-table" class="slide level2">
-<h2>Exercise 2b: reading a probit table</h2>
-<div class="callout-question" data-title="Exercise 2b">
-<p>They then study targeting across villages, and test which village characteristics predict that the village is included in the program using a probit model. The results are in the first column of Table 8. How do you interpret the coefficients?</p>
-</div>
-<div class="fragment">
-<div title="How to read any probit / logit table">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>How to read any probit / logit table</strong></p>
-</div>
-<div class="callout-content">
-<ol type="1">
-<li><strong>Sign</strong>: direction of the effect on the probability. Interpretable.</li>
-<li><strong>Significance</strong>: read the table notes! Here parentheses are <strong><span class="math inline">\(t\)</span>-ratios</strong>, not standard errors: <span class="math inline">\(|t| &gt; 1.96\)</span> <span class="math inline">\(\Rightarrow\)</span> 5%, <span class="math inline">\(|t| &gt; 1.65\)</span> <span class="math inline">\(\Rightarrow\)</span> 10%.</li>
-<li><strong>Magnitude</strong>: the coefficient is on the latent index, <em>not</em> a change in probability. Marginal effect <span class="math inline">\(= \beta_k\, \phi(X\beta)\)</span>, largest where <span class="math inline">\(P \approx 0.5\)</span>.</li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="fragment">
-<p><strong>Here</strong>: positive and significant: average landlessness <em>in the region</em>, share of heads in low professions / agricultural work, Grameen Bank, a recent shock. Village-level landlessness and illiteracy do <strong>not</strong> predict selection, and the regressors are <strong>not jointly significant</strong> (<span class="math inline">\(p = 0.138\)</span>): poorer villages are not clearly favoured, beyond poorer regions. These are <strong>predictors</strong>, not causal effects.</p>
+<!-- # Problem set 4 {#sec-ps4} -->
+<!-- ## Exercise 1: level of randomisation  -->
+<!-- ::: {.callout-question data-title="Exercise 1"} -->
+<!-- The property tax department of a large municipality wants to experiment -->
+<!-- on different methods to get people to pay: audits, letters that threaten -->
+<!-- financial penalties, and letters that shame tax delinquents. At what level -->
+<!-- would you randomize these interventions: individual taxpayer level or -->
+<!-- neighborhood level? Explain why you would choose one over the other. -->
+<!-- ::: -->
+<!-- . . . -->
+<!-- The general trade-off: **statistical power** vs. **spillovers**. -->
+<!-- ::: {.columns} -->
+<!-- ::: {.col} -->
+<!-- ::: {.callout-tip title="Individual level"} -->
+<!-- - Many more units $\Rightarrow$ **more power** for the same -->
+<!--   sample. -->
+<!-- - The city may have few neighbourhoods: a neighbourhood-level design could -->
+<!--   have too few clusters to detect anything. -->
+<!-- ::: -->
+<!-- ::: -->
+<!-- ::: {.col} -->
+<!-- ::: {.callout-warning title="Neighbourhood level"} -->
+<!-- - If treatment **spills over** onto controls, the individual comparison is -->
+<!--   biased (sign depends on complementarities of the treatment). -->
+<!-- - Here: if my neighbour is audited I may revise upwards my own audit -->
+<!--   probability, or think I am safe this year; shaming may work only if -->
+<!--   neighbours get the letter too. -->
+<!-- - Randomise at the level that **contains the spillovers**, and cluster -->
+<!--   standard errors at that level. -->
+<!-- ::: -->
+<!-- ::: -->
+<!-- ::: -->
+<!-- ::: {.callout-note title="Choosing the unit of randomisation"} -->
+<!-- 1. **Where does the treatment act?** If the mechanism works through social -->
+<!--    interactions, information or local markets, the "unit" is the group. -->
+<!-- 2. **Do controls get treated indirectly?** Contamination of the control -->
+<!--    group biases the estimate; a larger unit protects against it. -->
+<!-- 3. **How many units do I get?** Larger units $\Rightarrow$ fewer -->
+<!--    independent observations $\Rightarrow$ less power (intra-cluster -->
+<!--    correlation). -->
+<!-- 4. **Practical and political constraints**: can a letter campaign or an -->
+<!--    audit policy credibly differ between two neighbours? Is it fair? -->
+<!-- ::: -->
+<!-- ## Exercise 1: level of randomisation  -->
+<!-- ::: {.callout-question data-title="Exercise 1"} -->
+<!-- The property tax department of a large municipality wants to experiment -->
+<!-- on different methods to get people to pay: audits, letters that threaten -->
+<!-- financial penalties, and letters that shame tax delinquents. At what level -->
+<!-- would you randomize these interventions: individual taxpayer level or -->
+<!-- neighborhood level? Explain why you would choose one over the other. -->
+<!-- ::: -->
+<!-- If spillovers are themselves interesting, a **saturation design** answers -->
+<!-- both questions:  -->
+<!-- 1. randomise neighbourhoods into treatment intensity. Then -->
+<!-- 2. randomise individuals within neighborhoods, and compare untreated individuals in treated vs. control neighbourhoods. -->
+<!-- ```{r} -->
+<!-- #| include: false -->
+<!-- library(tidyverse) -->
+<!-- library(patchwork) -->
+<!-- set.seed(2013) -->
+<!-- sat_levels <- c(0, .25, .5, .75, 1) -->
+<!-- sat_lab    <- paste0(sat_levels * 100, "% treated") -->
+<!-- n_area     <- 235 -->
+<!-- n_ind      <- 100 -->
+<!-- # Stage 1: areas -> saturation -->
+<!-- areas <- tibble( -->
+<!--   area = 1:n_area, -->
+<!--   saturation = sample(rep(sat_levels, length.out = n_area)), -->
+<!--   row = (area - 1) %/% 16 + 1, -->
+<!--   col = (area - 1) %% 16 + 1 -->
+<!-- ) -->
+<!-- # Stage 2: individuals within areas -->
+<!-- people <- areas |> -->
+<!--   uncount(n_ind) |> -->
+<!--   group_by(area) |> -->
+<!--   mutate( -->
+<!--     id = row_number(), -->
+<!--     treated = id %in% sample(id, round(first(saturation) * n())) -->
+<!--   ) |> -->
+<!--   ungroup() -->
+<!-- # One example area per saturation level, laid out as a 10 x 10 grid of people -->
+<!-- example <- people |> -->
+<!--   group_by(saturation) |> -->
+<!--   filter(area == first(area)) |> -->
+<!--   ungroup() |> -->
+<!--   mutate(x = (id - 1) %% 10, y = (id - 1) %/% 10, -->
+<!--          panel = factor(saturation, sat_levels, sat_lab)) -->
+<!-- cols <- c(`FALSE` = "#c6dbef", `TRUE` = "#08519c") -->
+<!-- ``` -->
+<!-- ## Crépon et al. (2013): the setting -->
+<!-- - Job-placement assistance for young, educated job seekers in France -->
+<!-- - Does helping some job seekers just **displace** others in the same labour market? -->
+<!-- - Spillovers (displacement) are the question, so the design must vary how many people in a market are treated -->
+<!-- ## Step 1: randomise labour markets to a treatment intensity -->
+<!-- ```{r} -->
+<!-- #| echo: false -->
+<!-- #| fig-width: 9 -->
+<!-- #| fig-height: 5 -->
+<!-- areas |> -->
+<!--   mutate(lab = factor(saturation, sat_levels, sat_lab)) |> -->
+<!--   ggplot(aes(col, -row, fill = lab)) + -->
+<!--   geom_tile(colour = "white", linewidth = 0.6) + -->
+<!--   scale_fill_brewer(palette = "Blues", name = "Share of eligible\njob seekers offered\nthe programme") + -->
+<!--   coord_equal() + -->
+<!--   labs(title = "235 labour-market areas, each randomly assigned a saturation") + -->
+<!--   theme_void(base_size = 16) + -->
+<!--   theme(plot.title = element_text(face = "bold")) -->
+<!-- ``` -->
+<!-- ## Step 2: randomise individuals within each market -->
+<!-- ```{r} -->
+<!-- #| echo: false -->
+<!-- #| fig-width: 12 -->
+<!-- #| fig-height: 3.6 -->
+<!-- ggplot(example, aes(x, -y, colour = treated)) + -->
+<!--   geom_point(size = 3.2) + -->
+<!--   facet_wrap(~panel, nrow = 1) + -->
+<!--   scale_colour_manual(values = cols, labels = c("Not offered", "Offered"), name = NULL) + -->
+<!--   coord_equal() + -->
+<!--   labs(title = "One example area per saturation level (each dot is a job seeker)") + -->
+<!--   theme_void(base_size = 16) + -->
+<!--   theme(legend.position = "bottom", -->
+<!--         strip.text = element_text(face = "bold", margin = margin(b = 6)), -->
+<!--         plot.title = element_text(face = "bold")) -->
+<!-- ``` -->
+<!-- ## What the two levels let us compare -->
+<!-- :::: {.columns} -->
+<!-- ::: {.column width="40%"} -->
+<!-- **Direct effect** -->
+<!-- Treated vs. untreated job seekers *in the same area* -->
+<!-- **Spillover** -->
+<!-- Untreated in areas with saturation > 0 vs. untreated in the **0% areas**, which are never exposed -->
+<!-- ::: -->
+<!-- ::: {.column width="60%"} -->
+<!-- ```{r} -->
+<!-- #| echo: false -->
+<!-- #| fig-width: 7 -->
+<!-- #| fig-height: 3.6 -->
+<!-- draw_area <- function(d, title, ring = FALSE) { -->
+<!--   p <- ggplot(d, aes(x, -y, colour = treated)) + -->
+<!--     geom_point(size = 3.4) + -->
+<!--     scale_colour_manual(values = cols, guide = "none") + -->
+<!--     coord_equal() + labs(title = title) + theme_void(base_size = 14) + -->
+<!--     theme(plot.title = element_text(face = "bold", hjust = .5)) -->
+<!--   if (ring) -->
+<!--     p <- p + geom_point(data = filter(d, !treated), shape = 21, size = 5.6, -->
+<!--                         stroke = 1.2, colour = "#e6550d", fill = NA) -->
+<!--   p -->
+<!-- } -->
+<!-- a0  <- filter(example, saturation == 0) -->
+<!-- a50 <- filter(example, saturation == .5) -->
+<!-- (draw_area(a0, "0% area", ring = TRUE) + -->
+<!--    plot_spacer() + -->
+<!--    draw_area(a50, "50% area", ring = TRUE) + -->
+<!--    plot_layout(widths = c(1, 0.25, 1))) + -->
+<!--   plot_annotation( -->
+<!--     caption = "Orange rings: untreated people compared to measure the spillover", -->
+<!--     theme = theme(plot.caption = element_text(size = 12, colour = "#e6550d"))) -->
+<!-- ``` -->
+<!-- ::: -->
+<!-- :::: -->
+<!-- ## Results: gains for the assigned, displacement for the rest -->
+<!-- ```{r} -->
+<!-- #| echo: false -->
+<!-- #| fig-width: 11 -->
+<!-- #| fig-height: 4.6 -->
+<!-- # Crépon et al. (2013), QJE. Outcome: long-term fixed contract (LTFC) at 8 months, -->
+<!-- # job seekers not employed at baseline. Intention-to-treat (assignment) estimates. -->
+<!-- grp <- "All"   # switch to "Men" for Table IV col. 3 / Table V col. 2 -->
+<!-- # Table IV: beta_x  = assigned vs. unassigned in same area type (beta_100: vs. 0% areas) -->
+<!-- #           delta_x = unassigned in x% area vs. 0% areas -->
+<!-- est <- tribble( -->
+<!--   ~group, ~saturation, ~beta,  ~delta, -->
+<!--   "All",   .25,         .021,  -.015, -->
+<!--   "All",   .50,         .013,  -.014, -->
+<!--   "All",   .75,         .007,  -.006, -->
+<!--   "All",  1.00,         .025,     NA, -->
+<!--   "Men",   .25,         .037,  -.041, -->
+<!--   "Men",   .50,         .021,  -.026, -->
+<!--   "Men",   .75,         .061,  -.055, -->
+<!--   "Men",  1.00,         .021,     NA -->
+<!-- ) -->
+<!-- super_ctrl <- c(All = .167, Men = .150)   # Table IV control mean (0% areas) -->
+<!-- # Table V: pooled reduced form (coefficient, SE) -->
+<!-- pooled_all <- tribble( -->
+<!--   ~group, ~effect,      ~est,  ~se, -->
+<!--   "All",  "Direct",     .023, .008, -->
+<!--   "All",  "Spillover", -.013, .009, -->
+<!--   "All",  "Net",        .010, .008, -->
+<!--   "Men",  "Direct",     .043, .013, -->
+<!--   "Men",  "Spillover", -.036, .013, -->
+<!--   "Men",  "Net",        .007, .011 -->
+<!-- ) -->
+<!-- ctrl <- super_ctrl[[grp]] -->
+<!-- e <- filter(est, group == grp) -->
+<!-- lev <- bind_rows( -->
+<!--   tibble(saturation = 0, assigned = FALSE, m = ctrl), -->
+<!--   e |> filter(!is.na(delta)) |> -->
+<!--     transmute(saturation, assigned = FALSE, m = ctrl + delta), -->
+<!--   e |> transmute(saturation, assigned = TRUE, -->
+<!--                  m = ctrl + coalesce(delta, 0) + beta) -->
+<!-- ) -->
+<!-- p_sat <- ggplot(lev, aes(saturation, m, colour = assigned, group = assigned)) + -->
+<!--   geom_hline(yintercept = ctrl, linetype = "dashed", colour = "grey50") + -->
+<!--   geom_line(linewidth = 1) + -->
+<!--   geom_point(size = 3.5) + -->
+<!--   annotate("text", x = 1, y = ctrl - .004, hjust = 1, size = 4.2, colour = "grey40", -->
+<!--            label = paste0("0% areas: ", scales::percent(ctrl, accuracy = .1))) + -->
+<!--   scale_colour_manual(values = cols, labels = c("Unassigned", "Assigned"), name = NULL) + -->
+<!--   scale_x_continuous(labels = scales::percent, breaks = sat_levels) + -->
+<!--   scale_y_continuous(labels = scales::percent_format(accuracy = 1)) + -->
+<!--   labs(x = "Share of area assigned to the programme", -->
+<!--        y = "Long-term fixed contract", -->
+<!--        title = paste0("By area saturation (", grp, ")")) + -->
+<!--   theme_minimal(base_size = 15) + -->
+<!--   theme(legend.position = "bottom", plot.title = element_text(face = "bold")) -->
+<!-- pooled <- pooled_all |> -->
+<!--   filter(group == grp) |> -->
+<!--   mutate(effect = factor(effect, c("Direct", "Spillover", "Net"), -->
+<!--                          c("Direct\n(assigned vs.\nunassigned,\nsame areas)", -->
+<!--                            "Spillover\n(unassigned vs.\n0% areas)", -->
+<!--                            "Net\n(assigned vs.\n0% areas)"))) -->
+<!-- p_pool <- ggplot(pooled, aes(effect, est * 100)) + -->
+<!--   geom_hline(yintercept = 0) + -->
+<!--   geom_pointrange(aes(ymin = (est - 1.96 * se) * 100, ymax = (est + 1.96 * se) * 100), -->
+<!--                   size = 1, colour = "#08519c") + -->
+<!--   labs(x = NULL, y = "Percentage points", title = "Pooled estimates (95% CI)") + -->
+<!--   theme_minimal(base_size = 15) + -->
+<!--   theme(plot.title = element_text(face = "bold")) -->
+<!-- p_sat + plot_spacer() + p_pool + plot_layout(widths = c(1.2, .15, 1)) -->
+<!-- ``` -->
+<!-- - Assigned job seekers are **2.3 pp** more likely to hold a long-term contract than unassigned ones **in the same areas** -->
+<!-- - Unassigned job seekers in treated areas do **1.3 pp worse** than those in 0% areas (not significant; −3.6 pp and significant for men) -->
+<!-- - **Net** effect of assignment vs. 0% areas: **1.0 pp**, not significant -->
+<!-- *Source: Crépon et al. (2013), Tables IV–V.* -->
+<!-- ## Exercise 2: Galasso & Ravallion (2005) {.nostretch} -->
+<!-- ::: {.columns .cols-40-60} -->
+<!-- ::: {.col} -->
+<!-- Food-for-Education in Bangladesh: food rations for poor parents who send -->
+<!-- their children to school. -->
+<!-- ::: {.callout-question data-title="Exercise 2"} -->
+<!-- a. **Within villages**: are poor households more likely to receive rations -->
+<!--    than rich ones? Two models to test this? -->
+<!-- b. **Across villages**: which village characteristics predict -->
+<!--    participation (probit, col. 1)? Interpretation? -->
+<!-- c. Why a **Tobit** for the budget allocated to each village? Conclusions? -->
+<!-- ::: -->
+<!-- ::: -->
+<!-- ::: {.col} -->
+<!-- ![](img/gr_table8.png){style="height: 760px; max-width: none; display: block; margin: 0 auto;"} -->
+<!-- ::: -->
+<!-- ::: -->
+<!-- ## Exercise 2a: two models for a binary outcome  -->
+<!-- ::: {.callout-question data-title="Exercise 2a"} -->
+<!-- They first study within-village targeting. In particular, they want to -->
+<!-- test whether poor households are more likely to receive the rations than -->
+<!-- rich households. Describe two models they could use to test this. -->
+<!-- ::: -->
+<!-- . . . -->
+<!-- Outcome $D_{iv} = 1$ if household $i$ in village $v$ receives rations; -->
+<!-- $\text{Poor}_{iv}$ a poverty measure (landholdings, education, -->
+<!-- expenditures…). **Village fixed effects** $\alpha_v$ make it a -->
+<!-- *within*-village comparison. -->
+<!-- ::: {.columns} -->
+<!-- ::: {.col} -->
+<!-- ::: {.callout-tip title="Linear probability model (OLS)"} -->
+<!-- $$D_{iv} = \alpha_v + \beta\,\text{Poor}_{iv} + X_{iv}'\gamma + u_{iv}$$ -->
+<!-- - $\beta$ **is** the effect: poor households are $\beta \times 100$ pp -->
+<!--   more likely to receive rations. -->
+<!-- - Easy to compare across specifications. -->
+<!-- ::: -->
+<!-- ::: -->
+<!-- ::: {.col} -->
+<!-- ::: {.callout-note title="Probit / logit"} -->
+<!-- $$P(D_{iv} = 1 \mid \cdot) = G(\alpha_v + \beta\,\text{Poor}_{iv} + X_{iv}'\gamma)$$ -->
+<!-- - $G = \Phi$ (probit) or the logistic CDF (logit). -->
+<!-- - Predicted probabilities stay in $[0, 1]$, effects are non-linear. -->
+<!-- ::: -->
+<!-- ::: -->
+<!-- ::: -->
+<!-- . . . -->
+<!-- ::: {.fine-lines .small-reg} -->
+<!-- | | Linear probability model | Probit / logit | -->
+<!-- |---|---|---| -->
+<!-- | Fits a probability? | No: predictions can fall **outside $[0, 1]$** | **Yes**, by construction | -->
+<!-- | Marginal effect | **Constant**, read directly from $\hat\beta$ | $\beta\, g(X\beta)$: **depends on $X$**, must be computed | -->
+<!-- | Assumptions | Linear CEF; errors heteroskedastic by construction (use robust s.e.) | A **distribution for the error** (normal / logistic) | -->
+<!-- | Fixed effects | Straightforward | Many village FE: incidental parameters problem (probit) | -->
+<!-- | Communication | "+4 pp" | Coefficients only give sign and significance | -->
+<!-- ::: -->
+<!-- ## Exercise 2b: reading a probit table  -->
+<!-- ::: {.callout-question data-title="Exercise 2b"} -->
+<!-- They then study targeting across villages, and test which village -->
+<!-- characteristics predict that the village is included in the program using -->
+<!-- a probit model. The results are in the first column of Table 8. How do you -->
+<!-- interpret the coefficients? -->
+<!-- ::: -->
+<!-- . . . -->
+<!-- ::: {.callout-note title="How to read any probit / logit table"} -->
+<!-- 1. **Sign**: direction of the effect on the probability. Interpretable. -->
+<!-- 2. **Significance**: read the table notes! Here parentheses are **$t$-ratios**, -->
+<!--    not standard errors: $|t| > 1.96$ $\Rightarrow$ 5%, $|t| > 1.65$ -->
+<!--    $\Rightarrow$ 10%. -->
+<!-- 3. **Magnitude**: the coefficient is on the latent index, *not* a change in -->
+<!--    probability. Marginal effect $= \beta_k\, \phi(X\beta)$, largest where -->
+<!--    $P \approx 0.5$.  -->
+<!-- ::: -->
+<!-- . . . -->
+<!-- **Here**: positive and significant: average landlessness *in the region*, -->
+<!-- share of heads in low professions / agricultural work, Grameen Bank, a -->
+<!-- recent shock. Village-level landlessness and illiteracy do **not** predict -->
+<!-- selection, and the regressors are **not jointly significant** -->
+<!-- ($p = 0.138$): poorer villages are not clearly favoured, beyond poorer -->
+<!-- regions. These are **predictors**, not causal effects. -->
 <!-- ## Reminder: the Tobit model  -->
 <!-- **When?** The outcome is continuous but **piles up at a corner**, usually -->
 <!-- zero: hours worked, spending on a good, charitable donations, a budget -->
@@ -2084,9 +2084,8 @@ P(Y = 1 \mid X) = P(\epsilon &gt; -X\beta \mid X)
 <!--   villages** within regions. -->
 <!-- - Coefficients are smaller than in the probit, but this says nothing: -->
 <!--   the two are on different scales. -->
-</div>
 </section></section>
-<section id="section-1" class="title-slide slide level1 standout-red center" data-background-color="#d90502">
+<section id="section-2" class="title-slide slide level1 standout-red center" data-background-color="#d90502">
 <h1></h1>
 <p>Good luck for the quiz!</p>
 </section>
