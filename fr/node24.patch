@@ -1,0 +1,299 @@
+diff --git a/.github/workflows/axe.yml b/.github/workflows/axe.yml
+index 54a88b0..978ee2f 100644
+--- a/.github/workflows/axe.yml
++++ b/.github/workflows/axe.yml
+@@ -25,7 +25,7 @@ jobs:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Checkout 🛎️
+-        uses: actions/checkout@v4
++        uses: actions/checkout@v6
+       - name: Setup Ruby
+         uses: ruby/setup-ruby@v1
+         with:
+@@ -59,7 +59,7 @@ jobs:
+           echo "CHROMIUM_VERSION=$CHROMIUM_VERSION" >> $GITHUB_ENV
+       - name: Setup Chrome 🌐
+         id: setup-chrome
+-        uses: browser-actions/setup-chrome@v1
++        uses: browser-actions/setup-chrome@v2
+         with:
+           chrome-version: ${{ env.CHROMIUM_VERSION }}
+       - name: Install chromedriver 🚗
+diff --git a/.github/workflows/broken-links-site.yml b/.github/workflows/broken-links-site.yml
+index 2e493e3..354a7d4 100644
+--- a/.github/workflows/broken-links-site.yml
++++ b/.github/workflows/broken-links-site.yml
+@@ -13,7 +13,7 @@ jobs:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Checkout 🛎️
+-        uses: actions/checkout@v4
++        uses: actions/checkout@v6
+       - name: Setup Ruby
+         uses: ruby/setup-ruby@v1
+         with:
+diff --git a/.github/workflows/broken-links.yml b/.github/workflows/broken-links.yml
+index 88a2ad4..7854531 100644
+--- a/.github/workflows/broken-links.yml
++++ b/.github/workflows/broken-links.yml
+@@ -44,7 +44,7 @@ jobs:
+     # only run on the main repo
+     if: github.repository == 'alshedivat/al-folio'
+     steps:
+-      - uses: actions/checkout@v4
++      - uses: actions/checkout@v6
+ 
+       - name: Link Checker 🔗
+         uses: lycheeverse/lychee-action@v2.1.0
+diff --git a/.github/workflows/codeql.yml b/.github/workflows/codeql.yml
+index d09a3b5..291e269 100644
+--- a/.github/workflows/codeql.yml
++++ b/.github/workflows/codeql.yml
+@@ -57,11 +57,11 @@ jobs:
+         # your codebase is analyzed, see https://docs.github.com/en/code-security/code-scanning/creating-an-advanced-setup-for-code-scanning/codeql-code-scanning-for-compiled-languages
+     steps:
+       - name: Checkout repository
+-        uses: actions/checkout@v4
++        uses: actions/checkout@v6
+ 
+       # Initializes the CodeQL tools for scanning.
+       - name: Initialize CodeQL
+-        uses: github/codeql-action/init@v3
++        uses: github/codeql-action/init@v4
+         with:
+           languages: ${{ matrix.language }}
+           build-mode: ${{ matrix.build-mode }}
+@@ -89,6 +89,6 @@ jobs:
+           exit 1
+ 
+       - name: Perform CodeQL Analysis
+-        uses: github/codeql-action/analyze@v3
++        uses: github/codeql-action/analyze@v4
+         with:
+           category: "/language:${{matrix.language}}"
+diff --git a/.github/workflows/deploy-docker-tag.yml b/.github/workflows/deploy-docker-tag.yml
+index d7710e2..89babc3 100644
+--- a/.github/workflows/deploy-docker-tag.yml
++++ b/.github/workflows/deploy-docker-tag.yml
+@@ -20,28 +20,28 @@ jobs:
+ 
+     steps:
+       - name: Checkout
+-        uses: actions/checkout@v4
++        uses: actions/checkout@v6
+ 
+       - name: Set up QEMU
+-        uses: docker/setup-qemu-action@v3
++        uses: docker/setup-qemu-action@v4
+ 
+       - name: Buildx
+-        uses: docker/setup-buildx-action@v3
++        uses: docker/setup-buildx-action@v4
+ 
+       - name: Docker meta
+         id: meta
+-        uses: docker/metadata-action@v5
++        uses: docker/metadata-action@v6
+         with:
+           images: amirpourmand/al-folio
+ 
+       - name: Login
+-        uses: docker/login-action@v3
++        uses: docker/login-action@v4
+         with:
+           username: ${{ secrets.DOCKER_USERNAME }}
+           password: ${{ secrets.DOCKER_PASSWORD }}
+ 
+       - name: Build and push
+-        uses: docker/build-push-action@v5
++        uses: docker/build-push-action@v7
+         with:
+           context: .
+           platforms: linux/amd64,linux/arm64/v8
+diff --git a/.github/workflows/deploy-image.yml b/.github/workflows/deploy-image.yml
+index 7ddd8f6..f80a34d 100644
+--- a/.github/workflows/deploy-image.yml
++++ b/.github/workflows/deploy-image.yml
+@@ -21,22 +21,22 @@ jobs:
+ 
+     steps:
+       - name: Checkout
+-        uses: actions/checkout@v4
++        uses: actions/checkout@v6
+ 
+       - name: Set up QEMU
+-        uses: docker/setup-qemu-action@v3
++        uses: docker/setup-qemu-action@v4
+ 
+       - name: Buildx
+-        uses: docker/setup-buildx-action@v3
++        uses: docker/setup-buildx-action@v4
+ 
+       - name: Login
+-        uses: docker/login-action@v3
++        uses: docker/login-action@v4
+         with:
+           username: ${{ secrets.DOCKER_USERNAME }}
+           password: ${{ secrets.DOCKER_PASSWORD }}
+ 
+       - name: Build and push
+-        uses: docker/build-push-action@v5
++        uses: docker/build-push-action@v7
+         with:
+           context: .
+           push: true
+diff --git a/.github/workflows/deploy.yml b/.github/workflows/deploy.yml
+index 6ec9c55..6315070 100644
+--- a/.github/workflows/deploy.yml
++++ b/.github/workflows/deploy.yml
+@@ -70,14 +70,14 @@ jobs:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Checkout 🛎️
+-        uses: actions/checkout@v4
++        uses: actions/checkout@v6
+       - name: Setup Ruby 💎
+         uses: ruby/setup-ruby@v1
+         with:
+           ruby-version: "3.3"
+           bundler-cache: true
+       - name: Setup Python 🐍
+-        uses: actions/setup-python@v5
++        uses: actions/setup-python@v6
+         with:
+           python-version: "3.13"
+           cache: "pip" # caching pip dependencies
+diff --git a/.github/workflows/docker-slim.yml b/.github/workflows/docker-slim.yml
+index 3a67d32..d5a38a8 100644
+--- a/.github/workflows/docker-slim.yml
++++ b/.github/workflows/docker-slim.yml
+@@ -29,10 +29,10 @@ jobs:
+ 
+     steps:
+       - name: Checkout
+-        uses: actions/checkout@v4
++        uses: actions/checkout@v6
+ 
+       - name: Login
+-        uses: docker/login-action@v3
++        uses: docker/login-action@v4
+         with:
+           username: ${{ secrets.DOCKER_USERNAME }}
+           password: ${{ secrets.DOCKER_PASSWORD }}
+diff --git a/.github/workflows/lighthouse-badger.yml b/.github/workflows/lighthouse-badger.yml
+index addec2d..59f784d 100644
+--- a/.github/workflows/lighthouse-badger.yml
++++ b/.github/workflows/lighthouse-badger.yml
+@@ -46,12 +46,12 @@ jobs:
+           echo "BRANCH=$BRANCH" >> $GITHUB_ENV
+         env:
+           REPO_BRANCH: ${{ env.REPO_BRANCH }}
+-      - uses: actions/checkout@v4
++      - uses: actions/checkout@v6
+         with:
+           repository: ${{ env.REPOSITORY }}
+           token: ${{ secrets.LIGHTHOUSE_BADGER_TOKEN }}
+           ref: ${{ env.BRANCH }}
+-      - uses: actions/checkout@v4
++      - uses: actions/checkout@v6
+         with:
+           repository: "myactionway/lighthouse-badges"
+           path: temp_lighthouse_badges_nested
+diff --git a/.github/workflows/prettier-comment-on-pr.yml b/.github/workflows/prettier-comment-on-pr.yml
+index e95075c..e22ade0 100644
+--- a/.github/workflows/prettier-comment-on-pr.yml
++++ b/.github/workflows/prettier-comment-on-pr.yml
+@@ -10,9 +10,9 @@ jobs:
+     runs-on: ubuntu-latest
+     steps:
+       - name: PR comment with html diff 💬
+-        uses: thollander/actions-comment-pull-request@v2
++        uses: thollander/actions-comment-pull-request@v3
+         with:
+-          comment_tag: prettier-failed
+-          pr_number: ${{ github.event.client_payload.pr_number }}
++          comment-tag: prettier-failed
++          pr-number: ${{ github.event.client_payload.pr_number }}
+           message: |
+             Failed [prettier code check](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.event.client_payload.run_id }}). Check [this file](${{ github.event.client_payload.artifact_url }}) for more information.
+diff --git a/.github/workflows/prettier-html.yml b/.github/workflows/prettier-html.yml
+index 3dc4326..0e921df 100644
+--- a/.github/workflows/prettier-html.yml
++++ b/.github/workflows/prettier-html.yml
+@@ -8,7 +8,7 @@ jobs:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Checkout gh-pages branch
+-        uses: actions/checkout@v4
++        uses: actions/checkout@v6
+         with:
+           ref: gh-pages
+ 
+@@ -16,7 +16,9 @@ jobs:
+         run: find . -type f -name "*.html" -exec sed -i 's/<\/source>//g' {} +
+ 
+       - name: Set up Node.js
+-        uses: actions/setup-node@v4
++        uses: actions/setup-node@v6
++        with:
++          node-version: 24
+ 
+       - name: Install Prettier
+         run: npm install -g prettier
+diff --git a/.github/workflows/prettier.yml b/.github/workflows/prettier.yml
+index 0714cc2..c4b7ed6 100644
+--- a/.github/workflows/prettier.yml
++++ b/.github/workflows/prettier.yml
+@@ -16,9 +16,9 @@ jobs:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Checkout 🛎️
+-        uses: actions/checkout@v4.2.2
++        uses: actions/checkout@v6
+       - name: Setup Node.js ⚙️
+-        uses: actions/setup-node@v4.4.0
++        uses: actions/setup-node@v6
+         with:
+           node-version: 24
+       - name: Install Prettier 💾
+@@ -36,14 +36,14 @@ jobs:
+       - name: Upload html diff ⬆️
+         id: artifact-upload
+         if: ${{ failure() && steps.prettier.conclusion == 'failure' }}
+-        uses: actions/upload-artifact@v4.6.2
++        uses: actions/upload-artifact@v6
+         with:
+           name: HTML Diff
+           path: diff.html
+           retention-days: 7
+       - name: Dispatch information to repository 🗣️
+         if: ${{ failure() && steps.prettier.conclusion == 'failure' && github.event_name == 'pull_request' }}
+-        uses: peter-evans/repository-dispatch@v2
++        uses: peter-evans/repository-dispatch@v4
+         with:
+           event-type: prettier-failed-on-pr
+-          client-payload: '{"pr_number": "${{ github.event.number }}", "artifact_url": "${{ steps.artifact-upload.outputs.artifact-url }}", "run_id": "${{ github.run_id }}"}'
+\ No newline at end of file
++          client-payload: '{"pr_number": "${{ github.event.number }}", "artifact_url": "${{ steps.artifact-upload.outputs.artifact-url }}", "run_id": "${{ github.run_id }}"}'
+diff --git a/.github/workflows/update-tocs.yml b/.github/workflows/update-tocs.yml
+index 3567ee8..483cd08 100644
+--- a/.github/workflows/update-tocs.yml
++++ b/.github/workflows/update-tocs.yml
+@@ -18,7 +18,7 @@ jobs:
+     runs-on: ubuntu-latest
+     timeout-minutes: 5
+     steps:
+-      - uses: actions/checkout@v4
++      - uses: actions/checkout@v6
+         with:
+           fetch-depth: 0 # OR "2" -> To retrieve the preceding commit.
+ 
+@@ -45,6 +45,6 @@ jobs:
+ 
+       - name: Commit changes
+         if: steps.changed-files.outputs.any_changed == 'true'
+-        uses: stefanzweifel/git-auto-commit-action@v5.0.1
++        uses: stefanzweifel/git-auto-commit-action@v7
+         with:
+           commit_message: Auto update markdown TOC
